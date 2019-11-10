@@ -1,3 +1,6 @@
+import sys
+sys.path.append("../")
+
 from utils.google_trends import GoogleTrends
 
 keywords = ['jennifer', 'aniston']
