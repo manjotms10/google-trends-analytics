@@ -51,11 +51,12 @@ for i in range(n_req):
     plt.ylabel('normalized search interest')
     plt.savefig(f'./figures/{i}.png',bbox_inches=None)
 
-
+data = data / data.max().max() * 100 # normalized by the current peak
 plt.figure(figsize=(12,6))
 [plt.plot(data[i],label=i) for i in kw_LIST]
-plt.legend(bbox_to_anchor=(1,1.2))
+plt.legend(bbox_to_anchor=(1,1))
 plt.grid()
 plt.xlabel('year')
 plt.ylabel('normalized search interest')
-plt.savefig('./figures/all_data.png',bbox_inches=None)
+plt.ylim(0,100)
+plt.savefig('./figures/all_data.png',bbox_inches='tight')
