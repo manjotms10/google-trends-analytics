@@ -155,7 +155,7 @@ class GoogleTrends:
             
         return pd_df_with_query
     
-    def get_trends_data_from_multiple_keywords(self, keywords, start_date, end_date, category=None, geo='US'):
+    def get_trends_data_from_multiple_keywords(self, keywords, start_date, end_date, category=None, geo=''):
         """
         This function returns the search volume (Interest Over Time) of multiple keywords (> 5) and adjust the normalization such that the
         search result volumes of all keywords have the same normalization and are comparable.
@@ -238,11 +238,12 @@ class GoogleTrends:
             
         plt.figure(figsize=(12,6))
         [plt.plot(self.data[i],label=i) for i in self.keywords]
-        plt.legend()
+        plt.legend(bbox_to_anchor=(1,1))
         plt.grid()
         plt.xlabel('timeframe')
         plt.ylabel('normalized search interest')
         plt.xticks(rotation=70)
+        plt.ylim(0,100)
         
         if save_fig == True:
             file_name = GoogleTrends.plot_directory.format(plot_name)

@@ -1,7 +1,7 @@
 from utils.google_trends import GoogleTrends
 
 keywords = ['avengers', 'endgame', 'lion king', 'lion', 'toy story', 'woody', 'captain marvel', 'marvel', 'spider man', 'homecoming']
-start_date = '2019-01-01'
+start_date = '2004-01-01'
 end_date = '2019-11-09'
 
 gt = GoogleTrends()
