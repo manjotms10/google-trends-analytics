@@ -1,3 +1,8 @@
+#import os, sys
+#utils_path = os.path.abspath('../')+'\\utils'
+#sys.path.append(utils_path)
+#from console_logger import logger
+
 from pytrends.request import TrendReq
 import datetime
 import matplotlib.pyplot as plt
@@ -12,8 +17,6 @@ to Google, which can then be used throughout the session.
 '''
 class GoogleTrends:
     
-    plot_directory = '../../saved_plots/{}.png'
-    
     def __init__(self):
         '''
         The method to initialize the connection request object for connecting to Google Trends data.
@@ -27,7 +30,7 @@ class GoogleTrends:
         
         logger.info("Successfully connected session to Google Trends")
         
-    def get_trends_data(self, keywords, start_date, end_date, category=None, geo='US'):
+    def get_trends_data(self, keywords, start_date, end_date, category=None, geo=''):
         '''
         The method returns a Pandas dataframe obtained by the Google Trends library. This dataframe consists of the normalized search results in a Pandas dataframe format.
         
@@ -36,7 +39,7 @@ class GoogleTrends:
             start_date (str) - The start date of the search query in YYYY-MM-DD format
             end_date (str) - The end date of the search query in YYYY-MM-DD format
             category (str) - The category to which the search results belong to. By default, it is None, which means all categories
-            geo (str) - The country whose search results is to be obtained 
+            geo (str) - The country whose search results is to be obtained. By default: global
             
         Returns:
             A Pandas dataframe containing the search result volume for each keyword in keywords
@@ -68,7 +71,7 @@ class GoogleTrends:
         
         return self
         
-    def plot(self, save_fig=False, plot_name='plot'):
+    def plot(self, save_fig=False, plot_name='plot', plot_directory = '../saved_plots/{}.png'):
         '''
         The method plots the dataframe that was last queried by the self.get_trends_data method.
         
@@ -91,9 +94,10 @@ class GoogleTrends:
         plt.grid()
         plt.xlabel('timeframe')
         plt.ylabel('normalized search interest')
+        plt.ylim(0,100)
         
         if save_fig == True:
-            file_name = GoogleTrends.plot_directory.format(plot_name)
+            file_name = plot_directory.format(plot_name)
             plt.savefig(file_name,bbox_inches=None)
             logger.info("Plot successfully saved to {}".format(file_name))
          

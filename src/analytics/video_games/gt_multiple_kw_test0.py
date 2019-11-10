@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Nov  6 10:56:53 2019
-
-@author: Xiaolong He
-"""
-
-
 from pytrends.request import TrendReq
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -49,7 +41,7 @@ for i in range(n_req):
     plt.grid()
     plt.xlabel('year')
     plt.ylabel('normalized search interest')
-    plt.savefig(f'./figures/{i}.png',bbox_inches=None)
+    plt.savefig(f'../../../saved_plots/{i}.png',bbox_inches=None)
 
 data = data / data.max().max() * 100 # normalized by the current peak
 plt.figure(figsize=(12,6))
@@ -59,4 +51,4 @@ plt.grid()
 plt.xlabel('year')
 plt.ylabel('normalized search interest')
 plt.ylim(0,100)
-plt.savefig('./figures/all_data.png',bbox_inches='tight')
+plt.savefig('../../../saved_plots/all_data.png',bbox_inches='tight')
