@@ -65,9 +65,10 @@ class IMDBWebScraper(HTMLScraper):
     -------
     pd.DataFrame
 
+    Example:
     >>> parser = IMDBWebScraper()
-    >>> for year in range(2010, 2019):
-    >>>     print(parser.get_box_office_collection_by_year(year=str(year)).head())
+    >>> box_office_df = parser.get_box_office_collection_by_year(year="2019")
+    >>> top_50_action = parser.get_top_movies_by_genre(genre="action", metric="num_votes")
 
     '''
 
@@ -75,6 +76,9 @@ class IMDBWebScraper(HTMLScraper):
         '''
         Parse IMDB Box Office Collection Datasets.
         '''
+
+        self.genres  = ["action", "comedy", "Horror", "Sci-Fi", "Drama", "Romance"]
+        self.metrics = ["boxoffice_gross_us", "num_votes"]
 
         # This dict contains all features to store against the corresponding
         # key in the HTML attribute.
@@ -96,9 +100,9 @@ class IMDBWebScraper(HTMLScraper):
         assert len(year) > 0
         assert 2010 <= int(year) <= 2019
 
-        box_office_url = f'https://www.boxofficemojo.com/year/{year}/?ref_=bo_yl_table_1'
+        box_office_url = 'https://www.boxofficemojo.com/year/' +\
+                         f'{year}/?ref_=bo_yl_table_1'
 
-        print("Fetching from " + box_office_url)
         response = self.fetch_html(box_office_url)
 
         # Check if the response is valid.
@@ -130,10 +134,61 @@ class IMDBWebScraper(HTMLScraper):
             return movies
 
         # Raise an exception if we failed to get any data from the url
-        raise Exception('Error retrieving contents at {}'.format(self.url))
+        raise Exception('Error retrieving contents at {}'.format(box_office_url))
 
 
-# ------ GET BOX OFFICE COLLECTIONS ------
-# parser = IMDBWebScraper()
-# for year in range(2010, 2019):
-#     print(parser.get_box_office_collection_by_year(year=str(year)).head())
+    def get_top_movies_by_genre(self, genre = "action", metric = "num_votes"):
+        """
+        Parse HTML data from IMDB Top 50 page and return a pandas DataFrame.
+        """
+
+        assert isinstance(genre,  str)
+        assert isinstance(metric, str)
+
+        assert genre  in self.genres
+        assert metric in self.metrics
+
+        imdb_url = 'http://www.imdb.com/search/title/?title_type=movie' + \
+                   f'&genres={genre}&sort={metric},desc' + \
+                   '&explore=title_type,genres'
+
+        response = self.fetch_html(imdb_url)
+
+        # Check if the response is valid.
+        if response is not None:
+            html = BeautifulSoup(response, 'html.parser')
+
+            # For each movie in the HTML page.
+            movies = html.findAll("div", {"class": "lister-item mode-advanced"})
+            result = []
+
+            for movie in movies:
+                rank  = movie.find("span").text.split('.')[0]
+                name  = movie.find("h3").find("a").text
+                year  = movie.find("span", {
+                                    "class": "lister-item-year text-muted unbold"
+                                }).text[1:-1]
+                if len(year) > 4:
+                    year = year[-4:]
+                span  = movie.find("p", {"class": "sort-num_votes-visible"})\
+                             .findAll("span", {"name": "nv"})
+
+                assert len(span) >= 1, "Could Not find Votes and Gross"
+                votes = span[0].text
+                if len(span) > 1:
+                    gross = span[1].text[1:-1]
+                else:
+                    gross = "0"
+
+                result.append({
+                    "rank"  : rank,
+                    "name"  : name,
+                    "year"  : year,
+                    "votes" : votes,
+                    "gross" : gross,
+                })
+
+            return pd.DataFrame(result)
+
+        # Raise an exception if we failed to get any data from the url
+        raise Exception('Error retrieving contents at {}'.format(imdb_url))
