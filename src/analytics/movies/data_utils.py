@@ -9,7 +9,7 @@ class HTMLScraper:
     '''
     A python based HTML Web Scraper using the requests module.
     '''
-    
+
     def __init__(self):
         '''
         Base Class that implements utility functions like HTTP get requests.
@@ -30,8 +30,8 @@ class HTMLScraper:
         Returns True if the response seems to be HTML, False otherwise.
         """
         content_type = resp.headers['Content-Type'].lower()
-        return (resp.status_code == 200 
-                and content_type is not None 
+        return (resp.status_code == 200
+                and content_type is not None
                 and content_type.find('html') > -1)
 
 
@@ -60,22 +60,21 @@ class IMDBWebScraper(HTMLScraper):
     Parameters
     ----------
     url : A valid url pointing to IMDB's box office collection page.
-    
+
     Returns
     -------
     pd.DataFrame
 
-    >>> imdb = IMDBWebScraper('https://www.boxofficemojo.com/year/2019/?ref_=bo_yl_table_1')
-    >>> df = imdb.get_data()
-    >>> print(df.head())
+    >>> parser = IMDBWebScraper()
+    >>> for year in range(2010, 2019):
+    >>>     print(parser.get_box_office_collection_by_year(year=str(year)).head())
+
     '''
 
-    def __init__(self, url):
+    def __init__(self):
         '''
         Parse IMDB Box Office Collection Datasets.
         '''
-
-        self.url = url
 
         # This dict contains all features to store against the corresponding
         # key in the HTML attribute.
@@ -87,42 +86,54 @@ class IMDBWebScraper(HTMLScraper):
             'date'    : 'mojo-field-type-date',
         }
 
-        # Hold the response of the get request.
-        self.response = self.fetch_html(url)
 
-
-    def get_data(self):
+    def get_box_office_collection_by_year(self, year = "2019"):
         """
         Parse data from the HTML page and return a pandas dataframe.
         """
 
+        assert isinstance(year, str)
+        assert len(year) > 0
+        assert 2010 <= int(year) <= 2019
+
+        box_office_url = f'https://www.boxofficemojo.com/year/{year}/?ref_=bo_yl_table_1'
+
+        print("Fetching from " + box_office_url)
+        response = self.fetch_html(box_office_url)
+
         # Check if the response is valid.
-        if self.response is not None:
-            html = BeautifulSoup(self.response, 'html.parser')
+        if response is not None:
+            html = BeautifulSoup(response, 'html.parser')
             movies = []
-            
+
             # For each table-row in the HTML page.
             for tr in html.select('tr'):
                 # Placeholder for each row in our dataframe.
                 row = {
-                    "rank"     : None, 
+                    "rank"     : None,
                     "money"    : None,
                     "name"     : None,
                     "theaters" : None,
                     "date"     : None,
                 }
-                
+
                 # Go through each child and look for the attribute to search.
                 for child in tr.children:
                     for key in self.tags_dict.keys():
                         if self.tags_dict[key] in child.attrs['class']:
                             row[key] = child.text
-                
+
                 movies.append(row)
-                
+
             movies = pd.DataFrame(movies)
-            
+
             return movies
 
         # Raise an exception if we failed to get any data from the url
         raise Exception('Error retrieving contents at {}'.format(self.url))
+
+
+# ------ GET BOX OFFICE COLLECTIONS ------
+# parser = IMDBWebScraper()
+# for year in range(2010, 2019):
+#     print(parser.get_box_office_collection_by_year(year=str(year)).head())
