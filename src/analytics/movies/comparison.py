@@ -38,16 +38,17 @@ def box_office_by_year(query_year, google_trends, imdb_parser, path):
 
     # Get the result from box office collection parser.
     box_office_df  = imdb_parser.get_box_office_collection_by_year(query_year)
-    idx            = np.random.choice(range(box_office_df.shape[0]), 5)
+    idx            = np.random.choice(range(box_office_df.shape[0]), 15)
     movies         = list(box_office_df.iloc[idx]["name"])
     start_date     = query_year + "-01-01"
     end_date       = query_year + "-12-31"
 
     # Query pytrends
     google_trends_box_office_df = \
-            google_trends.get_trends_data(keywords = movies,
-                                          start_date = start_date,
-                                          end_date = end_date).data
+            google_trends.get_trends_data_from_multiple_keywords(
+                                        keywords = movies,
+                                        start_date = start_date,
+                                        end_date = end_date).data
 
     # Sum all the queries across the year.
     total_queries = google_trends_box_office_df.sum(axis = 0)
@@ -75,7 +76,7 @@ def box_office_by_year(query_year, google_trends, imdb_parser, path):
     # plt.show()
 
     # Plot the comparison and save the result.
-    fig = df.plot.bar(rot=0, figsize=(30,10)).get_figure()
+    fig = df.plot.bar(rot=0, figsize=(50,15)).get_figure()
     fig.savefig(path + f'{query_year}_plot_{str(np.random.randint(1, 10))}.png')
 
 
@@ -86,7 +87,7 @@ if __name__ == '__main__':
     path            = ""
 
     for year in range(2010, 2019):
-        try:
-            box_office_by_year(str(year), google_trends, imdb_parser, path)
-        except:
-            print("Exception occured with year = ", year, "\n")
+        #try:
+        box_office_by_year(str(year), google_trends, imdb_parser, path)
+        # except:
+        #     print("Exception occured with year = ", year, "\n")
