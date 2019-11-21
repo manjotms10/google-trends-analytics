@@ -1,15 +1,22 @@
 from utils.google_trends import GoogleTrends
 from utils.misc import line_plot_2Yaxes
 from analytics.video_games.data_preprocessing import sale_history
+import pandas as pd
+import dateutil.relativedelta as timedelta
 
 #%% parameters
 var_index = 4
-hist_game_index = 5
+hist_game_index = 0
 
 var_list = ['Platform','Genre','Publisher','Developer','History','Game']
-hist_game_list = ['Super Mario Odyssey','mario kart 8 deluxe','minecraft','spider man',
-             'nba 2k19','detroit become human ps4','fifa 17',]
-hist_game_release_date = ['2017-10-27','2017-04-27','2009-05-17','2017-07-07',
+#hist_game_list = ['Super Mario Odyssey','mario kart 8 deluxe','minecraft','spider man',
+#             'nba 2k19','detroit become human ps4','fifa 17']
+#hist_game_release_date = ['2017-10-27','2017-04-27','2009-05-17','2017-07-07',
+#                     '2018-09-07','2018-05-25']
+
+hist_game_list = ['minecraft','mario kart 8 deluxe','spider man',
+             'nba 2k19','detroit become human ps4','fifa 17']
+hist_game_release_date = ['2009-05-17','2017-04-27','2017-07-07',
                      '2018-09-07','2018-05-25']
 
 start_date = '2004-01-01'
@@ -47,24 +54,31 @@ elif var_list[var_index] == 'Developer':
 
 elif var_list[var_index] == 'History':
     keywords = [hist_game_list[hist_game_index]]
-    if hist_game_index == 0:
-        start_date = '2017-09-27'
-        end_date = '2018-02-28'
-    elif hist_game_index == 1:
-        start_date = '2017-03-01'
-        end_date = '2017-08-30'
-    elif hist_game_index == 2:
-        start_date = '2009-04-01'
-        end_date = '2009-9-30'
-    elif hist_game_index == 3:
-        start_date = '2017-06-01'
-        end_date = '2017-11-30'
-    elif hist_game_index == 4:  # ok
-        start_date = '2018-08-01'
-        end_date = '2019-01-31'
-    elif hist_game_index == 5:
-        start_date = '2018-04-01'
-        end_date = '2018-09-30'
+    date = hist_game_release_date[hist_game_index]
+    date = pd.Timestamp(date) - timedelta.relativedelta(months=1)
+    date = date.strftime('%Y-%m-%d')
+    rng = pd.date_range(start=date,periods=6,freq='m').strftime('%Y-%m-%d').tolist()
+    start_date = rng[0]
+    end_date = rng[-1]
+    
+#    if hist_game_index == 0:
+#        start_date = '2017-09-27'
+#        end_date = '2018-02-28'
+#    elif hist_game_index == 1:
+#        start_date = '2017-03-01'
+#        end_date = '2017-08-30'
+#    elif hist_game_index == 2:
+#        start_date = '2009-04-01'
+#        end_date = '2009-9-30'
+#    elif hist_game_index == 3:
+#        start_date = '2017-06-01'
+#        end_date = '2017-11-30'
+#    elif hist_game_index == 4:  # ok
+#        start_date = '2018-08-01'
+#        end_date = '2019-01-31'
+#    elif hist_game_index == 5:
+#        start_date = '2018-04-01'
+#        end_date = '2018-09-30'
         
 elif var_list[var_index] == 'Game': # Correlation Analysis of games' total search volume and real sales
     keywords = ['Mario Kart Wii','Wii Sports','New Super Mario Bros','Wii Play',\
@@ -78,8 +92,8 @@ gt.get_trends_data_from_multiple_keywords(keywords=keywords,
                                           category=cat)
 
 #%% data processing
-gt.sort_data_by_year()
-#gt.sort_data_by_year_month()
+#gt.sort_data_by_year()
+gt.sort_data_by_year_month()
 
 if var_list[var_index] == 'Games':
     df3 = gt.data_by_year.sum(axis=0).to_frame(name='total search volume')
@@ -94,7 +108,7 @@ if var_list[var_index] == 'Games':
 if var_list[var_index] == 'History':
 #    fname = './analytics/video_games/2017-2018_by_week.csv'
     fname = './analytics/video_games/2016-2018.csv'
-    df2 = sale_history(fname, limit=20, month_aft=5, plot=True)
+    df2 = sale_history(fname, limit=30, month_aft=5, plot=True)
     line_plot_2Yaxes(gt.data_by_year_month, df2.iloc[:,1], save_fig=True, plot_name='line_plot_comparison')
     
 

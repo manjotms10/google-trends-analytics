@@ -207,7 +207,7 @@ def sale_history(fname, limit=10, month_aft=5, plot=False):
         msale_hist = msale_hist.iloc[:,:limit]
                  
     # output to csv
-    msale_hist.to_csv('vgsales-game-sale-history.csv')
+    msale_hist.swapaxes('index','columns').to_csv('./analytics/video_games/vgsales-game-sale-history.csv')
     print(msale_hist)
     
     # plot

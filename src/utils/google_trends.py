@@ -261,10 +261,13 @@ class GoogleTrends:
 #        cat = pd.CategoricalDtype(rng,ordered=True)
         
         # reindex dataframe using Year-Month      
-        self.data['Year-Month'] = self.data.index.strftime('%Y-%m')
-#        self.data['Year-Month'] = self.data['Year-Month'].astype(cat)
-        self.data.set_index('Year-Month',inplace=True)
-        
+        try:
+            self.data['Year-Month'] = self.data.index.strftime('%Y-%m')
+    #        self.data['Year-Month'] = self.data['Year-Month'].astype(cat)
+            self.data.set_index('Year-Month',inplace=True)
+        except AttributeError:
+            pass
+
         # get the range of Year-Month in ascending order
         yr_month_range = self.data.groupby(self.data.index).count().index.sort_values().to_list()
           
