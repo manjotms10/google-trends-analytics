@@ -43,7 +43,7 @@ def data_cleaning(fname, platforms=[], merge_keywords=[], keywords=[], del_keywo
     nrow, ncol = df.shape
     print(f'There are {nrow} rows and {ncol} columns in refined data')
 
-    df.to_csv('vgsales-refined-data.csv', index=False)
+    df.to_csv('./analytics/video_games/output data/vgsales-refined-data.csv', index=False)
 
     print('Genre includes', df['Genre'].value_counts().to_dict())
     print('ESRB_rating includes', df['ESRB_Rating'].value_counts().to_dict())
@@ -106,13 +106,11 @@ def data_sorting(fname, keyword, limit=10, line_plot=False, bar_plot=False):
     output = output.drop(list(output)[limit+1:], axis=1)
 
     # recalculate the total sale
-#    output["total"] = output.sum(axis=1)
     output["total"] = output.drop('total',axis=1).sum(axis=1)
 
     # output
     output = output.round(2)
-    output.to_csv('./sorted data/vgsales-%s-year.csv' % keyword)
-#    output.drop('total', axis=1).drop('total', axis=0).plot()
+    output.to_csv('./analytics/video_games/output data/vgsales-%s-year.csv' % keyword)
     output.drop('total', axis=1).drop('total', axis=0)
     print(output)
     
@@ -149,13 +147,6 @@ def data_sorting(fname, keyword, limit=10, line_plot=False, bar_plot=False):
         plt.savefig(f'../../saved_plots/vgsales-{keyword}-year_bar.png',bbox_inches='tight')
     
     return output
-
-#if __name__ == "__main__":
-#    fname = 'vgsales-refined-data.csv'
-#    var_list = ['Platform','Genre','Publisher','Developer']
-#    for var in var_list:
-#        data_sorting(fname, var, limit=5, line_plot=True)
-#        data_sorting(fname, var, limit=5, bar_plot=True)
         
     
 def sale_history(fname, limit=10, month_aft=5, plot=False):
@@ -207,7 +198,7 @@ def sale_history(fname, limit=10, month_aft=5, plot=False):
         msale_hist = msale_hist.iloc[:,:limit]
                  
     # output to csv
-    msale_hist.swapaxes('index','columns').to_csv('./analytics/video_games/vgsales-game-sale-history.csv')
+    msale_hist.swapaxes('index','columns').to_csv('./analytics/video_games/output/vgsales-game-sale-history.csv')
     print(msale_hist)
     
     # plot
@@ -223,7 +214,3 @@ def sale_history(fname, limit=10, month_aft=5, plot=False):
         plt.savefig(f'../../saved_plots/vgsales-game-sale-history.png',bbox_inches='tight')
     
     return msale_hist
-
-#if __name__ == "__main__":
-#    fname = '2017-2018_by_week.csv'
-#    sale_history(fname, limit=5, plot=True)

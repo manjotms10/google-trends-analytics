@@ -4,16 +4,18 @@ from analytics.video_games.data_preprocessing import sale_history
 import pandas as pd
 import dateutil.relativedelta as timedelta
 
-# Comparison of games' search volume history and real sale history 
+# Compare games' Google Trends' search volume history 
+# (6 months: from one month before release to 5 months after release)
+# with corresponding monthly sale history 
 
 #%% parameters
 cat = '41'               # category = computer $ video games
 gt = GoogleTrends()
 
 #%% analysis
-fname = './analytics/video_games/vgsales-game-release-date.csv'
+fname = './analytics/video_games/input data/vgsales-game-release-date.csv'
 df = pd.read_csv(fname,delimiter=',')
-fname = './analytics/video_games/2016-2018.csv'
+fname = './analytics/video_games/input data/2016-2018.csv'
 df2 = sale_history(fname, limit=30, month_aft=5, plot=True)
 
 for i,game in enumerate(df.game.tolist()):
@@ -34,8 +36,6 @@ for i,game in enumerate(df.game.tolist()):
     # data processing
     gt.sort_data_by_year_month()
     
-
     # plot
     fig_name = 'game' + str(i) + '_line_plot_comparison'
     line_plot_2Yaxes(gt.data_by_year_month, df2.iloc[:,i], save_fig=True, plot_name=fig_name)
-    
