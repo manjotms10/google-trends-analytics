@@ -223,7 +223,7 @@ class GoogleTrends:
         of interest.
         
         Return:
-            a dataframe with index of years and columns of 
+            a dataframe with index of Year and columns of 
             yearly search volume of keywords
         """
         
@@ -251,8 +251,8 @@ class GoogleTrends:
         of interest.
         
         Return:
-            a dataframe with index of years and columns of 
-            yearly search volume of keywords
+            a dataframe with index of Year-Month and columns of "Year-Month"
+            search volume of keywords
         """
 
         # generate a CategoryDtype for Year-Month
@@ -379,7 +379,7 @@ class GoogleTrends:
             plt.savefig(file_name,bbox_inches='tight')
             logger.info("Plot successfully saved to {}".format(file_name))
             
-    def bar_plot(self, show_values=False, value_format='{}', save_fig=False, plot_name='bar_plot'):
+    def stack_bar_plot(self, show_values=False, value_format='{}', save_fig=False, plot_name='bar_plot'):
         """
         The method plots the dataframe (with stacked bars) that was last 
         queried by the self.get_trends_data method and was sorted by year.

@@ -158,14 +158,14 @@ def data_sorting(fname, keyword, limit=10, line_plot=False, bar_plot=False):
 #        data_sorting(fname, var, limit=5, bar_plot=True)
         
     
-    
-def sale_history(fname, limit=10, plot=False):
+def sale_history(fname, limit=10, month_aft=5, plot=False):
     """
     Returns sale history of top number (<='limit') of games from the data file. 
     The sale history of selective games will be output to csv file and plotted.
     
     :param fname: string
     :param limit: integer, output sale history of top 'limit' number of games
+    :param month_aft: the specified number of months after release
     :param plot: bool, if True, line plot is produced and saved
     """
 
@@ -175,55 +175,37 @@ def sale_history(fname, limit=10, plot=False):
 
     # read data file
     df = pd.read_csv(fname, delimiter=',')
-    nrow, ncol = df.shape
+    week_aft = month_aft*4 # weeks after sales to be considered
     
     # drop rows without data (only games ranked top 30 have data)
     df = df.loc[df['rank of the week'] <= 30]
     
     # select games that were released at least 20 weeks ago
-    game_list = []
-    for i in range(int(df.shape[0]/75)):
-        df2 = df.iloc[i*75:i*75+30,:]
-        df2 = df2.sort_values(by=['total sales'])
-        game_list.append(df2.loc[df2['week after release'] >= 20]['name'].tolist())
-    game_list = [item for sublist in game_list for item in sublist]
+    game_list = df.name.tolist()
     game_list = list(set(game_list))
-    
-
         
     # create a dataframe containing Monthly Sales of selected games
-    msale_hist = pd.DataFrame()
-#    msale_hist = pd.DataFrame(data=0, index=np.arange(52))
-    
-#    game = game_list[5]
+    msale_hist = pd.DataFrame(index=list(range(month_aft+1)))
     for game in game_list:
         # weekly sales
         wsale_hist = df.loc[df['name'] == game] # weekly sales of the selected game
         wsale_hist = wsale_hist.iloc[::-1]      # reverse dataframe
         wsale_hist.reset_index(inplace=True,drop=True)    # reset index
-        
-        # monthly sales
-#        msale_hist = pd.DataFrame(data=0,
-#                                  index=np.arange(round(wsale_hist.shape[0]/4)+1),
-#                                  columns=['monthly sales'])
-        
         temp = wsale_hist['week after release']
-        if all(temp == list(range(1,len(temp)+1))):
+        
+#        if len(temp) >= week_aft and all(temp == list(range(1,len(temp)+1))):
+        if len(temp) >= week_aft and all(temp[:20] == list(range(1,21))):
             j = 0
-            pd.concat((msale_hist,pd.DataFrame(columns=game)),axis=1)
-            for i in range(wsale_hist.shape[0]):
+            msale_hist[game] = 0
+            for i in range(month_aft*4):
                 if i % 4 == 0:
                     j += 1
                 week_sale = int(wsale_hist['weekly sales'][i].replace(',',''))
-#                msale_hist.iloc[j,0] += week_sale
-                msale_hist[game][i] += week_sale
-        
-#    msale_hist = wsale_hist.loc[wsale_hist['week after release'] % 4 == 0]
+                msale_hist[game][j] += week_sale
 
-#    if len(game_list) > limit:
-#        game_list = game_list[:limit]
-                
-                
+    if len(msale_hist.columns.to_list()) > limit:
+        msale_hist = msale_hist.iloc[:,:limit]
+                 
     # output to csv
     msale_hist.to_csv('vgsales-game-sale-history.csv')
     print(msale_hist)
@@ -232,8 +214,8 @@ def sale_history(fname, limit=10, plot=False):
     if plot:
         plt.rcParams.update({'font.size':18})
         plt.figure(figsize=(12,6))
-        plt.plot(msale_hist['monthly sales'][:6],label=game)
-        plt.legend()
+        [plt.plot(msale_hist[game][:month_aft+1],label=game) for game in msale_hist.columns.to_list()]
+        plt.legend(bbox_to_anchor=(1,1),fontsize=12)
         plt.grid()
         plt.xlabel('Months after release')
         plt.ylabel('Monthly sales')
