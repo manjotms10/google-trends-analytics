@@ -217,9 +217,72 @@ class GoogleTrends:
             
         return self
     
-    def plot(self, save_fig=False, plot_name='plot'):
+    def sort_data_by_year(self):
+        """
+        This function sums the search volume of keywords within each year 
+        of interest.
+        
+        Return:
+            a dataframe with index of years and columns of 
+            yearly search volume of keywords
+        """
+        
+        # reindex dataframe using Year
+        self.data['Year'] = self.data.index.year
+        self.data.set_index('Year',inplace=True)
+        
+        # get the range of years
+        year_range = self.data.groupby(self.data.index).count().index.to_list()
+        
+        # create a data frame with index of unique years and columns of keywords
+        self.data_by_year = pd.DataFrame()
+        for yr in year_range:
+            temp = self.data[self.data.index == yr].sum(axis=0).to_frame(name=yr).swapaxes('index','columns')
+            self.data_by_year = pd.concat((self.data_by_year,temp),axis=0)
+        
+        # normalize by the max aggregate search volume of years
+        self.data_by_year = self.data_by_year / self.data_by_year.sum(axis=1).max() * 100
+        
+        return self
+    
+    def sort_data_by_year_month(self):
+        """
+        This function sums the search volume of keywords within each month 
+        of interest.
+        
+        Return:
+            a dataframe with index of years and columns of 
+            yearly search volume of keywords
+        """
+
+        # generate a CategoryDtype for Year-Month
+#        rng = self.data.index.strftime('%Y-%m-%d')
+#        rng = pd.date_range(start=rng.values[0],end=rng.values[-1],freq='m').strftime('%Y-%m')
+#        cat = pd.CategoricalDtype(rng,ordered=True)
+        
+        # reindex dataframe using Year-Month      
+        self.data['Year-Month'] = self.data.index.strftime('%Y-%m')
+#        self.data['Year-Month'] = self.data['Year-Month'].astype(cat)
+        self.data.set_index('Year-Month',inplace=True)
+        
+        # get the range of Year-Month in ascending order
+        yr_month_range = self.data.groupby(self.data.index).count().index.sort_values().to_list()
+          
+        # create a data frame with index of unique Year-Month and columns of keywords
+        self.data_by_year_month = pd.DataFrame()
+        for yr in yr_month_range:
+            temp = self.data[self.data.index == yr].sum(axis=0).to_frame(name=yr).swapaxes('index','columns')
+            self.data_by_year_month = pd.concat((self.data_by_year_month,temp),axis=0)
+            
+        # normalize by the max aggregate search volume of months
+        self.data_by_year_month = self.data_by_year_month / self.data_by_year_month.sum(axis=1).max() * 100
+        
+        return self
+    
+    def line_plot(self, save_fig=False, plot_name='line_plot'):
         '''
-        The method plots the dataframe that was last queried by the self.get_trends_data method.
+        The method plots the dataframe (with lines) that was last queried by 
+        the self.get_trends_data method.
         
         Args:
             save_fig (bool) - The parameter decides whether to save the plot or not. By default it is False
@@ -237,18 +300,136 @@ class GoogleTrends:
         logger.info("Plotting dataframe of size - ({}, {})".format(self.data.shape[0], self.data.shape[1]))
             
         plt.figure(figsize=(12,6))
-        [plt.plot(self.data[i],label=i) for i in self.keywords]
+        [plt.plot(self.data[i],label=i,zorder=3) for i in self.keywords]
         plt.legend(bbox_to_anchor=(1,1))
-        plt.grid()
-        plt.xlabel('timeframe')
-        plt.ylabel('normalized search interest')
+        plt.grid(zorder=0)
+        plt.xlabel('Timeframe')
+        plt.ylabel('Normalized search interest')
         plt.xticks(rotation=70)
         plt.ylim(0,100)
         
         if save_fig == True:
             file_name = GoogleTrends.plot_directory.format(plot_name)
-            plt.savefig(file_name,bbox_inches=None)
+            plt.savefig(file_name,bbox_inches='tight')
             logger.info("Plot successfully saved to {}".format(file_name))
-         
+
+    def line_plot_by_year(self, save_fig=False, plot_name='line_plot_by_year'):
+        '''
+        The method plots the dataframe (with lines) that was last queried by 
+        the self.get_trends_data method and sorted by Year.
         
-    
+        Args:
+            save_fig (bool) - The parameter decides whether to save the plot or not. By default it is False
+            plot_name (str) - The name of the plot to be saved. Will be used if save_fig is set to true
+        '''
+        
+        assert isinstance(save_fig, bool)
+        assert isinstance(plot_name, str)
+        if(self.data.empty or len(self.keywords) == 0):
+            logger.warn("Make sure you call the get_trends_data() method before calling the plot method")
+            return 
+        if(save_fig == True and plot_name == 'plot'):
+            logger.warn("Using the default name - {} for saving the plot to disk".format(plot_name))
+        
+        logger.info("Plotting dataframe of size - ({}, {})".format(self.data.shape[0], self.data.shape[1]))
+            
+        plt.figure(figsize=(12,6))
+        [plt.plot(self.data_by_year[i],label=i,zorder=3) for i in self.keywords]
+        plt.legend(bbox_to_anchor=(1,1))
+        plt.grid(zorder=0)
+        plt.xlabel('Timeframe')
+        plt.ylabel('Normalized search interest')
+        plt.xticks(list(self.data_by_year.index),rotation=70)
+        
+        if save_fig == True:
+            file_name = GoogleTrends.plot_directory.format(plot_name)
+            plt.savefig(file_name,bbox_inches='tight')
+            logger.info("Plot successfully saved to {}".format(file_name))
+
+    def line_plot_by_year_month(self, save_fig=False, plot_name='line_plot_by_year_month'):
+        '''
+        The method plots the dataframe (with lines) that was last queried by 
+        the self.get_trends_data method and sorted by Year-Month.
+        
+        Args:
+            save_fig (bool) - The parameter decides whether to save the plot or not. By default it is False
+            plot_name (str) - The name of the plot to be saved. Will be used if save_fig is set to true
+        '''
+        
+        assert isinstance(save_fig, bool)
+        assert isinstance(plot_name, str)
+        if(self.data.empty or len(self.keywords) == 0):
+            logger.warn("Make sure you call the get_trends_data() method before calling the plot method")
+            return 
+        if(save_fig == True and plot_name == 'plot'):
+            logger.warn("Using the default name - {} for saving the plot to disk".format(plot_name))
+        
+        logger.info("Plotting dataframe of size - ({}, {})".format(self.data.shape[0], self.data.shape[1]))
+            
+        plt.figure(figsize=(12,6))
+        [plt.plot(self.data_by_year_month[i],label=i,zorder=3) for i in self.keywords]
+        plt.legend(bbox_to_anchor=(1,1))
+        plt.grid(zorder=0)
+        plt.xlabel('Timeframe')
+        plt.ylabel('Normalized search interest')
+        plt.ylim(0,100)
+        
+        if save_fig == True:
+            file_name = GoogleTrends.plot_directory.format(plot_name)
+            plt.savefig(file_name,bbox_inches='tight')
+            logger.info("Plot successfully saved to {}".format(file_name))
+            
+    def bar_plot(self, show_values=False, value_format='{}', save_fig=False, plot_name='bar_plot'):
+        """
+        The method plots the dataframe (with stacked bars) that was last 
+        queried by the self.get_trends_data method and was sorted by year.
+        
+        Args:
+            show_values (bool) - If True then numeric value labels will be shown on each bar
+            value_format (str) - Format string for numeric value labels (default is '{}')
+            save_fig (bool) - The parameter decides whether to save the plot or not. By default it is False
+            plot_name (str) - The name of the plot to be saved. Will be used if save_fig is set to true
+        """
+        
+        assert isinstance(save_fig, bool)
+        assert isinstance(plot_name, str)
+        if(self.data.empty or len(self.keywords) == 0):
+            logger.warn("Make sure you call the get_trends_data() method before calling the plot method")
+            return 
+        if(save_fig == True and plot_name == 'plot'):
+            logger.warn("Using the default name - {} for saving the plot to disk".format(plot_name))
+        
+        logger.info("Plotting dataframe of size - ({}, {})".format(self.data.shape[0], self.data.shape[1]))
+        
+        keywords = self.keywords
+        df = self.data_by_year
+        ind = list(df.index)
+        
+        plt.figure(figsize=(12,6))
+        axes = []
+        agg_sum = np.zeros(len(ind))
+        for i in keywords:
+            axes.append(plt.bar(ind,df[i],label=i,bottom=agg_sum,zorder=3))
+            agg_sum += df[i].values
+        
+        if show_values:
+            for axis in axes:
+                for bar in axis:
+                    w, h = bar.get_width(), bar.get_height()
+                    if h > 2:
+                        plt.text(bar.get_x() + w/2, bar.get_y() + h/2, 
+                             value_format.format(h), ha="center", 
+                             va="center",fontsize=10)
+        
+        plt.legend(bbox_to_anchor=(1,1))
+#        plt.legend(bbox_to_anchor=(0,-0.8,1,0.5),ncol=5,mode="expand",borderaxespad=0.,
+#                   fontsize=12)
+        plt.grid(axis='y',zorder=0)
+        plt.xlabel('Timeframe')
+        plt.ylabel('Normalized search interest')
+        plt.xticks(ind,rotation=70)
+        
+        if save_fig == True:
+            file_name = GoogleTrends.plot_directory.format(plot_name)
+            plt.savefig(file_name,bbox_inches='tight')
+            logger.info("Plot successfully saved to {}".format(file_name))
