@@ -66,6 +66,7 @@ def data_cleaning(fname, platforms=[], merge_keywords=[], keywords=[], del_keywo
 #    start_year = 2004
 #    data_cleaning(fname, platforms=platforms, merge_keywords=merge_keywords, keywords=keywords, del_keywords=del_keywords, start_year=2004)
 
+
 def data_sorting(fname, keyword, limit=10, line_plot=False, bar_plot=False):
     """
     Sorting out the total sale of a certain type (keyword) video games each year.
@@ -214,3 +215,60 @@ def sale_history(fname, limit=10, month_aft=5, plot=False):
         plt.savefig(f'../../saved_plots/vgsales-game-sale-history.png',bbox_inches='tight')
     
     return msale_hist
+
+
+def keyword_data_sorting(fname, year=[], genre=[], esrb_rating=[], platform=[], publisher=[], developer=[], top=1):
+    """
+    Sorting out the total sale of a certain type (keyword) video games each year.
+    Only top 'top' video games are listed in the file and picture.
+    :param fname: string
+    :param top: integer, only show top 'limit' number of data
+    """
+
+    import pandas as pd
+
+    # read file
+    df = pd.read_csv(fname, delimiter=',')
+    nrow, ncol = df.shape
+    df['Year'] = df['Year'].astype('int')
+
+    # delete rows which are not satisfied with the criteria
+    for i in range(nrow):
+        if year and df['Year'][i] not in year:
+            df.drop(index=i, inplace=True)
+        elif genre and df['Genre'][i] not in genre:
+            df.drop(index=i, inplace=True)
+        elif esrb_rating and df['ESRB_Rating'][i] not in esrb_rating:
+            df.drop(index=i, inplace=True)
+        elif platform and df['Platform'][i] not in platform:
+            df.drop(index=i, inplace=True)
+        elif publisher and df['Publisher'][i] not in publisher:
+            df.drop(index=i, inplace=True)
+        elif developer and df['Developer'][i] not in developer:
+            df.drop(index=i, inplace=True)
+    assert not df.empty, 'No video game satisfy this criteria'
+
+    # combine the repeat elements
+    output_df = pd.DataFrame(index=list(set(df['Name'])), columns=['Total_Sale'])
+    output_df['Total_Sale'] = 0
+    nrow, ncol = df.shape
+    for i in range(nrow):
+        output_df.loc[df.iloc[i, 1], 'Total_Sale'] += df.iloc[i, 9]
+    output_df.sort_values(by='Total_Sale', ascending=False, inplace=True)
+
+    nrow, ncol = output_df.shape
+    # delete excessive rows
+    assert nrow >= top, 'Only %d video game satisfy this criteria, please check input "top"' % nrow
+    output_df.drop(index=output_df.index[top:], inplace=True)
+
+    # normalize
+    max_sale = max(output_df['Total_Sale'])
+    for i in range(top):
+        output_df.iloc[i, 0] = output_df.iloc[i, 0]/max_sale*100
+
+    return output_df
+
+
+# if __name__ == "__main__":
+#     filename = 'vgsales-refined-data.csv'
+#     output_file = keyword_data_sorting(filename, year=[2012], genre=['Sports'], top=8)
