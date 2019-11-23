@@ -1,13 +1,14 @@
 from utils.google_trends import GoogleTrends
 import pandas as pd
 from analytics.video_games.data_preprocessing import keyword_data_sorting
+from utils.misc import bar_plot_comparison, scatter_plot
 
 # get data from vgchartz
 # a pandas dataframe with index = game name, and column = total sale
 # For example, if genre=[], platform=[], the top number of games are under the 
 # condition of the specified year: in 2015, top 100 games
 filename = './analytics/video_games/input data/vgsales-refined-data.csv'
-vg_df = keyword_data_sorting(filename, year=[2015], genre=[], platform=[], top=20)
+vg_df = keyword_data_sorting(filename, year=[2018], genre=[], platform=[], top=90)
 
 
 #%% parameters for Pytrends
@@ -39,7 +40,5 @@ gt_df = gt_df / gt_df.max() * 100
 df = pd.concat((vg_df,gt_df),axis=1,sort=True)
 
 #%% plot
-
-
-
-
+#bar_plot_comparison(df)
+scatter_plot(df)
