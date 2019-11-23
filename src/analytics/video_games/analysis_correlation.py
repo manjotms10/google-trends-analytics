@@ -8,7 +8,7 @@ from utils.misc import bar_plot_comparison, scatter_plot
 # For example, if genre=[], platform=[], the top number of games are under the 
 # condition of the specified year: in 2015, top 100 games
 filename = './analytics/video_games/input data/vgsales-refined-data.csv'
-vg_df = keyword_data_sorting(filename, year=[2018], genre=[], platform=[], top=90)
+vg_df = keyword_data_sorting(filename, year=[2018], genre=[], platform=[], top=10)
 
 
 #%% parameters for Pytrends
@@ -25,20 +25,27 @@ gt = GoogleTrends()
 
 keywords = vg_df.index.tolist()
 
+#keywords = ['Pokemon: Lets Go, Eevee!','Pokemon Lets Go Eevee']
+
 #%% get google-trends data
 gt.get_trends_data_from_multiple_keywords(keywords=keywords, 
                                           start_date=start_date,
                                           end_date=end_date, 
                                           category=cat)
+#gt.get_trends_data(keywords=keywords, 
+#                                          start_date=start_date,
+#                                          end_date=end_date, 
+#                                          category=cat)
 
 #%% data processing
 gt.sort_data_by_year()
 gt_df = gt.data_by_year.sum(axis=0).to_frame(name='Total Search Volume')
+#gt_df = gt_df[gt_df == 0]
 gt_df = gt_df / gt_df.max() * 100
 
 #%% combine dataframes
 df = pd.concat((vg_df,gt_df),axis=1,sort=True)
 
 #%% plot
-#bar_plot_comparison(df)
+bar_plot_comparison(df)
 scatter_plot(df)

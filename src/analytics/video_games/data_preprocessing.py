@@ -226,11 +226,14 @@ def keyword_data_sorting(fname, year=[], genre=[], esrb_rating=[], platform=[], 
     """
 
     import pandas as pd
+    import string
 
     # read file
     df = pd.read_csv(fname, delimiter=',')
     nrow, ncol = df.shape
     df['Year'] = df['Year'].astype('int')
+    for i in range(nrow):
+        df.loc[i, 'Name'] = df.loc[i, 'Name'].translate(str.maketrans('', '', string.punctuation))
 
     # delete rows which are not satisfied with the criteria
     for i in range(nrow):
@@ -248,7 +251,7 @@ def keyword_data_sorting(fname, year=[], genre=[], esrb_rating=[], platform=[], 
             df.drop(index=i, inplace=True)
     assert not df.empty, 'No video game satisfy this criteria'
 
-    # combine the repeat elements
+    # Replace all the punctuations in the instring to a blank
     output_df = pd.DataFrame(index=list(set(df['Name'])), columns=['Total_Sale'])
     output_df['Total_Sale'] = 0
     nrow, ncol = df.shape
@@ -265,10 +268,12 @@ def keyword_data_sorting(fname, year=[], genre=[], esrb_rating=[], platform=[], 
     max_sale = max(output_df['Total_Sale'])
     for i in range(top):
         output_df.iloc[i, 0] = output_df.iloc[i, 0]/max_sale*100
+    #
+    # for i in output_df.index:
+    #     output_df['Name'][i] = i.translate(str.maketrans('', '', string.punctuation))
 
     return output_df
 
-
-# if __name__ == "__main__":
-#     filename = 'vgsales-refined-data.csv'
-#     output_file = keyword_data_sorting(filename, year=[2012], genre=['Sports'], top=8)
+#if __name__ == "__main__":
+#    filename = 'vgsales-refined-data.csv'
+#    output_file = keyword_data_sorting(filename, year=[2012], genre=['Sports'], top=8)

@@ -5,14 +5,14 @@ from analytics.video_games.data_preprocessing import data_sorting
 # (Platform, Genre, Publisher, Developer) with corresponding Google Trends'
 # search volume hisotry (yearly)
 
-feat_index = 3  # feature index: 0-3, indicates which feature is analyzed
+feat_index = 0  # feature index: 0-3, indicates which feature is analyzed
 feat_list = ['Platform','Genre','Publisher','Developer']
 
 #%% vgchartz data
 fname = './analytics/video_games/input data/vgsales-refined-data.csv'
-for feat in feat_list:
-    data_sorting(fname, feat, limit=5, line_plot=True)
-    data_sorting(fname, feat, limit=5, bar_plot=True)
+#for feat in feat_list:
+#    data_sorting(fname, feat, limit=5, line_plot=True)
+#    data_sorting(fname, feat, limit=5, bar_plot=True)
     
 #%% parameters for Google Trends data
 start_date = '2004-01-01'

@@ -241,7 +241,7 @@ class GoogleTrends:
             self.data_by_year = pd.concat((self.data_by_year,temp),axis=0)
         
         # normalize by the max aggregate search volume of years
-        self.data_by_year = self.data_by_year / self.data_by_year.sum(axis=1).max() * 100
+        self.data_by_year = self.data_by_year / self.data_by_year.max().max() * 100
         
         return self
     
