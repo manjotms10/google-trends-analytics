@@ -10,9 +10,9 @@ feat_list = ['Platform','Genre','Publisher','Developer']
 
 #%% vgchartz data
 fname = './analytics/video_games/input data/vgsales-refined-data.csv'
-#for feat in feat_list:
-#    data_sorting(fname, feat, limit=5, line_plot=True)
-#    data_sorting(fname, feat, limit=5, bar_plot=True)
+for feat in feat_list:
+    data_sorting(fname, feat, limit=4, line_plot=True)
+    data_sorting(fname, feat, limit=4, bar_plot=True)
     
 #%% parameters for Google Trends data
 start_date = '2004-01-01'
@@ -26,7 +26,8 @@ gt = GoogleTrends()
 #%%
 if feat_list[feat_index] == 'Platform':
     # top 5 platforms in vgchartz data
-    keywords = ['Xbox360','PS3','Wii','DS','PS4']
+#    keywords = ['Xbox360','PS3','Wii','DS','PS4','3DS']
+    keywords = ['PS3','Wii','DS','PS4']
     
     # 11 platforms
 #    keywords = ['Sony Playstation 4','Nintendo Switch','XBox One','Nintendo 3DS',
@@ -40,10 +41,10 @@ if feat_list[feat_index] == 'Platform':
 #    keywords = ['Sony Playstation 4','Xbox One','Nintendo 3DS','Nintendo Wii','Nintendo DS']
     
 elif feat_list[feat_index] == 'Genre':
-    keywords = ['Sports','Shooter','Action','Role-Playing','Platform']
+    keywords = ['Sports','Shooter','Action','Role-Playing','Platform','Racing']
     
 elif feat_list[feat_index] == 'Publisher':
-    keywords = ['Nintendo','Activision','Electronic Arts','Ubisoft','EA Sports']
+    keywords = ['Nintendo','Activision','Electronic Arts','Ubisoft','EA Sports','Sony Computer Entertainment']
     
 elif feat_list[feat_index] == 'Developer':
     keywords = ['Nintendo EAD','Game Freak','EA Canada','Infinity Ward','Ubisoft Montreal']

@@ -232,8 +232,12 @@ def keyword_data_sorting(fname, year=[], genre=[], esrb_rating=[], platform=[], 
     df = pd.read_csv(fname, delimiter=',')
     nrow, ncol = df.shape
     df['Year'] = df['Year'].astype('int')
+    # remove the punctuation
     for i in range(nrow):
         df.loc[i, 'Name'] = df.loc[i, 'Name'].translate(str.maketrans('', '', string.punctuation))
+    # combine name with platform
+#    for i in range(nrow):
+#        df.loc[i, 'Name'] = df.loc[i, 'Name'] + ' ' + df.loc[i, 'Platform']
 
     # delete rows which are not satisfied with the criteria
     for i in range(nrow):
@@ -252,12 +256,12 @@ def keyword_data_sorting(fname, year=[], genre=[], esrb_rating=[], platform=[], 
     assert not df.empty, 'No video game satisfy this criteria'
 
     # Replace all the punctuations in the instring to a blank
-    output_df = pd.DataFrame(index=list(set(df['Name'])), columns=['Total_Sale'])
-    output_df['Total_Sale'] = 0
+    output_df = pd.DataFrame(index=list(set(df['Name'])), columns=['Total Sale Volume'])
+    output_df['Total Sale Volume'] = 0
     nrow, ncol = df.shape
     for i in range(nrow):
-        output_df.loc[df.iloc[i, 1], 'Total_Sale'] += df.iloc[i, 9]
-    output_df.sort_values(by='Total_Sale', ascending=False, inplace=True)
+        output_df.loc[df.iloc[i, 1], 'Total Sale Volume'] += df.iloc[i, 9]
+    output_df.sort_values(by='Total Sale Volume', ascending=False, inplace=True)
 
     nrow, ncol = output_df.shape
     # delete excessive rows
@@ -265,7 +269,7 @@ def keyword_data_sorting(fname, year=[], genre=[], esrb_rating=[], platform=[], 
     output_df.drop(index=output_df.index[top:], inplace=True)
 
     # normalize
-    max_sale = max(output_df['Total_Sale'])
+    max_sale = max(output_df['Total Sale Volume'])
     for i in range(top):
         output_df.iloc[i, 0] = output_df.iloc[i, 0]/max_sale*100
     #

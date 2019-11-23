@@ -39,27 +39,53 @@ def line_plot_2Yaxes(df1, df2, save_fig=False, plot_name='line_plot_by_year_mont
         file_name = '../../saved_plots/{}.png'.format(plot_name)
         plt.savefig(file_name,bbox_inches='tight')
     
-def bar_plot_comparison(df):
+def bar_plot_comparison(df, save_fig=False, plot_name='bar_plot'):
     '''
-    This function is to produce graph using the same y aixs
+    This function is to produce bar chart using the same y aixs
     '''
     col1 = df.columns.values[0]
     col2 = df.columns.values[1]
+    df = df.sort_values(by=col1, ascending=True)
     df1 = pd.DataFrame(df[col1]) #dataframe of one category
     df1 = df1.rename(columns={col1:"Normalized value"})#change column name to 'normalized value'
     df2 = pd.DataFrame(df[col2]) #dataframe of another category
     df2 = df2.rename(columns={col2:"Normalized value"})#change column name to 'normalized value'
     df4 = pd.concat([df1, df2], axis=0, ignore_index=False)#connect two dataframes
-    df4['Legends'] = (len(df1)*(col2,) + len(df2)*(col1,))#add column 'legends'
+    df4['Legends'] = (len(df1)*(col1,) + len(df2)*(col2,))#add column 'legends'
     df4['Games'] = df4.index
     df4.reset_index(inplace=True)
 
-    plot = sns.catplot(x='Normalized value', y='Games', hue='Legends', kind='bar',height=10, data=df4)
+    plot = sns.catplot(x='Normalized value', y='Games', hue='Legends',
+                       kind='bar',height=8, data=df4,legend_out=False)
+    plt.xlim(0,100)
     plot.set_xticklabels(fontsize=20)
     plot.set_xlabels(fontsize=20)
     plot.set_yticklabels(fontsize=20)
     plot.set_ylabels(fontsize=20)
+    plt.legend(fontsize=20)
     
-def scatter_plot(df):
-    sns.set(style="ticks")
-    sns.relplot(x="Total_Sale", y="Total Search Volume", data=df)
+    if save_fig == True:
+        file_name = '../../saved_plots/{}.png'.format(plot_name)
+        plot.savefig(file_name,bbox_inches='tight')
+    
+def scatter_plot(df, save_fig=False, plot_name='scatter_plot'):
+    """
+    
+    """
+    
+    col1 = df.columns.values[0]
+    col2 = df.columns.values[1]
+    fig,ax = plt.subplots(figsize=(8,8))
+    plt.scatter(df.iloc[:,0],df.iloc[:,1])
+    plt.xlim(0,100)
+    plt.ylim(0,100)
+    ax.tick_params(axis='both', which='major', labelsize=20)
+    ax.set_xlabel(col1,fontsize=20)
+    ax.set_ylabel(col2,fontsize=20)
+    plt.rcParams.update({'font.size':20})
+#    ax.set_yscale('log')
+#    ax.set_xscale('log')
+    
+    if save_fig == True:
+        file_name = '../../saved_plots/{}.png'.format(plot_name)
+        plt.savefig(file_name,bbox_inches='tight')
