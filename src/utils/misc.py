@@ -1,8 +1,9 @@
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FormatStrFormatter
 import pandas as pd
+import numpy as np
 import seaborn as sns
-plt.rcParams.update({'font.size':20})
+plt.rcParams.update({'font.size':24})
 
 def line_plot_2Yaxes(df1, df2, save_fig=False, plot_name='line_plot_by_year_month'):
     '''
@@ -13,7 +14,7 @@ def line_plot_2Yaxes(df1, df2, save_fig=False, plot_name='line_plot_by_year_mont
         save_fig (bool) - The parameter decides whether to save the plot or not. By default it is False
         plot_name (str) - The name of the plot to be saved. Will be used if save_fig is set to true
     '''
-
+    
     fig,ax1 = plt.subplots(figsize=(12,6))
     ax1.set_xlabel('Timeframe')
     ax1.set_ylabel('Normalized search interest',color='r')
@@ -44,8 +45,7 @@ def bar_plot_comparison(df, save_fig=False, plot_name='bar_plot'):
     '''
     This function is to produce bar chart using the same y aixs
     '''
-    import numpy as np
-    
+    plt.rcParams.update({'font.size':24})
     col1 = df.columns.values[0]
     col2 = df.columns.values[1]
     df = df.sort_values(by=col1, ascending=True)
@@ -56,7 +56,7 @@ def bar_plot_comparison(df, save_fig=False, plot_name='bar_plot'):
     df4 = pd.concat([df1, df2], axis=0, ignore_index=False)#connect two dataframes
     df4['Legends'] = (len(df1)*(col1,) + len(df2)*(col2,))#add column 'legends'
     
-    # add '\n' to keywords if their length is too long
+    # add '\n' to keywords that are too long
     name_list = df4.index.tolist()
     for idx,name in enumerate(name_list):
         if len(name) > 15:
@@ -82,12 +82,13 @@ def bar_plot_comparison(df, save_fig=False, plot_name='bar_plot'):
                        kind='bar',height=10, data=df4,legend_out=False,
                        palette=sns.color_palette(['#E3715F','#4052A7']).as_hex())
     plt.xlim(0,100)
-    plot.set_xticklabels(fontsize=20)
-    plot.set_xlabels(fontsize=20)
-    plot.set_yticklabels(fontsize=20)
-    plot.set_ylabels(fontsize=20)
-    plt.legend(bbox_to_anchor=(1,1),fontsize=20)
-    plt.rcParams["figure.figsize"] = (100,100)
+    plot.set_xlabels(fontsize=30)
+    plot.set_ylabels(fontsize=30)
+#    plot.set_xticklabels(fontsize=30)
+#    plot.set_yticklabels(fontsize=20)
+#    plt.legend(bbox_to_anchor=(1,1),fontsize=20)
+    plt.legend(bbox_to_anchor=(1,1))
+#    plt.rcParams["figure.figsize"] = (100,100)
     
     if save_fig == True:
         file_name = '../../saved_plots/{}.png'.format(plot_name)
@@ -99,16 +100,15 @@ def scatter_plot(df, save_fig=False, plot_name='scatter_plot'):
     
     """
     
-    col1 = df.columns.values[0]
-    col2 = df.columns.values[1]
+#    col1 = df.columns.values[0]
+#    col2 = df.columns.values[1]
     fig,ax = plt.subplots(figsize=(8,8))
     plt.scatter(df.iloc[:,0],df.iloc[:,1])
     plt.xlim(0,100)
     plt.ylim(0,100)
     ax.tick_params(axis='both', which='major', labelsize=20)
-    ax.set_xlabel(col1,fontsize=20)
-    ax.set_ylabel(col2,fontsize=20)
-    plt.rcParams.update({'font.size':20})
+#    ax.set_xlabel(col1,fontsize=20)
+#    ax.set_ylabel(col2,fontsize=20)
 #    ax.set_yscale('log')
 #    ax.set_xscale('log')
     
