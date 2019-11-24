@@ -62,6 +62,7 @@ class GoogleTrends:
             
             self.keywords = keywords
             self.trend_request.build_payload(kw_list=keywords, cat=category, timeframe=timeframe, geo=geo)
+#            self.trend_request.build_payload(kw_list=keywords, cat=category, timeframe=timeframe, geo=geo, gprop='news')
             self.data = self.trend_request.interest_over_time()
             self.data = self.data.drop(labels='isPartial', axis=1)
             

@@ -56,13 +56,14 @@ def bar_plot_comparison(df, save_fig=False, plot_name='bar_plot'):
     df4.reset_index(inplace=True)
 
     plot = sns.catplot(x='Normalized value', y='Games', hue='Legends',
-                       kind='bar',height=8, data=df4,legend_out=False)
+                       kind='bar',height=10, data=df4,legend_out=False)
     plt.xlim(0,100)
+#    plot.set(xlim=(0,100))
     plot.set_xticklabels(fontsize=20)
     plot.set_xlabels(fontsize=20)
     plot.set_yticklabels(fontsize=20)
     plot.set_ylabels(fontsize=20)
-    plt.legend(fontsize=20)
+    plt.legend(bbox_to_anchor=(1,1),fontsize=20)
     
     if save_fig == True:
         file_name = '../../saved_plots/{}.png'.format(plot_name)
