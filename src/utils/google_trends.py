@@ -4,6 +4,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from pandas.plotting import register_matplotlib_converters
 import numpy as np
+from matplotlib.ticker import FormatStrFormatter
+plt.style.use('seaborn-pastel')
+#plt.rc("figure", facecolor="white")
 
 from utils import logger
 
@@ -19,7 +22,7 @@ class GoogleTrends:
         '''
         The method to initialize the connection request object for connecting to Google Trends data.
         '''
-        plt.rcParams.update({'font.size':20})
+        plt.rcParams.update({'font.size':24})
         register_matplotlib_converters()
         
         self.trend_request = TrendReq()
@@ -30,7 +33,9 @@ class GoogleTrends:
         
     def get_trends_data(self, keywords, start_date, end_date, category=None, geo='US'):
         '''
-        The method returns a Pandas dataframe obtained by the Google Trends library. This dataframe consists of the normalized search results in a Pandas dataframe format.
+        The method returns a Pandas dataframe obtained by the Google Trends library. 
+        This dataframe consists of the normalized search results in a Pandas dataframe format.
+        default search type: Web search
         
         Args:
             keywords (list) - List of keywords that are to be sent to get the search volume
@@ -337,13 +342,18 @@ class GoogleTrends:
         
         logger.info("Plotting dataframe of size - ({}, {})".format(self.data.shape[0], self.data.shape[1]))
             
-        plt.figure(figsize=(12,6))
-        [plt.plot(self.data_by_year[i],label=i,zorder=3) for i in self.keywords]
-        plt.legend(bbox_to_anchor=(1,1))
+        ind = list(self.data_by_year.index)
+        fig, ax = plt.subplots(figsize=(12,6))
+        [plt.plot(self.data_by_year[i],label=i,linewidth=5,zorder=3) for i in self.keywords]
+        plt.legend(bbox_to_anchor=(1,1),prop={'weight':'bold','size':20},frameon=False)
         plt.grid(zorder=0)
-        plt.xlabel('Timeframe')
-        plt.ylabel('Normalized search interest')
-        plt.xticks(list(self.data_by_year.index),rotation=70)
+#        plt.xlabel('Timeframe')
+        plt.ylabel('Normalized Search Volume',fontweight='bold')
+        plt.xticks(ind,rotation=45,fontsize=20,fontweight='bold')
+        plt.yticks(fontweight='bold')
+        plt.xlim(min(ind),max(ind))
+        ax.xaxis.set_major_formatter(FormatStrFormatter('%d'))
+        plt.ylim(0,100)
         
         if save_fig == True:
             file_name = GoogleTrends.plot_directory.format(plot_name)
@@ -369,14 +379,18 @@ class GoogleTrends:
             logger.warn("Using the default name - {} for saving the plot to disk".format(plot_name))
         
         logger.info("Plotting dataframe of size - ({}, {})".format(self.data.shape[0], self.data.shape[1]))
-            
-        plt.figure(figsize=(12,6))
-        [plt.plot(self.data_by_year_month[i],label=i,zorder=3) for i in self.keywords]
-        plt.legend(bbox_to_anchor=(1,1))
+        
+        ind = list(self.data_by_year_month.index)
+        fig, ax = plt.subplots(figsize=(12,6))
+        [plt.plot(self.data_by_year_month[i],label=i,linewidth=5,zorder=3) for i in self.keywords]
+        plt.legend(bbox_to_anchor=(1,1),prop={'weight':'bold','size':20},frameon=False)
         plt.grid(zorder=0)
-        plt.xlabel('Timeframe')
-        plt.ylabel('Normalized search interest')
-        plt.ylim(0,100)
+        plt.ylabel('Normalized Search Volume',fontweight='bold')
+        plt.xticks(ind,rotation=45,fontsize=20,fontweight='bold')
+        plt.yticks(fontweight='bold')
+#        plt.xlim(min(ind)-1,max(ind)+1)
+        ax.xaxis.set_major_formatter(FormatStrFormatter('%d'))
+#        plt.ylim(0,100)
         
         if save_fig == True:
             file_name = GoogleTrends.plot_directory.format(plot_name)
@@ -409,11 +423,12 @@ class GoogleTrends:
         df = self.data_by_year
         ind = list(df.index)
         
-        plt.figure(figsize=(12,6))
+        
+        fig, ax = plt.subplots(figsize=(12,6))
         axes = []
         agg_sum = np.zeros(len(ind))
         for i in keywords:
-            axes.append(plt.bar(ind,df[i],label=i,bottom=agg_sum,zorder=3))
+            axes.append(plt.bar(ind,df[i],label=i,edgecolor='none',bottom=agg_sum,zorder=3))
             agg_sum += df[i].values
         
         if show_values:
@@ -425,13 +440,16 @@ class GoogleTrends:
                              value_format.format(h), ha="center", 
                              va="center",fontsize=10)
         
-        plt.legend(bbox_to_anchor=(1,1))
+        plt.legend(bbox_to_anchor=(1,1),prop={'weight':'bold','size':20},frameon=False)
 #        plt.legend(bbox_to_anchor=(0,-0.8,1,0.5),ncol=5,mode="expand",borderaxespad=0.,
 #                   fontsize=12)
         plt.grid(axis='y',zorder=0)
-        plt.xlabel('Timeframe')
-        plt.ylabel('Normalized search interest')
-        plt.xticks(ind,rotation=70)
+#        plt.xlabel('Timeframe')
+        plt.ylabel('Normalized Search Volume',fontweight='bold')
+        plt.xticks(ind,rotation=45,fontsize=20,fontweight='bold')
+        plt.yticks(fontweight='bold')
+        plt.xlim(min(ind)-1,max(ind)+1)
+        ax.xaxis.set_major_formatter(FormatStrFormatter('%d'))
         
         if save_fig == True:
             file_name = GoogleTrends.plot_directory.format(plot_name)

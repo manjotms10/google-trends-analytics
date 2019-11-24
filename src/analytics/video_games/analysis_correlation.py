@@ -11,9 +11,10 @@ t1 = time.time()
 # For example, if genre=[], platform=[], the top number of games are under the 
 # condition of the specified year: in 2015, top 100 games
 filename = './analytics/video_games/input data/vgsales-refined-data.csv'
-year = 2017
+year = 2011
 top_num = 100 # Top number of games to be returned after sorting
 vg_df = keyword_data_sorting(filename,year=[year],genre=[], platform=[],top=top_num)
+#vg_df = keyword_data_sorting(filename,year=[],genre=[], platform=[],top=top_num)
 
 #%% parameters for Pytrends
 start_date = '2004-01-01'
@@ -78,7 +79,7 @@ df = df / df.max() * 100
 
 # drop rows with large differences
 # max_diff = prcentage of difference: rows with 'diff > max_diff' are dropped
-max_diff = 5 
+max_diff = 20 
 df['diff'] = abs(df.iloc[:,0]-df.iloc[:,1])
 df2 = df.drop(df[df['diff'] > max_diff].index)
 
@@ -99,7 +100,9 @@ fig_name = 'bar_plot_' + str(year) + '_' + str(top_num)
 bar_plot_comparison(df2.iloc[:num_games,:],save_fig=True,plot_name=fig_name)
 
 # scatter plot
-#scatter_plot(df2,save_fig=True, plot_name='scatter_plot_2018')
+#df2.drop(df2.index[0],inplace=True)
+#df2 = df2 / df2.max() * 100
+#scatter_plot(df2,save_fig=True, plot_name='scatter_plot')
 
 t2 = time.time()
 print(f'Total time: {t2-t1}')

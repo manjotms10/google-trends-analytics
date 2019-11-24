@@ -1,3 +1,14 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+import string
+from matplotlib.ticker import FormatStrFormatter
+plt.rcParams.update({'font.size':24})
+# set color style (plt.style.available)
+plt.style.use('seaborn-pastel')
+#plt.figure(facecolor="white")
+plt.rc("figure", facecolor="white")
+
 def data_cleaning(fname, platforms=[], merge_keywords=[], keywords=[], del_keywords=[], start_year=2004):
     """
     Filtering out unwanted game data.
@@ -8,8 +19,6 @@ def data_cleaning(fname, platforms=[], merge_keywords=[], keywords=[], del_keywo
     :param del_keywords: list of strings. Deleting columns.
     :param start_year: integer. Filtering out games released before this year.
     """
-
-    import pandas as pd
 
     df = pd.read_csv(fname, delimiter=',')
     nrow, ncol = df.shape
@@ -76,11 +85,7 @@ def data_sorting(fname, keyword, limit=10, line_plot=False, bar_plot=False):
     :param keyword: 'Genre', 'ESRB_Rating', 'Platform', 'Publisher', 'Developer'
     :param limit: integer, only show top 'limit' number of data
     """
-
-    import pandas as pd
-    import numpy as np
-    import matplotlib.pyplot as plt
-
+    
     # read file
     df = pd.read_csv(fname, delimiter=',')
     nrow, ncol = df.shape
@@ -112,39 +117,45 @@ def data_sorting(fname, keyword, limit=10, line_plot=False, bar_plot=False):
     # output
     output = output.round(2)
     output.to_csv('./analytics/video_games/output data/vgsales-%s-year.csv' % keyword)
-    output.drop('total', axis=1).drop('total', axis=0)
+    output.drop('total',axis=1,inplace=True)
+    output.drop('total',axis=0,inplace=True)
     print(output)
     
     # plot
-    plt.rcParams.update({'font.size':18})
-    output = output.drop('total',axis=1).drop('total',axis=0)
-    ind = list(output.index)
+#    output.drop(['Role-Playing','Misc'],axis=1,inplace=True)
+#    output.drop([2004,2005],axis=0,inplace=True)
+    
+    ind = list(range(2004,2019))
+    plt.rcParams.update({'font.size':20})
     if line_plot:
-        plt.figure(figsize=(12,6))
-        [plt.plot(output[i],label=i) for i in output.columns.values]
-        plt.legend(bbox_to_anchor=(1,1))
+        fig, ax = plt.subplots(figsize=(12,6))
+        [plt.plot(output[i][:-2],label=i,linewidth=5) for i in output.columns.values[:]]
+        plt.legend(bbox_to_anchor=(1,1),prop={'weight':'bold','size':20},frameon=False)
         plt.grid()
-        plt.xlabel('Time')
-        plt.ylabel('Sales')
-        plt.xticks(ind,rotation=70)
-        plt.xlim(int(min(year_range))-1,int(max(year_range))+1)
+        plt.ylabel('Total Sale (millions)',fontweight='bold')
+        plt.xticks(ind,rotation=45,fontsize=20,fontweight='bold')
+        plt.yticks(fontweight='bold')
+        plt.xlim(min(ind),max(ind))
+        plt.ylim(0,output.max().max())
+        ax.xaxis.set_major_formatter(FormatStrFormatter('%d'))
         plt.savefig(f'../../saved_plots/vgsales-{keyword}-year_line.png',bbox_inches='tight')
     elif bar_plot:
-        plt.figure(figsize=(12,6))
+        fig, ax = plt.subplots(figsize=(12,6))
         axes = []
         agg_sum = np.zeros(len(ind))
-        for i in list(output.columns.values):
-            axes.append(plt.bar(ind,output[i],label=i,bottom=agg_sum,zorder=3))
-            agg_sum += output[i].values
+        for i in list(output.columns.values[:]):
+            axes.append(plt.bar(ind,output[i][:-2],label=i,edgecolor='none',bottom=agg_sum,zorder=3))
+            agg_sum += output[i].values[:-2]
 
 #        plt.legend(bbox_to_anchor=(0,-0.3,1,0.5),ncol=5,mode="expand",borderaxespad=0.,
 #                   fontsize=12)
-        plt.legend(bbox_to_anchor=(1,1))
+        plt.legend(bbox_to_anchor=(1,1),prop={'weight':'bold','size':20},frameon=False)
         plt.grid(axis='y',zorder=0)
-        plt.xlabel('Time')
-        plt.ylabel('Sales')
-        plt.xticks(ind,rotation=70)
-        plt.xlim(int(min(year_range))-1,int(max(year_range))+1)
+        plt.ylabel('Total Sale (millions)',fontweight='bold')
+        plt.xticks(ind,rotation=45,fontsize=20,fontweight='bold')
+        plt.yticks(fontweight='bold')
+        plt.xlim(min(ind)-1,max(ind)+1)
+        ax.xaxis.set_major_formatter(FormatStrFormatter('%d'))
         plt.savefig(f'../../saved_plots/vgsales-{keyword}-year_bar.png',bbox_inches='tight')
     
     return output
@@ -160,11 +171,7 @@ def sale_history(fname, limit=10, month_aft=5, plot=False):
     :param month_aft: the specified number of months after release
     :param plot: bool, if True, line plot is produced and saved
     """
-
-    import pandas as pd
-    import numpy as np
-    import matplotlib.pyplot as plt
-
+    
     # read data file
     df = pd.read_csv(fname, delimiter=',')
     week_aft = month_aft*4 # weeks after sales to be considered
@@ -199,7 +206,7 @@ def sale_history(fname, limit=10, month_aft=5, plot=False):
         msale_hist = msale_hist.iloc[:,:limit]
                  
     # output to csv
-    msale_hist.swapaxes('index','columns').to_csv('./analytics/video_games/output/vgsales-game-sale-history.csv')
+    msale_hist.swapaxes('index','columns').to_csv('./analytics/video_games/output data/vgsales-game-sale-history.csv')
     print(msale_hist)
     
     # plot
@@ -224,9 +231,6 @@ def keyword_data_sorting(fname, year=[], genre=[], esrb_rating=[], platform=[], 
     :param fname: string
     :param top: integer, only show top 'limit' number of data
     """
-
-    import pandas as pd
-    import string
 
     # read file
     df = pd.read_csv(fname, delimiter=',')

@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from matplotlib.ticker import FormatStrFormatter
+from matplotlib.ticker import FormatStrFormatter, FuncFormatter
 import pandas as pd
 import numpy as np
 import seaborn as sns
@@ -14,26 +14,42 @@ def line_plot_2Yaxes(df1, df2, save_fig=False, plot_name='line_plot_by_year_mont
         save_fig (bool) - The parameter decides whether to save the plot or not. By default it is False
         plot_name (str) - The name of the plot to be saved. Will be used if save_fig is set to true
     '''
+    plt.rcParams.update({'font.size':22})
+    fig,ax1 = plt.subplots(figsize=(14,8),frameon=False)
+    fig.patch.set_visible(False) # remove figure border
+    color1 = (0.89,0.44,0.37) # line and label colors of Google Trends
+    color2 = (0.25,0.32,0.65) # line and label colors of Total Sale
     
-    fig,ax1 = plt.subplots(figsize=(12,6))
-    ax1.set_xlabel('Timeframe')
-    ax1.set_ylabel('Normalized search interest',color='r')
-    line1 = ax1.plot(df1,label='Google Trends',color='r',zorder=3)
+    # first line
+    line1 = ax1.plot(df1,color=color1,linewidth=5,
+                                label='Google Trends',zorder=3)
+#    ax1.set_xlabel('Timeframe',labelpad=15,fontweight='bold')
+    ax1.set_ylabel('Normalized Value',color=color1,fontweight='bold')
+    plt.xticks(np.arange(6),
+                   ('Launch-1','Launch','Launch+1','Launch+2','Launch+3','Launch+4'),
+                   rotation=-10,
+                   fontsize=20,
+                   fontweight='bold')
+    plt.yticks(fontweight='bold')
     ax1.set_ylim(bottom=0)
-    ax1.tick_params(axis='y', labelcolor='r')
+    ax1.tick_params(axis='y',labelcolor=color1)
+    ax1.tick_params(axis='both',pad=15)
     
+    # second line
     ax2 = ax1.twinx()
-    ax2.set_ylabel('Game unit sales',color='b',rotation=-90,labelpad=20)
-    line2 = ax2.plot(df2[:6],'b--',label='vgchartz',zorder=3)
+    line2 = ax2.plot(df2[:6],'--',color=color2,linewidth=5,
+                     label='Total Sale',zorder=3)
+    ax2.set_ylabel('Game Total Sale',color=color2,rotation=-90,fontweight='bold',labelpad=25)
+    plt.yticks(fontweight='bold')
     ax2.set_ylim(bottom=0)
-    ax2.tick_params(axis='y', labelcolor='b')
-    ax2.yaxis.set_major_formatter(FormatStrFormatter('%.1e'))
+    ax2.tick_params(axis='y',labelcolor=color2,pad=15)
+    ax2.yaxis.set_major_formatter(FuncFormatter(lambda x, p: format(int(x), ',')))
     
     lines = line1 + line2
     labels = [ln.get_label() for ln in lines]
-    plt.title('Game: ' + df1.columns.values[0])
-    ax1.legend(lines,labels)
-    plt.grid(zorder=0)
+    ax1.legend(lines,labels,prop={'weight':'bold'})
+    plt.title('Game: ' + df1.columns.values[0],pad=20,fontweight='bold')
+#    plt.grid(zorder=0)
     fig.tight_layout()
     
     if save_fig == True:

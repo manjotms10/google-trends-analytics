@@ -10,9 +10,11 @@ import dateutil.relativedelta as timedelta
 
 #%% parameters
 cat = '41'               # category = computer $ video games
+#cat = '8'               # category = games
 gt = GoogleTrends()
 
 #%% analysis
+#fname = '.\analytics\video_games\input data\vgsales-game-release-date.csv'
 fname = './analytics/video_games/input data/vgsales-game-release-date.csv'
 df = pd.read_csv(fname,delimiter=',')
 fname = './analytics/video_games/input data/2016-2018.csv'
