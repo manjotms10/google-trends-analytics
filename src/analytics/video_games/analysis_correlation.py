@@ -13,7 +13,7 @@ t1 = time.time()
 # condition of the specified year: in 2015, top 100 games
 filename = './analytics/video_games/input data/vgsales-refined-data.csv'
 year = 2017
-vg_df = keyword_data_sorting(filename,year=[year],genre=[], platform=[],top=100)
+vg_df = keyword_data_sorting(filename,year=[year],genre=[], platform=[],top=50)
 
 #%% parameters for Pytrends
 start_date = '2004-01-01'
@@ -85,7 +85,7 @@ df2['diff'] = abs(df2.iloc[:,0]-df2.iloc[:,1])
 
 # resort by Total Sale Volume
 df2 = df2.sort_values(by='Total Sale Volume',ascending=False)
-#df2 = df2.sort_values(by='diff',ascending=True)
+df2 = df2.sort_values(by='diff',ascending=True)
 
 bar_plot_comparison(df2.iloc[:8,:],save_fig=True, plot_name='bar_plot_'+str(year))
 
