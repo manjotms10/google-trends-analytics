@@ -11,6 +11,8 @@ def line_plot_2Yaxes(df1, df2, save_fig=False, plot_name='line_plot_by_year_mont
     the self.get_trends_data method and sorted by Year-Month.
     
     Args:
+        df1 (dataframe) - dataframe from google trends
+        df2 (dataframe) - dataframe from other data source
         save_fig (bool) - The parameter decides whether to save the plot or not. By default it is False
         plot_name (str) - The name of the plot to be saved. Will be used if save_fig is set to true
     '''
@@ -19,8 +21,9 @@ def line_plot_2Yaxes(df1, df2, save_fig=False, plot_name='line_plot_by_year_mont
     fig.patch.set_visible(False) # remove figure border
     color1 = (0.89,0.44,0.37) # line and label colors of Google Trends
     color2 = (0.25,0.32,0.65) # line and label colors of Total Sale
+    df2 /= 1000000 # convert unit to millions
     
-    # first line
+    # first line: Google Trends
     line1 = ax1.plot(df1,color=color1,linewidth=5,
                                 label='Google Trends',zorder=3)
 #    ax1.set_xlabel('Timeframe',labelpad=15,fontweight='bold')
@@ -35,15 +38,16 @@ def line_plot_2Yaxes(df1, df2, save_fig=False, plot_name='line_plot_by_year_mont
     ax1.tick_params(axis='y',labelcolor=color1)
     ax1.tick_params(axis='both',pad=15)
     
-    # second line
+    # second line: Total Sale
     ax2 = ax1.twinx()
     line2 = ax2.plot(df2[:6],'--',color=color2,linewidth=5,
                      label='Total Sale',zorder=3)
-    ax2.set_ylabel('Game Total Sale',color=color2,rotation=-90,fontweight='bold',labelpad=25)
+    ax2.set_ylabel('Total Sale (millions)',color=color2,rotation=-90,fontweight='bold',labelpad=25)
     plt.yticks(fontweight='bold')
     ax2.set_ylim(bottom=0)
     ax2.tick_params(axis='y',labelcolor=color2,pad=15)
-    ax2.yaxis.set_major_formatter(FuncFormatter(lambda x, p: format(int(x), ',')))
+#    ax2.yaxis.set_major_formatter(FuncFormatter(lambda x, p: format(int(x), ',')))
+    ax2.yaxis.set_major_formatter(FormatStrFormatter('%.2f'))
     
     lines = line1 + line2
     labels = [ln.get_label() for ln in lines]
