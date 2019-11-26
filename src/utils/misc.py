@@ -19,8 +19,8 @@ def line_plot_2Yaxes(df1, df2, save_fig=False, plot_name='line_plot_by_year_mont
     plt.rcParams.update({'font.size':22})
     fig,ax1 = plt.subplots(figsize=(14,8),frameon=False)
     fig.patch.set_visible(False) # remove figure border
-    color1 = (0.89,0.44,0.37) # line and label colors of Google Trends
-    color2 = (0.25,0.32,0.65) # line and label colors of Total Sale
+    color1 = (0.25,0.32,0.65) # line and label colors of Google Trends
+    color2 = (0.89,0.44,0.37) # line and label colors of Total Sale
     df2 /= 1000000 # convert unit to millions
     
     # first line: Google Trends
