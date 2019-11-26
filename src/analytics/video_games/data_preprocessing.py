@@ -5,7 +5,8 @@ import string
 from matplotlib.ticker import FormatStrFormatter
 plt.rcParams.update({'font.size':24})
 # set color style (plt.style.available)
-plt.style.use('seaborn-pastel')
+#plt.style.use('seaborn-pastel')
+plt.style.use('seaborn-deep')
 #plt.figure(facecolor="white")
 plt.rc("figure", facecolor="white")
 
@@ -122,19 +123,20 @@ def data_sorting(fname, keyword, limit=10, line_plot=False, bar_plot=False):
     print(output)
     
     # plot
-#    output.drop(['Role-Playing','Misc'],axis=1,inplace=True)
-#    output.drop([2004,2005],axis=0,inplace=True)
+    output.drop(['Role-Playing','Misc'],axis=1,inplace=True)
+    output.drop([2004,2005],axis=0,inplace=True)
+    ind = list(range(2006,2019))
     
-    ind = list(range(2004,2019))
+#    ind = list(range(2004,2019))
     plt.rcParams.update({'font.size':20})
     if line_plot:
         fig, ax = plt.subplots(figsize=(12,6))
         [plt.plot(output[i][:-2],label=i,linewidth=5) for i in output.columns.values[:]]
-        plt.legend(bbox_to_anchor=(1,1),prop={'weight':'bold','size':20},frameon=False)
+        plt.legend(bbox_to_anchor=(1,1),prop={'size':15},frameon=False)
         plt.grid()
-        plt.ylabel('Total Sale (millions)',fontweight='bold')
-        plt.xticks(ind,rotation=45,fontsize=20,fontweight='bold')
-        plt.yticks(fontweight='bold')
+        plt.ylabel('Total Sales (millions)',fontsize=25)
+        plt.xticks(ind,rotation=45)
+        plt.yticks(fontsize=25)
         plt.xlim(min(ind),max(ind))
         plt.ylim(0,output.max().max())
         ax.xaxis.set_major_formatter(FormatStrFormatter('%d'))
@@ -149,11 +151,11 @@ def data_sorting(fname, keyword, limit=10, line_plot=False, bar_plot=False):
 
 #        plt.legend(bbox_to_anchor=(0,-0.3,1,0.5),ncol=5,mode="expand",borderaxespad=0.,
 #                   fontsize=12)
-        plt.legend(bbox_to_anchor=(1,1),prop={'weight':'bold','size':20},frameon=False)
+        plt.legend(bbox_to_anchor=(1,1),prop={'size':15},frameon=False)
         plt.grid(axis='y',zorder=0)
-        plt.ylabel('Total Sale (millions)',fontweight='bold')
-        plt.xticks(ind,rotation=45,fontsize=20,fontweight='bold')
-        plt.yticks(fontweight='bold')
+        plt.ylabel('Total Sales (millions)',fontsize=25)
+        plt.xticks(ind,rotation=45)
+        plt.yticks(fontsize=20)
         plt.xlim(min(ind)-1,max(ind)+1)
         ax.xaxis.set_major_formatter(FormatStrFormatter('%d'))
         plt.savefig(f'../../saved_plots/vgsales-{keyword}-year_bar.png',bbox_inches='tight')
@@ -260,12 +262,12 @@ def keyword_data_sorting(fname, year=[], genre=[], esrb_rating=[], platform=[], 
     assert not df.empty, 'No video game satisfy this criteria'
 
     # Replace all the punctuations in the instring to a blank
-    output_df = pd.DataFrame(index=list(set(df['Name'])), columns=['Total Sale Volume'])
-    output_df['Total Sale Volume'] = 0
+    output_df = pd.DataFrame(index=list(set(df['Name'])), columns=['Normalized Sales Volume'])
+    output_df['Normalized Sales Volume'] = 0
     nrow, ncol = df.shape
     for i in range(nrow):
-        output_df.loc[df.iloc[i, 1], 'Total Sale Volume'] += df.iloc[i, 9]
-    output_df.sort_values(by='Total Sale Volume', ascending=False, inplace=True)
+        output_df.loc[df.iloc[i, 1], 'Normalized Sales Volume'] += df.iloc[i, 9]
+    output_df.sort_values(by='Normalized Sales Volume', ascending=False, inplace=True)
 
     nrow, ncol = output_df.shape
     # delete excessive rows
@@ -273,7 +275,7 @@ def keyword_data_sorting(fname, year=[], genre=[], esrb_rating=[], platform=[], 
     output_df.drop(index=output_df.index[top:], inplace=True)
 
     # normalize
-    max_sale = max(output_df['Total Sale Volume'])
+    max_sale = max(output_df['Normalized Sales Volume'])
     for i in range(top):
         output_df.iloc[i, 0] = output_df.iloc[i, 0]/max_sale*100
     #

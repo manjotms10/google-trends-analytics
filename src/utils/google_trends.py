@@ -5,7 +5,8 @@ import pandas as pd
 from pandas.plotting import register_matplotlib_converters
 import numpy as np
 from matplotlib.ticker import FormatStrFormatter
-plt.style.use('seaborn-pastel')
+#plt.style.use('seaborn-pastel')
+plt.style.use('seaborn-deep')
 #plt.rc("figure", facecolor="white")
 
 from utils import logger
@@ -423,7 +424,7 @@ class GoogleTrends:
         df = self.data_by_year
         ind = list(df.index)
         
-        
+        plt.rcParams.update({'font.size':20})
         fig, ax = plt.subplots(figsize=(12,6))
         axes = []
         agg_sum = np.zeros(len(ind))
@@ -440,14 +441,14 @@ class GoogleTrends:
                              value_format.format(h), ha="center", 
                              va="center",fontsize=10)
         
-        plt.legend(bbox_to_anchor=(1,1),prop={'weight':'bold','size':20},frameon=False)
+        plt.legend(bbox_to_anchor=(1,1),prop={'size':15},frameon=False)
 #        plt.legend(bbox_to_anchor=(0,-0.8,1,0.5),ncol=5,mode="expand",borderaxespad=0.,
 #                   fontsize=12)
         plt.grid(axis='y',zorder=0)
 #        plt.xlabel('Timeframe')
-        plt.ylabel('Normalized Search Volume',fontweight='bold')
-        plt.xticks(ind,rotation=45,fontsize=20,fontweight='bold')
-        plt.yticks(fontweight='bold')
+        plt.ylabel('Normalized Search Volume',fontsize=25)
+        plt.xticks(ind,rotation=45,fontsize=20)
+        plt.yticks(fontsize=20)
         plt.xlim(min(ind)-1,max(ind)+1)
         ax.xaxis.set_major_formatter(FormatStrFormatter('%d'))
         

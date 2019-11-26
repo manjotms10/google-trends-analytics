@@ -11,7 +11,7 @@ t1 = time.time()
 # For example, if genre=[], platform=[], the top number of games are under the 
 # condition of the specified year: in 2015, top 100 games
 filename = './analytics/video_games/input data/vgsales-refined-data.csv'
-year = 2011
+year = 2015
 top_num = 100 # Top number of games to be returned after sorting
 vg_df = keyword_data_sorting(filename,year=[year],genre=[], platform=[],top=top_num)
 #vg_df = keyword_data_sorting(filename,year=[],genre=[], platform=[],top=top_num)
@@ -62,7 +62,7 @@ gt.sort_data_by_year()
 
 # create a dataframe storing the max search volume of each year
 #gt_df = gt.data_by_year.sum(axis=0).to_frame(name='Total Search Volume')
-gt_df = gt.data_by_year.max().to_frame(name='Total Search Volume')
+gt_df = gt.data_by_year.max().to_frame(name='Normalized Search Volume')
 
 # normalize
 gt_df = gt_df / gt_df.max() * 100
@@ -79,7 +79,7 @@ df = df / df.max() * 100
 
 # drop rows with large differences
 # max_diff = prcentage of difference: rows with 'diff > max_diff' are dropped
-max_diff = 20 
+max_diff = 5 
 df['diff'] = abs(df.iloc[:,0]-df.iloc[:,1])
 df2 = df.drop(df[df['diff'] > max_diff].index)
 
@@ -88,7 +88,7 @@ df2 = df2 / df2.max() * 100
 df2['diff'] = abs(df2.iloc[:,0]-df2.iloc[:,1])
 
 # resort by Total Sale Volume
-df2 = df2.sort_values(by='Total Sale Volume',ascending=False)
+df2 = df2.sort_values(by='Normalized Sales Volume',ascending=False)
 
 # resort by Difference between Total Sale Volume and Total Search Volume
 #df2 = df2.sort_values(by='diff',ascending=True)

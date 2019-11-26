@@ -3,7 +3,7 @@ from matplotlib.ticker import FormatStrFormatter, FuncFormatter
 import pandas as pd
 import numpy as np
 import seaborn as sns
-plt.rcParams.update({'font.size':24})
+plt.rcParams.update({'font.size':20})
 
 def line_plot_2Yaxes(df1, df2, save_fig=False, plot_name='line_plot_by_year_month'):
     '''
@@ -16,24 +16,22 @@ def line_plot_2Yaxes(df1, df2, save_fig=False, plot_name='line_plot_by_year_mont
         save_fig (bool) - The parameter decides whether to save the plot or not. By default it is False
         plot_name (str) - The name of the plot to be saved. Will be used if save_fig is set to true
     '''
-    plt.rcParams.update({'font.size':22})
     fig,ax1 = plt.subplots(figsize=(14,8),frameon=False)
     fig.patch.set_visible(False) # remove figure border
-    color1 = (0.25,0.32,0.65) # line and label colors of Google Trends
-    color2 = (0.89,0.44,0.37) # line and label colors of Total Sale
+    color1 = (0.89,0.44,0.37) # line and label colors of Google Trends
+    color2 = (0.25,0.32,0.65) # line and label colors of Total Sale
     df2 /= 1000000 # convert unit to millions
     
     # first line: Google Trends
     line1 = ax1.plot(df1,color=color1,linewidth=5,
                                 label='Google Trends',zorder=3)
-#    ax1.set_xlabel('Timeframe',labelpad=15,fontweight='bold')
-    ax1.set_ylabel('Normalized Value',color=color1,fontweight='bold')
+    ax1.set_xlabel('Month',labelpad=15,fontsize=25)
+    ax1.set_ylabel('Normalized Value',color=color1,fontsize=25)
     plt.xticks(np.arange(6),
                    ('Launch-1','Launch','Launch+1','Launch+2','Launch+3','Launch+4'),
                    rotation=-10,
-                   fontsize=20,
-                   fontweight='bold')
-    plt.yticks(fontweight='bold')
+                   fontsize=20)
+    plt.yticks()
     ax1.set_ylim(bottom=0)
     ax1.tick_params(axis='y',labelcolor=color1)
     ax1.tick_params(axis='both',pad=15)
@@ -41,9 +39,9 @@ def line_plot_2Yaxes(df1, df2, save_fig=False, plot_name='line_plot_by_year_mont
     # second line: Total Sale
     ax2 = ax1.twinx()
     line2 = ax2.plot(df2[:6],'--',color=color2,linewidth=5,
-                     label='Total Sale',zorder=3)
-    ax2.set_ylabel('Total Sale (millions)',color=color2,rotation=-90,fontweight='bold',labelpad=25)
-    plt.yticks(fontweight='bold')
+                     label='Total Sales',zorder=3)
+    ax2.set_ylabel('Total Sales (millions)',color=color2,rotation=-90,labelpad=25,fontsize=25)
+    plt.yticks()
     ax2.set_ylim(bottom=0)
     ax2.tick_params(axis='y',labelcolor=color2,pad=15)
 #    ax2.yaxis.set_major_formatter(FuncFormatter(lambda x, p: format(int(x), ',')))
@@ -51,8 +49,9 @@ def line_plot_2Yaxes(df1, df2, save_fig=False, plot_name='line_plot_by_year_mont
     
     lines = line1 + line2
     labels = [ln.get_label() for ln in lines]
-    ax1.legend(lines,labels,prop={'weight':'bold'})
-    plt.title('Game: ' + df1.columns.values[0],pad=20,fontweight='bold')
+#    ax1.legend(lines,labels,prop={'weight':'bold'})
+    ax1.legend(lines,labels,prop={'size':15})
+    plt.title('Game: ' + df1.columns.values[0],pad=20)
 #    plt.grid(zorder=0)
     fig.tight_layout()
     
@@ -65,7 +64,7 @@ def bar_plot_comparison(df, save_fig=False, plot_name='bar_plot'):
     '''
     This function is to produce bar chart using the same y aixs
     '''
-    plt.rcParams.update({'font.size':24})
+    plt.rcParams.update({'font.size':20})
     col1 = df.columns.values[0]
     col2 = df.columns.values[1]
     df = df.sort_values(by=col1, ascending=True)
@@ -100,14 +99,14 @@ def bar_plot_comparison(df, save_fig=False, plot_name='bar_plot'):
     df4.reset_index(inplace=True)
     plot = sns.catplot(x='Normalized value', y='Games', hue='Legends',
                        kind='bar',height=10, data=df4,legend_out=False,
-                       palette=sns.color_palette(['#E3715F','#4052A7']).as_hex())
+                       palette=sns.color_palette(['#4052A7','#E3715F']).as_hex())
     plt.xlim(0,100)
-    plot.set_xlabels(fontsize=30)
-    plot.set_ylabels(fontsize=30)
+    plot.set_xlabels(fontsize=25)
+    plot.set_ylabels(fontsize=25)
 #    plot.set_xticklabels(fontsize=30)
 #    plot.set_yticklabels(fontsize=20)
 #    plt.legend(bbox_to_anchor=(1,1),fontsize=20)
-    plt.legend(bbox_to_anchor=(1,1))
+    plt.legend(bbox_to_anchor=(1,1),prop={'size':15})
 #    plt.rcParams["figure.figsize"] = (100,100)
     
     if save_fig == True:

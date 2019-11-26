@@ -16,6 +16,7 @@ for feat in feat_list[:1]:
     data_sorting(fname, feat, limit=6, bar_plot=True)
     
 #%% parameters for Google Trends data
+#start_date = '2004-01-01'
 start_date = '2006-01-01'
 end_date = '2018-12-31'
 #start_date = '2008-01-01'
