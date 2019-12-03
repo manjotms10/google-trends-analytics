@@ -10,6 +10,10 @@ from utils import logger
 '''
 This is a util class that fetches the data from Google Trends using PyTrends library. First a connection request object is created for connection
 to Google, which can then be used throughout the session.
+
+Example usage - 
+gt = GoogleTrends()
+gt.get_trends_data_from_multiple_keywords(keywords=['Avengers', 'Black Panther'], start_date='2012-03-01', end_date='2012-04-01', category='34')
 '''
 class GoogleTrends:
     
@@ -75,6 +79,7 @@ class GoogleTrends:
     def get_trends_data_with_region(self, keywords, start_date, end_date, category=None, geo='US', resolution='COUNTRY'):
         '''
         The method returns a Pandas dataframe obtained by the Google Trends library. This dataframe consists of the normalized search results in a Pandas dataframe format.
+        In addition to the data, it can also give the data according to a particular country, region, or city.
         
         Args:
             keywords (list) - List of keywords that are to be sent to get the search volume
@@ -181,7 +186,8 @@ class GoogleTrends:
     def get_trends_data_with_region_from_multiple_keywords(self, keywords, start_date, end_date, category=None, geo='US', resolution='COUNTRY'):
         """
         This function returns the search volume (Interest Over Time) of multiple keywords (> 5) and adjust the normalization such that the
-        search result volumes of all keywords have the same normalization and are comparable.
+        search result volumes of all keywords have the same normalization and are comparable. 
+        In addition to the data, it can also give the data according to a particular country, region, or city.
     
         Args:
             keywords (list) - A list of keywords that are to be sent to get the search volume
@@ -189,6 +195,7 @@ class GoogleTrends:
             end_date (str) - The end date of the search query in YYYY-MM-DD format
             category (str) - The category to which the search results belong to. By default, it is None, which means all categories
             geo (str) - The country whose search results is to be obtained. By default: global
+            resolution (str) - The level of data desired. Can be one of - COUNTRY, CITY, DMA, REGION
         
         Returns:
             A Pandas dataframe containing the search result volume for each keyword in keywords

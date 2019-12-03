@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from matplotlib.ticker import FormatStrFormatter, FuncFormatter
+from matplotlib.ticker import FormatStrFormatter
 import pandas as pd
 import numpy as np
 import seaborn as sns
@@ -26,7 +26,6 @@ def line_plot_2Yaxes(df1, df2, save_fig=False, plot_name='line_plot_by_year_mont
     # first line: Google Trends
     line1 = ax1.plot(df1,color=color1,linewidth=5,
                                 label='Google Trends',zorder=3)
-#    ax1.set_xlabel('Timeframe',labelpad=15,fontweight='bold')
     ax1.set_ylabel('Normalized Value',color=color1,fontweight='bold')
     plt.xticks(np.arange(6),
                    ('Launch-1','Launch','Launch+1','Launch+2','Launch+3','Launch+4'),
@@ -46,14 +45,12 @@ def line_plot_2Yaxes(df1, df2, save_fig=False, plot_name='line_plot_by_year_mont
     plt.yticks(fontweight='bold')
     ax2.set_ylim(bottom=0)
     ax2.tick_params(axis='y',labelcolor=color2,pad=15)
-#    ax2.yaxis.set_major_formatter(FuncFormatter(lambda x, p: format(int(x), ',')))
     ax2.yaxis.set_major_formatter(FormatStrFormatter('%.2f'))
     
     lines = line1 + line2
     labels = [ln.get_label() for ln in lines]
     ax1.legend(lines,labels,prop={'weight':'bold'})
     plt.title('Movie: ' + df1.columns.values[0],pad=20,fontweight='bold')
-#    plt.grid(zorder=0)
     fig.tight_layout()
     
     if save_fig == True:
@@ -66,6 +63,8 @@ def line_plot_2Yaxes_1(df1, df2, save_fig=False, plot_name='line_plot_by_year_mo
     the self.get_trends_data method and sorted by Year-Month.
     
     Args:
+        df1 (dataframe) - dataframe from google trends
+        df2 (dataframe) - dataframe from other data source
         save_fig (bool) - The parameter decides whether to save the plot or not. By default it is False
         plot_name (str) - The name of the plot to be saved. Will be used if save_fig is set to true
     '''
@@ -76,12 +75,10 @@ def line_plot_2Yaxes_1(df1, df2, save_fig=False, plot_name='line_plot_by_year_mo
     color1 = (0.89,0.44,0.37) # line and label colors of Google Trends
     color2 = (0.25,0.32,0.65) # line and label colors of Total Sale
     color = (0.0, 0.0, 0.0)
-#     df2 /= 1000000 # convert unit to millions
     
     # first line: Google Trends
     line1 = ax1.plot(df1,color=color1,linewidth=5,
                                 label='Google Trends',zorder=3)
-#    ax1.set_xlabel('Timeframe',labelpad=15,fontweight='bold')
     ax1.set_ylabel('Normalized Value',color=color1,fontsize=25)
     plt.xticks(np.arange(5),
                    ('Launch-1','Launch','Launch+1','Launch+2','Launch+3','Launch+4'),
@@ -98,7 +95,6 @@ def line_plot_2Yaxes_1(df1, df2, save_fig=False, plot_name='line_plot_by_year_mo
     ax2.set_ylabel('Total Sales (millions)',color=color2,rotation=-90,labelpad=25,fontsize=25)
     ax2.set_ylim(bottom=0)
     ax2.tick_params(axis='y',labelcolor=color2,pad=15)
-#    ax2.yaxis.set_major_formatter(FuncFormatter(lambda x, p: format(int(x), ',')))
     ax2.yaxis.set_major_formatter(FormatStrFormatter('%.2f'))
     
     
@@ -117,6 +113,11 @@ def line_plot_2Yaxes_1(df1, df2, save_fig=False, plot_name='line_plot_by_year_mo
 def bar_plot_comparison_1(df, save_fig=False, plot_name='bar_plot'):
     '''
     This function is to produce bar chart using the same y aixs
+    
+    Args:
+        df (dataframe) - dataframe containing both search and sales data
+        save_fig (bool) - The parameter decides whether to save the plot or not. By default it is False
+        plot_name (str) - The name of the plot to be saved. Will be used if save_fig is set to true
     '''
     plt.rcParams.update({'font.size':24})
     col1 = df.columns.values[0]
@@ -157,11 +158,7 @@ def bar_plot_comparison_1(df, save_fig=False, plot_name='bar_plot'):
     plt.xlim(0,100)
     plot.set_xlabels(fontsize=30)
     plot.set_ylabels(fontsize=30)
-#    plot.set_xticklabels(fontsize=30)
-#    plot.set_yticklabels(fontsize=20)
-#    plt.legend(bbox_to_anchor=(1,1),fontsize=20)
     plt.legend(bbox_to_anchor=(1,1))
-#    plt.rcParams["figure.figsize"] = (100,100)
     
     if save_fig == True:
         file_name = '../../../saved_plots/{}.png'.format(plot_name)
@@ -170,6 +167,11 @@ def bar_plot_comparison_1(df, save_fig=False, plot_name='bar_plot'):
 def bar_plot_comparison(df, save_fig=False, plot_name='bar_plot'):
     '''
     This function is to produce graph using the same y aixs
+    
+    Args:
+        df (dataframe) - dataframe containing both search and sales data
+        save_fig (bool) - The parameter decides whether to save the plot or not. By default it is False
+        plot_name (str) - The name of the plot to be saved. Will be used if save_fig is set to true
     '''
     col1 = df.columns.values[0]
     col2 = df.columns.values[1]
@@ -182,7 +184,6 @@ def bar_plot_comparison(df, save_fig=False, plot_name='bar_plot'):
     df4['Movies'] = df4.index
     df4.reset_index(inplace=True)
 
-#     plot = sns.catplot(x='Normalized value', y='Movies', hue='Legends',kind='bar',height=8, data=df4)
     plot = sns.catplot(x='Normalized value', y='Movies', hue='Legends',
                        kind='bar',height=10, data=df4,legend_out=False,
                        palette=sns.color_palette(['#E3715F','#4052A7']).as_hex())
@@ -195,24 +196,3 @@ def bar_plot_comparison(df, save_fig=False, plot_name='bar_plot'):
     if save_fig == True:
         file_name = '../../../saved_plots/{}.png'.format(plot_name)
         plot.savefig(file_name,bbox_inches='tight')
-                
-def scatter_plot(df, save_fig=False, plot_name='scatter_plot'):
-    """
-    
-    """
-    
-#    col1 = df.columns.values[0]
-#    col2 = df.columns.values[1]
-    fig,ax = plt.subplots(figsize=(8,8))
-    plt.scatter(df.iloc[:,0],df.iloc[:,1])
-    plt.xlim(0,100)
-    plt.ylim(0,100)
-    ax.tick_params(axis='both', which='major', labelsize=20)
-#    ax.set_xlabel(col1,fontsize=20)
-#    ax.set_ylabel(col2,fontsize=20)
-#    ax.set_yscale('log')
-#    ax.set_xscale('log')
-    
-    if save_fig == True:
-        file_name = '../../saved_plots/{}.png'.format(plot_name)
-        plt.savefig(file_name,bbox_inches='tight')
