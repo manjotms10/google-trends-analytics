@@ -4,8 +4,8 @@ import pandas as pd
 import dateutil.relativedelta as timedelta
 
 """
-This analysis compare games' monthly search volume with corresponding monthly sales
-over a 6-month launch period, from 1 month before launch to 4 months after launch
+This analysis compare games' Monthly Search Volume with corresponding Monthly Sales
+over a 6-month launch period, from 1 month before launch to 4 months after launch.
 """
 
 #%% parameters for Pytrends
@@ -13,11 +13,11 @@ cat = '8'               # category = Games
 gt = GoogleTrends()
 
 #%% analysis
-num_games = 4 # top number (up to 10) of games to be analyzed
-fname = './analytics/video_games/input_data/vgsales-game-release-date.csv'
+num_games = 4 # Top number (up to 10) of games to be analyzed
+fname = '../conf/video_games/input/vgsales-game-release-date.csv'
 df = pd.read_csv(fname,delimiter=',')
 
-fname = './analytics/video_games/input_data/vgsales-game-sale-history.csv'
+fname = '../conf/video_games/input/vgsales-game-sale-history.csv'
 df2 = pd.read_csv(fname,delimiter=',').T
 df2 = df2.iloc[1:,:].astype(int)
 

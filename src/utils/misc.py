@@ -110,17 +110,16 @@ def line_plot_2Yaxes_without_norm(df1, df2, save_fig=False, plot_name='line_plot
         plt.savefig(file_name,bbox_inches='tight')
     plt.show()
     
-def bar_plot(df, ylabel, save_fig=False, plot_name='bar_plot'):
+def bar_plot(df, ylabel='Movies', save_fig=False, plot_name='bar_plot'):
     '''
     This function is to produce bar chart using the same y aixs, by making the names of index shorter
     
     Args:
         df (dataframe) - dataframe containing both search and sales data
-        ylabel (str) - label of yaxis, either 'Movies' or 'Games'
+        ylabel (str) - label of y axis
         save_fig (bool) - The parameter decides whether to save the plot or not. By default it is False
         plot_name (str) - The name of the plot to be saved. Will be used if save_fig is set to true
     '''
-    assert ylabel == 'Movies' or ylabel == 'Games', 'ylabel is not Movies or Games'
     
     col1 = df.columns.values[0]
     col2 = df.columns.values[1]
@@ -167,13 +166,13 @@ def bar_plot(df, ylabel, save_fig=False, plot_name='bar_plot'):
         plot.savefig(file_name,bbox_inches='tight')
     plt.show()
     
-def bar_plot_comparison(df, ylabel, save_fig=False, plot_name='bar_plot'):
+def bar_plot_comparison(df, ylabel='Movies', save_fig=False, plot_name='bar_plot'):
     '''
     This function is to produce a bar plot graph using the same y axis, without changing the name of index
     
     Args:
         df (dataframe) - dataframe containing both search and sales data
-        ylabel (str) - label of yaxis, either 'Movies' or 'Games'
+        ylabel (str) - label of y axis
         save_fig (bool) - The parameter decides whether to save the plot or not. By default it is False
         plot_name (str) - The name of the plot to be saved. Will be used if save_fig is set to true
     '''

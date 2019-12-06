@@ -3,12 +3,12 @@ from analytics.video_games.data_preprocessing import data_sorting
 
 """
 This analysis compares the Total Sales of games under the Platforms that
-have the largest sales with corresponding Total Search Volume from 2004 to 2018
+have the highest sales with corresponding Total Search Volume from 2004 to 2018.
 """
 
 #%% get sorted vgchartz dataframe
 feature = 'Platform'
-fname = './analytics/video_games/input_data/vgsales-refined-data.csv'
+fname = '../conf/video_games/input/vgsales-refined-data.csv'
 data_sorting(fname, feature, limit=5, line_plot=True)
 data_sorting(fname, feature, limit=5, bar_plot=True)
     

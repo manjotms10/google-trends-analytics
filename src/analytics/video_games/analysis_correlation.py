@@ -8,11 +8,9 @@ This analysis compares the Total Search Volume with the Total Sales of
 Top 8 video games released in a specified year.
 """
 
-#%% get sorted vgchartz dataframe
-# index = Game Name, column = total sale
-# For example, if year = 2015, top_num = 100
-# it returns top 100 games released in 2015
-filename = './analytics/video_games/input_data/vgsales-refined-data.csv'
+#%% get sorted vgchartz dataframe with Index = Game Name, Column = Total Sales
+# For example, with year = 2015, top_num = 100, it returns top 100 games released in 2015
+filename = '../conf/video_games/input/vgsales-refined-data.csv'
 year = 2015
 top_num = 100 # Top number of games to be returned after sorting
 vg_df = keyword_data_sorting(filename,year=[year],genre=[], platform=[],top=top_num)
@@ -73,4 +71,4 @@ df2 = df2.sort_values(by='Normalized Sales Volume',ascending=False)
 #%% bar plot
 num_games = 8 # Top number of games to be plotted
 fig_name = 'bar_plot_' + str(year) + '_' + str(top_num)
-bar_plot(df2.iloc[:num_games,:],'Games',save_fig=True,plot_name=fig_name)
+bar_plot(df2.iloc[:num_games,:],ylabel='Games',save_fig=True,plot_name=fig_name)

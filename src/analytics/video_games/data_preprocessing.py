@@ -54,7 +54,7 @@ def data_cleaning(fname, platforms=[], merge_keywords=[], keywords=[], del_keywo
     nrow, ncol = df.shape
     print(f'There are {nrow} rows and {ncol} columns in refined data')
 
-    df.to_csv('./analytics/video_games/output_data/vgsales-refined-data.csv', index=False)
+    df.to_csv('../conf/video_games/output/vgsales-refined-data.csv', index=False)
 
     print('Genre includes', df['Genre'].value_counts().to_dict())
     print('ESRB_rating includes', df['ESRB_Rating'].value_counts().to_dict())
@@ -64,18 +64,18 @@ def data_cleaning(fname, platforms=[], merge_keywords=[], keywords=[], del_keywo
     
     return df
 
-#if __name__ == "__main__":
-#    fname = 'vgsales-12-4-2019-short.csv'
-#    
-#    merge_keywords = [['Total_Shipped', 'Global_Sales']]
-#    keywords = ['Genre', 'ESRB_Rating', 'Platform', 'Publisher', 'Developer', 'Critic_Score', 'Total_Shipped', 'Year']
-#    
-#    all_keywords = ['Genre', 'ESRB_Rating', 'Platform', 'Publisher', 'Developer', 'Critic_Score', 'User_Score', 'Total_Shipped', 'Global_Sales', 'Year']
-#    
-#    platforms = ['PS4', 'NS', 'XOne', '3DS', 'PSV', 'PS3', 'WiiU', 'X360', 'PSP', 'Wii', 'DS']
-#    del_keywords = ['NA_Sales', 'PAL_Sales', 'JP_Sales', 'Other_Sales']
-#    start_year = 2004
-#    data_cleaning(fname, platforms=platforms, merge_keywords=merge_keywords, keywords=keywords, del_keywords=del_keywords, start_year=2004)
+if __name__ == "__main__":
+    fname = '../conf/video_games/input/vgsales-scraped-data.csv'
+    
+    merge_keywords = [['Total_Shipped', 'Global_Sales']]
+    keywords = ['Genre', 'ESRB_Rating', 'Platform', 'Publisher', 'Developer', 'Critic_Score', 'Total_Shipped', 'Year']
+    
+    all_keywords = ['Genre', 'ESRB_Rating', 'Platform', 'Publisher', 'Developer', 'Critic_Score', 'User_Score', 'Total_Shipped', 'Global_Sales', 'Year']
+    
+    platforms = ['PS4', 'NS', 'XOne', '3DS', 'PSV', 'PS3', 'WiiU', 'X360', 'PSP', 'Wii', 'DS']
+    del_keywords = ['NA_Sales', 'PAL_Sales', 'JP_Sales', 'Other_Sales']
+    start_year = 2004
+    data_cleaning(fname, platforms=platforms, merge_keywords=merge_keywords, keywords=keywords, del_keywords=del_keywords, start_year=2004)
 
 
 def data_sorting(fname, keyword, limit=10, line_plot=False, bar_plot=False):
@@ -121,7 +121,7 @@ def data_sorting(fname, keyword, limit=10, line_plot=False, bar_plot=False):
 
     # output
     output = output.round(2)
-    output.to_csv('./analytics/video_games/output_data/vgsales-%s-year.csv' % keyword)
+    output.to_csv('../conf/video_games/output/vgsales-%s-year.csv' % keyword)
     output.drop('total',axis=1,inplace=True)
     output.drop('total',axis=0,inplace=True)
     print(output)
@@ -208,7 +208,7 @@ def sale_history(fname, limit=10, month_aft=5, plot=False):
         msale_hist = msale_hist.iloc[:,:limit]
                  
     # output to csv
-    msale_hist.swapaxes('index','columns').to_csv('./analytics/video_games/output_data/vgsales-game-sale-history.csv')
+    msale_hist.swapaxes('index','columns').to_csv('../conf/video_games/output/vgsales-game-sale-history.csv')
     print(msale_hist)
     
     # plot
@@ -284,5 +284,5 @@ def keyword_data_sorting(fname, year=[], genre=[], esrb_rating=[], platform=[], 
     return output_df
 
 #if __name__ == "__main__":
-#    filename = 'vgsales-refined-data.csv'
+#    filename = '../conf/video_games/input/vgsales-refined-data.csv'
 #    output_file = keyword_data_sorting(filename, year=[2012], genre=['Sports'], top=8)
