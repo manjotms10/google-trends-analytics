@@ -26,11 +26,11 @@ src - This is the source directory containing all our code <br>
 			 it consists of code for connecting to the GoogleTrends  API, obtain visualizations and log info and errors <br>
 
 ## Code Demo:
-The Jupyter notebook is present under __src/analytics.demo__ package. The code makes use of PyTrends API to connect to Google 
+- The Jupyter notebook is present under __src/analytics.demo__ package. The code makes use of PyTrends API to connect to Google 
 Search data and returns a Pandas dataframe. This data is then compared to actual sales data obtained by scraping IMDB,
-in the case of movies, and VGChartz dataset, in the case of video games. All these visualizations can be obtained from 
-the python files as well that are included in the __src/analytics.movies/analysis*.py files__ and 
-__src/analytics.video_games/analysis*.py__ files. To run these script files, please set the working directory to './src/'.
+in the case of movies, and VGChartz dataset, in the case of video games. <br>
+- All these visualizations can be obtained from the python files as well that are included in the __src/analytics.movies/analysis*.py files__ and __src/analytics.video_games/analysis*.py__ files. <br>
+To run these script files, please set the working directory to './src/'. <br>
 
 ## Third-party Modules:
 The following modules were used - <br>
