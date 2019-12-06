@@ -36,6 +36,9 @@ in the case of movies, and VGChartz dataset, in the case of video games. All the
 the python files as well that are included in the src/analytics.movies/analysis*.py files and 
 src/analytics.video_games/analysis*.py files 
 
+## Third-party Modules:
+The following modules were used - pytrends, pandas, numpy, matplotlib, contextlib, bs4, requests, re, string, collections, dateutil, logging
+
 ## Contributors
 Manjot Bilkhu (mbilkhu@ucsd.edu), Tushar Dobhal (tdobhal@ucsd.edu), Xiaolong He (xih251@ucsd.edu), 
 Zhaoru Shang (z5shang@ucsd.edu), Terry Huang (t1huang@ucsd.edu)
