@@ -3,7 +3,7 @@ from matplotlib.ticker import FormatStrFormatter
 import pandas as pd
 import numpy as np
 import seaborn as sns
-plt.rcParams.update({'font.size':24})
+plt.rcParams.update({'font.size':20})
 
 def line_plot_2Yaxes(df1, df2, save_fig=False, plot_name='line_plot_by_year_month'):
     '''
@@ -16,7 +16,6 @@ def line_plot_2Yaxes(df1, df2, save_fig=False, plot_name='line_plot_by_year_mont
         save_fig (bool) - The parameter decides whether to save the plot or not. By default it is False
         plot_name (str) - The name of the plot to be saved. Will be used if save_fig is set to true
     '''
-    plt.rcParams.update({'font.size':22})
     fig,ax1 = plt.subplots(figsize=(14,8),frameon=False)
     fig.patch.set_visible(False) # remove figure border
     color1 = (0.89,0.44,0.37) # line and label colors of Google Trends
@@ -26,37 +25,36 @@ def line_plot_2Yaxes(df1, df2, save_fig=False, plot_name='line_plot_by_year_mont
     # first line: Google Trends
     line1 = ax1.plot(df1,color=color1,linewidth=5,
                                 label='Google Trends',zorder=3)
-    ax1.set_ylabel('Normalized Value',color=color1,fontweight='bold')
+    ax1.set_xlabel('Month',labelpad=15,fontsize=25)
+    ax1.set_ylabel('Normalized Value',color=color1,fontsize=25)
     plt.xticks(np.arange(6),
                    ('Launch-1','Launch','Launch+1','Launch+2','Launch+3','Launch+4'),
-                   rotation=-10,
-                   fontsize=20,
-                   fontweight='bold')
-    plt.yticks(fontweight='bold')
+                   rotation=-10)
+    plt.yticks()
     ax1.set_ylim(bottom=0)
     ax1.tick_params(axis='y',labelcolor=color1)
     ax1.tick_params(axis='both',pad=15)
     
-    # second line: Total Sale
+    # second line: Total Sales
     ax2 = ax1.twinx()
     line2 = ax2.plot(df2[:6],'--',color=color2,linewidth=5,
-                     label='Total Sale',zorder=3)
-    ax2.set_ylabel('Total Sale (millions)',color=color2,rotation=-90,fontweight='bold',labelpad=25)
-    plt.yticks(fontweight='bold')
+                     label='Total Sales',zorder=3)
+    ax2.set_ylabel('Total Sales (millions)',color=color2,rotation=-90,labelpad=25,fontsize=25)
+    plt.yticks()
     ax2.set_ylim(bottom=0)
     ax2.tick_params(axis='y',labelcolor=color2,pad=15)
     ax2.yaxis.set_major_formatter(FormatStrFormatter('%.2f'))
     
     lines = line1 + line2
     labels = [ln.get_label() for ln in lines]
-    ax1.legend(lines,labels,prop={'weight':'bold'})
-    plt.title('Movie: ' + df1.columns.values[0],pad=20,fontweight='bold')
+    ax1.legend(lines,labels,prop={'size':15})
+    plt.title('Game: ' + df1.columns.values[0],pad=20)
     fig.tight_layout()
-    plt.show()
     
     if save_fig == True:
         file_name = '../../../saved_plots/{}.png'.format(plot_name)
         plt.savefig(file_name,bbox_inches='tight')
+    plt.show()
     
 def line_plot_2Yaxes_without_norm(df1, df2, save_fig=False, plot_name='line_plot_by_year_month'):
     '''
@@ -107,22 +105,23 @@ def line_plot_2Yaxes_without_norm(df1, df2, save_fig=False, plot_name='line_plot
     ax1.set_xlabel('Date',color=color,rotation=0,labelpad=25,fontsize=25)
     fig.tight_layout()
     
-    plt.show()
-    
     if save_fig == True:
         file_name = '../../../saved_plots/{}.png'.format(plot_name)
         plt.savefig(file_name,bbox_inches='tight')
-          
-def bar_plot(df, save_fig=False, plot_name='bar_plot'):
+    plt.show()
+    
+def bar_plot(df, ylabel, save_fig=False, plot_name='bar_plot'):
     '''
     This function is to produce bar chart using the same y aixs, by making the names of index shorter
     
     Args:
         df (dataframe) - dataframe containing both search and sales data
+        ylabel (str) - label of yaxis, either 'Movies' or 'Games'
         save_fig (bool) - The parameter decides whether to save the plot or not. By default it is False
         plot_name (str) - The name of the plot to be saved. Will be used if save_fig is set to true
     '''
-    plt.rcParams.update({'font.size':24})
+    assert ylabel == 'Movies' or ylabel == 'Games', 'ylabel is not Movies or Games'
+    
     col1 = df.columns.values[0]
     col2 = df.columns.values[1]
     df = df.sort_values(by=col1, ascending=True)
@@ -153,30 +152,33 @@ def bar_plot(df, save_fig=False, plot_name='bar_plot'):
             half = key[0]
             name_list[idx] = str.join(' ',words[:half]) + '\n' + str.join(' ',words[half:])
     
-    df4['Movies'] = name_list
+    df4[ylabel] = name_list
     df4.reset_index(inplace=True)
-    plot = sns.catplot(x='Normalized value', y='Movies', hue='Legends',
+    plot = sns.catplot(x='Normalized value', y=ylabel, hue='Legends',
                        kind='bar',height=10, data=df4,legend_out=False,
-                       palette=sns.color_palette(['#E3715F','#4052A7']).as_hex())
+                       palette=sns.color_palette(['#4052A7','#E3715F']).as_hex())
     plt.xlim(0,100)
-    plot.set_xlabels(fontsize=30)
-    plot.set_ylabels(fontsize=30)
-    plt.legend(bbox_to_anchor=(1,1))
-    plt.show()
+    plot.set_xlabels(fontsize=25)
+    plot.set_ylabels(fontsize=25)
+    plt.legend(bbox_to_anchor=(1,1),prop={'size':15})
     
     if save_fig == True:
         file_name = '../../../saved_plots/{}.png'.format(plot_name)
         plot.savefig(file_name,bbox_inches='tight')
-        
-def bar_plot_comparison(df, save_fig=False, plot_name='bar_plot'):
+    plt.show()
+    
+def bar_plot_comparison(df, ylabel, save_fig=False, plot_name='bar_plot'):
     '''
     This function is to produce a bar plot graph using the same y axis, without changing the name of index
     
     Args:
         df (dataframe) - dataframe containing both search and sales data
+        ylabel (str) - label of yaxis, either 'Movies' or 'Games'
         save_fig (bool) - The parameter decides whether to save the plot or not. By default it is False
         plot_name (str) - The name of the plot to be saved. Will be used if save_fig is set to true
     '''
+    assert ylabel == 'Movies' or ylabel == 'Games', 'ylabel is not Movies or Games'
+    
     col1 = df.columns.values[0]
     col2 = df.columns.values[1]
     df1 = pd.DataFrame(df[col1]) #dataframe of one category
@@ -185,23 +187,23 @@ def bar_plot_comparison(df, save_fig=False, plot_name='bar_plot'):
     df2 = df2.rename(columns={col2:"Normalized value"})#change column name to 'normalized value'
     df4 = pd.concat([df1, df2], axis=0, ignore_index=False)#connect two dataframes
     df4['Legends'] = (len(df1)*(col1,) + len(df2)*(col2,))#add column 'legends'
-    df4['Movies'] = df4.index
+    df4[ylabel] = df4.index
     df4.reset_index(inplace=True)
 
-    plot = sns.catplot(x='Normalized value', y='Movies', hue='Legends',
+    plot = sns.catplot(x='Normalized value', y=ylabel, hue='Legends',
                        kind='bar',height=10, data=df4,legend_out=False,
-                       palette=sns.color_palette(['#E3715F','#4052A7']).as_hex())
+                       palette=sns.color_palette(['#4052A7','#E3715F']).as_hex())
     plot.set_xticklabels(fontsize=20)
     plot.set_xlabels(fontsize=25)
     plot.set_yticklabels(fontsize=20)
     plot.set_ylabels(fontsize=25)
     plt.legend(loc='upper right',fontsize=15)
-    plt.show()
     
     if save_fig == True:
         file_name = '../../../saved_plots/{}.png'.format(plot_name)
         plot.savefig(file_name,bbox_inches='tight')
-
+    plt.show()
+    
 def stacked_bar_plot(trend_dict, save_fig=False, plot_name='bar_plot'):
     '''
     This function is to produces a stacked bar plot graph using the same y axis
@@ -237,10 +239,9 @@ def stacked_bar_plot(trend_dict, save_fig=False, plot_name='bar_plot'):
     plt.yticks(fontsize=20)
     plt.ylabel("Number of Movies", fontsize=25)
     plt.legend(["0-40", "40-60", "60-80", "80-100"], loc='upper right',fontsize=15, title='Movie Ratings')
-     
-    # Show graphic
-    plt.show()   
-    
+       
     if save_fig == True:
         file_name = '../../../saved_plots/{}.png'.format(plot_name)
-        plt.savefig(file_name,bbox_inches='tight')     
+        plt.savefig(file_name,bbox_inches='tight')    
+    # Show graphic
+    plt.show() 

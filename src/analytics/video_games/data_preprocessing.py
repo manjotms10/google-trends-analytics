@@ -1,15 +1,26 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+import string
+from matplotlib.ticker import FormatStrFormatter
+plt.rcParams.update({'font.size':24})
+plt.style.use('seaborn-deep')
+plt.rc("figure", facecolor="white")
+
 def data_cleaning(fname, platforms=[], merge_keywords=[], keywords=[], del_keywords=[], start_year=2004):
     """
     Filtering out unwanted game data.
-    :param fname: string. Name of data file.
-    :param platforms: list of strings. Filtering out games other than these platforms.
-    :param merge_keywords: list constains list with two elements. Fill the first element with the value of secon element.
-    :param keywords: list of strings. Filtering out games lacking these values.
-    :param del_keywords: list of strings. Deleting columns.
-    :param start_year: integer. Filtering out games released before this year.
+    
+    Args:
+        :param fname: string. Name of data file.
+        :param platforms: list of strings. Filtering out games other than these platforms.
+        :param merge_keywords: list constains list with two elements. Fill the first element with the value of secon element.
+        :param keywords: list of strings. Filtering out games lacking these values.
+        :param del_keywords: list of strings. Deleting columns.
+        :param start_year: integer. Filtering out games released before this year.
+    Return:
+        A cleaned dataframe
     """
-
-    import pandas as pd
 
     df = pd.read_csv(fname, delimiter=',')
     nrow, ncol = df.shape
@@ -43,7 +54,7 @@ def data_cleaning(fname, platforms=[], merge_keywords=[], keywords=[], del_keywo
     nrow, ncol = df.shape
     print(f'There are {nrow} rows and {ncol} columns in refined data')
 
-    df.to_csv('./analytics/video_games/output data/vgsales-refined-data.csv', index=False)
+    df.to_csv('./analytics/video_games/output_data/vgsales-refined-data.csv', index=False)
 
     print('Genre includes', df['Genre'].value_counts().to_dict())
     print('ESRB_rating includes', df['ESRB_Rating'].value_counts().to_dict())
@@ -72,15 +83,14 @@ def data_sorting(fname, keyword, limit=10, line_plot=False, bar_plot=False):
     Sorting out the total sale of a certain type (keyword) video games each year.
     Only top 'limit' video games are listed in the file and picture.
     
-    :param fname: string
-    :param keyword: 'Genre', 'ESRB_Rating', 'Platform', 'Publisher', 'Developer'
-    :param limit: integer, only show top 'limit' number of data
+    Args:
+        :param fname: string
+        :param keyword: 'Genre', 'ESRB_Rating', 'Platform', 'Publisher', 'Developer'
+        :param limit: integer, only show top 'limit' number of data
+    Return:
+        A sorted dataframe
     """
-
-    import pandas as pd
-    import numpy as np
-    import matplotlib.pyplot as plt
-
+    
     # read file
     df = pd.read_csv(fname, delimiter=',')
     nrow, ncol = df.shape
@@ -111,41 +121,42 @@ def data_sorting(fname, keyword, limit=10, line_plot=False, bar_plot=False):
 
     # output
     output = output.round(2)
-    output.to_csv('./analytics/video_games/output data/vgsales-%s-year.csv' % keyword)
-    output.drop('total', axis=1).drop('total', axis=0)
+    output.to_csv('./analytics/video_games/output_data/vgsales-%s-year.csv' % keyword)
+    output.drop('total',axis=1,inplace=True)
+    output.drop('total',axis=0,inplace=True)
     print(output)
     
-    # plot
-    plt.rcParams.update({'font.size':18})
-    output = output.drop('total',axis=1).drop('total',axis=0)
-    ind = list(output.index)
+    # plot   
+    ind = list(range(2004,2019))
+    plt.rcParams.update({'font.size':20})
     if line_plot:
-        plt.figure(figsize=(12,6))
-        [plt.plot(output[i],label=i) for i in output.columns.values]
-        plt.legend(bbox_to_anchor=(1,1))
+        fig, ax = plt.subplots(figsize=(12,6))
+        [plt.plot(output[i][:-2],label=i,linewidth=5) for i in output.columns.values[1:]]
+        plt.legend(bbox_to_anchor=(1,1),prop={'size':15},frameon=False)
         plt.grid()
-        plt.xlabel('Time')
-        plt.ylabel('Sales')
-        plt.xticks(ind,rotation=70)
-        plt.xlim(int(min(year_range))-1,int(max(year_range))+1)
-        plt.savefig(f'../../saved_plots/vgsales-{keyword}-year_line.png',bbox_inches='tight')
+        plt.ylabel('Total Sales (millions)',fontsize=25)
+        plt.xticks(ind,rotation=45)
+        plt.yticks(fontsize=25)
+        plt.xlim(min(ind),max(ind))
+        plt.ylim(0,output.max().max())
+        ax.xaxis.set_major_formatter(FormatStrFormatter('%d'))
+        plt.savefig(f'../../../saved_plots/vgsales-{keyword}-year_line.png',bbox_inches='tight')
     elif bar_plot:
-        plt.figure(figsize=(12,6))
+        fig, ax = plt.subplots(figsize=(12,6))
         axes = []
         agg_sum = np.zeros(len(ind))
-        for i in list(output.columns.values):
-            axes.append(plt.bar(ind,output[i],label=i,bottom=agg_sum,zorder=3))
-            agg_sum += output[i].values
+        for i in list(output.columns.values[1:]):
+            axes.append(plt.bar(ind,output[i][:-2],label=i,edgecolor='none',bottom=agg_sum,zorder=3))
+            agg_sum += output[i].values[:-2]
 
-#        plt.legend(bbox_to_anchor=(0,-0.3,1,0.5),ncol=5,mode="expand",borderaxespad=0.,
-#                   fontsize=12)
-        plt.legend(bbox_to_anchor=(1,1))
+        plt.legend(bbox_to_anchor=(1,1),prop={'size':15},frameon=False)
         plt.grid(axis='y',zorder=0)
-        plt.xlabel('Time')
-        plt.ylabel('Sales')
-        plt.xticks(ind,rotation=70)
-        plt.xlim(int(min(year_range))-1,int(max(year_range))+1)
-        plt.savefig(f'../../saved_plots/vgsales-{keyword}-year_bar.png',bbox_inches='tight')
+        plt.ylabel('Total Sales (millions)',fontsize=25)
+        plt.xticks(ind,rotation=45)
+        plt.yticks(fontsize=20)
+        plt.xlim(min(ind)-1,max(ind)+1)
+        ax.xaxis.set_major_formatter(FormatStrFormatter('%d'))
+        plt.savefig(f'../../../saved_plots/vgsales-{keyword}-year_bar.png',bbox_inches='tight')
     
     return output
         
@@ -155,16 +166,15 @@ def sale_history(fname, limit=10, month_aft=5, plot=False):
     Returns sale history of top number (<='limit') of games from the data file. 
     The sale history of selective games will be output to csv file and plotted.
     
-    :param fname: string
-    :param limit: integer, output sale history of top 'limit' number of games
-    :param month_aft: the specified number of months after release
-    :param plot: bool, if True, line plot is produced and saved
+    Args:
+        :param fname: string
+        :param limit: integer, output sale history of top 'limit' number of games
+        :param month_aft: the specified number of months after release
+        :param plot: bool, if True, line plot is produced and saved
+    Return:
+        A dataframe that contains monthly sales of games
     """
-
-    import pandas as pd
-    import numpy as np
-    import matplotlib.pyplot as plt
-
+    
     # read data file
     df = pd.read_csv(fname, delimiter=',')
     week_aft = month_aft*4 # weeks after sales to be considered
@@ -185,7 +195,6 @@ def sale_history(fname, limit=10, month_aft=5, plot=False):
         wsale_hist.reset_index(inplace=True,drop=True)    # reset index
         temp = wsale_hist['week after release']
         
-#        if len(temp) >= week_aft and all(temp == list(range(1,len(temp)+1))):
         if len(temp) >= week_aft and all(temp[:20] == list(range(1,21))):
             j = 0
             msale_hist[game] = 0
@@ -199,7 +208,7 @@ def sale_history(fname, limit=10, month_aft=5, plot=False):
         msale_hist = msale_hist.iloc[:,:limit]
                  
     # output to csv
-    msale_hist.swapaxes('index','columns').to_csv('./analytics/video_games/output/vgsales-game-sale-history.csv')
+    msale_hist.swapaxes('index','columns').to_csv('./analytics/video_games/output_data/vgsales-game-sale-history.csv')
     print(msale_hist)
     
     # plot
@@ -212,7 +221,7 @@ def sale_history(fname, limit=10, month_aft=5, plot=False):
         plt.xlabel('Months after release')
         plt.ylabel('Monthly sales')
         plt.xticks(np.arange(6))
-        plt.savefig(f'../../saved_plots/vgsales-game-sale-history.png',bbox_inches='tight')
+        plt.savefig(f'../../../saved_plots/vgsales-game-sale-history.png',bbox_inches='tight')
     
     return msale_hist
 
@@ -220,17 +229,23 @@ def sale_history(fname, limit=10, month_aft=5, plot=False):
 def keyword_data_sorting(fname, year=[], genre=[], esrb_rating=[], platform=[], publisher=[], developer=[], top=1):
     """
     Sorting out the total sale of a certain type (keyword) video games each year.
-    Only top 'top' video games are listed in the file and picture.
-    :param fname: string
-    :param top: integer, only show top 'limit' number of data
+    Only top 'top' video games are listed in the file and plots.
+    
+    Args:
+        :param fname: string
+        :param top: integer, only show top 'limit' number of data
+    Retrun:
+        A dataframe sorted by specified keywords
     """
-
-    import pandas as pd
 
     # read file
     df = pd.read_csv(fname, delimiter=',')
     nrow, ncol = df.shape
     df['Year'] = df['Year'].astype('int')
+    
+    # remove the punctuation
+    for i in range(nrow):
+        df.loc[i, 'Name'] = df.loc[i, 'Name'].translate(str.maketrans('', '', string.punctuation))
 
     # delete rows which are not satisfied with the criteria
     for i in range(nrow):
@@ -248,13 +263,13 @@ def keyword_data_sorting(fname, year=[], genre=[], esrb_rating=[], platform=[], 
             df.drop(index=i, inplace=True)
     assert not df.empty, 'No video game satisfy this criteria'
 
-    # combine the repeat elements
-    output_df = pd.DataFrame(index=list(set(df['Name'])), columns=['Total_Sale'])
-    output_df['Total_Sale'] = 0
+    # Replace all the punctuations in the instring to a blank
+    output_df = pd.DataFrame(index=list(set(df['Name'])), columns=['Normalized Sales Volume'])
+    output_df['Normalized Sales Volume'] = 0
     nrow, ncol = df.shape
     for i in range(nrow):
-        output_df.loc[df.iloc[i, 1], 'Total_Sale'] += df.iloc[i, 9]
-    output_df.sort_values(by='Total_Sale', ascending=False, inplace=True)
+        output_df.loc[df.iloc[i, 1], 'Normalized Sales Volume'] += df.iloc[i, 9]
+    output_df.sort_values(by='Normalized Sales Volume', ascending=False, inplace=True)
 
     nrow, ncol = output_df.shape
     # delete excessive rows
@@ -262,13 +277,12 @@ def keyword_data_sorting(fname, year=[], genre=[], esrb_rating=[], platform=[], 
     output_df.drop(index=output_df.index[top:], inplace=True)
 
     # normalize
-    max_sale = max(output_df['Total_Sale'])
+    max_sale = max(output_df['Normalized Sales Volume'])
     for i in range(top):
         output_df.iloc[i, 0] = output_df.iloc[i, 0]/max_sale*100
 
     return output_df
 
-
-# if __name__ == "__main__":
-#     filename = 'vgsales-refined-data.csv'
-#     output_file = keyword_data_sorting(filename, year=[2012], genre=['Sports'], top=8)
+#if __name__ == "__main__":
+#    filename = 'vgsales-refined-data.csv'
+#    output_file = keyword_data_sorting(filename, year=[2012], genre=['Sports'], top=8)

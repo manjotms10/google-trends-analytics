@@ -1,44 +1,76 @@
 from utils.google_trends import GoogleTrends
 import pandas as pd
 from analytics.video_games.data_preprocessing import keyword_data_sorting
-from utils.misc import bar_plot_comparison, scatter_plot
+from utils.misc import bar_plot
 
-# get data from vgchartz
-# a pandas dataframe with index = game name, and column = total sale
-# For example, if genre=[], platform=[], the top number of games are under the 
-# condition of the specified year: in 2015, top 100 games
-filename = './analytics/video_games/input data/vgsales-refined-data.csv'
-vg_df = keyword_data_sorting(filename, year=[2018], genre=[], platform=[], top=90)
+"""
+This analysis compares the Total Search Volume with the Total Sales of 
+Top 8 video games released in a specified year.
+"""
 
+#%% get sorted vgchartz dataframe
+# index = Game Name, column = total sale
+# For example, if year = 2015, top_num = 100
+# it returns top 100 games released in 2015
+filename = './analytics/video_games/input_data/vgsales-refined-data.csv'
+year = 2015
+top_num = 100 # Top number of games to be returned after sorting
+vg_df = keyword_data_sorting(filename,year=[year],genre=[], platform=[],top=top_num)
 
 #%% parameters for Pytrends
 start_date = '2004-01-01'
 end_date = '2019-11-19'
-
-cat = '41'               # category = computer $ video games
+cat = '8'                 # category = Games
 gt = GoogleTrends()
 
-# input keywords manually or from data files
-#keywords = ['Mario Kart Wii','Wii Sports','New Super Mario Bros','Wii Play',\
-#       'Kinect Adventures','Nintendogs','Mario Kart DS','Wii Fit',\
-#       'Grand Theft Auto V','Red Dead Redemption 2','Super Mario Odyssey']
-
+# get keywords from sorted vgchart dataframe
 keywords = vg_df.index.tolist()
 
+# optimize keywords by suggestion from Pytrends
+keywords_suggested = []
+for kw in keywords:
+    try:
+        keywords_suggested.append(gt.trend_request.suggestions(kw)[0]['mid'])
+    except IndexError:
+        keywords_suggested.append(kw)
+
 #%% get google-trends data
-gt.get_trends_data_from_multiple_keywords(keywords=keywords, 
+gt.get_trends_data_from_multiple_keywords(keywords=keywords_suggested, 
                                           start_date=start_date,
                                           end_date=end_date, 
                                           category=cat)
 
 #%% data processing
 gt.sort_data_by_year()
-gt_df = gt.data_by_year.sum(axis=0).to_frame(name='Total Search Volume')
+
+# create a dataframe storing the max search volume of each year
+#gt_df = gt.data_by_year.sum(axis=0).to_frame(name='Total Search Volume')
+gt_df = gt.data_by_year.max().to_frame(name='Normalized Search Volume')
+
+# normalize
 gt_df = gt_df / gt_df.max() * 100
+
+# set names as index
+gt_df.set_index(vg_df.index,inplace=True)
 
 #%% combine dataframes
 df = pd.concat((vg_df,gt_df),axis=1,sort=True)
 
-#%% plot
-#bar_plot_comparison(df)
-scatter_plot(df)
+# drop rows with zero search volume and too large differences
+df.drop(df[gt_df.iloc[:,0] == 0].index,inplace=True)
+df = df / df.max() * 100
+max_diff = 5 
+df['diff'] = abs(df.iloc[:,0]-df.iloc[:,1])
+df2 = df.drop(df[df['diff'] > max_diff].index)
+
+# normalize by max of each column
+df2 = df2 / df2.max() * 100 
+df2['diff'] = abs(df2.iloc[:,0]-df2.iloc[:,1])
+
+# resort by Total Sale Volume
+df2 = df2.sort_values(by='Normalized Sales Volume',ascending=False)
+
+#%% bar plot
+num_games = 8 # Top number of games to be plotted
+fig_name = 'bar_plot_' + str(year) + '_' + str(top_num)
+bar_plot(df2.iloc[:num_games,:],'Games',save_fig=True,plot_name=fig_name)

@@ -1,24 +1,27 @@
 from utils.google_trends import GoogleTrends
 from utils.misc import line_plot_2Yaxes
-from analytics.video_games.data_preprocessing import sale_history
 import pandas as pd
 import dateutil.relativedelta as timedelta
 
-# Compare games' Google Trends' search volume history 
-# (6 months: from one month before release to 5 months after release)
-# with corresponding monthly sale history 
+"""
+This analysis compare games' monthly search volume with corresponding monthly sales
+over a 6-month launch period, from 1 month before launch to 4 months after launch
+"""
 
-#%% parameters
-cat = '41'               # category = computer $ video games
+#%% parameters for Pytrends
+cat = '8'               # category = Games
 gt = GoogleTrends()
 
 #%% analysis
-fname = './analytics/video_games/input data/vgsales-game-release-date.csv'
+num_games = 4 # top number (up to 10) of games to be analyzed
+fname = './analytics/video_games/input_data/vgsales-game-release-date.csv'
 df = pd.read_csv(fname,delimiter=',')
-fname = './analytics/video_games/input data/2016-2018.csv'
-df2 = sale_history(fname, limit=30, month_aft=5, plot=True)
 
-for i,game in enumerate(df.game.tolist()):
+fname = './analytics/video_games/input_data/vgsales-game-sale-history.csv'
+df2 = pd.read_csv(fname,delimiter=',').T
+df2 = df2.iloc[1:,:].astype(int)
+
+for i,game in enumerate(df.game.tolist()[:num_games]):
     keywords = [game]
     date = df.iloc[i,1]
     date = pd.Timestamp(date) - timedelta.relativedelta(months=1)
@@ -33,6 +36,7 @@ for i,game in enumerate(df.game.tolist()):
                                               end_date=end_date, 
                                               category=cat)
     print(gt.data.index)
+    
     # data processing
     gt.sort_data_by_year_month()
     
