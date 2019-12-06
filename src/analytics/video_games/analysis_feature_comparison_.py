@@ -9,8 +9,8 @@ have the highest sales with corresponding Total Search Volume from 2004 to 2018.
 #%% get sorted vgchartz dataframe
 feature = 'Platform'
 fname = '../conf/video_games/input/vgsales-refined-data.csv'
-data_sorting(fname, feature, limit=5, line_plot=True)
-data_sorting(fname, feature, limit=5, bar_plot=True)
+data_sorting(fname, feature, limit=4, line_plot=True)
+data_sorting(fname, feature, limit=4, bar_plot=True)
     
 #%% parameters for Pytrends
 start_date = '2004-01-01'

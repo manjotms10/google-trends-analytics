@@ -64,21 +64,21 @@ def data_cleaning(fname, platforms=[], merge_keywords=[], keywords=[], del_keywo
     
     return df
 
-if __name__ == "__main__":
-    fname = '../conf/video_games/input/vgsales-scraped-data.csv'
-    
-    merge_keywords = [['Total_Shipped', 'Global_Sales']]
-    keywords = ['Genre', 'ESRB_Rating', 'Platform', 'Publisher', 'Developer', 'Critic_Score', 'Total_Shipped', 'Year']
-    
-    all_keywords = ['Genre', 'ESRB_Rating', 'Platform', 'Publisher', 'Developer', 'Critic_Score', 'User_Score', 'Total_Shipped', 'Global_Sales', 'Year']
-    
-    platforms = ['PS4', 'NS', 'XOne', '3DS', 'PSV', 'PS3', 'WiiU', 'X360', 'PSP', 'Wii', 'DS']
-    del_keywords = ['NA_Sales', 'PAL_Sales', 'JP_Sales', 'Other_Sales']
-    start_year = 2004
-    data_cleaning(fname, platforms=platforms, merge_keywords=merge_keywords, keywords=keywords, del_keywords=del_keywords, start_year=2004)
+#if __name__ == "__main__":
+#    fname = '../conf/video_games/input/vgsales-scraped-data.csv'
+#    
+#    merge_keywords = [['Total_Shipped', 'Global_Sales']]
+#    keywords = ['Genre', 'ESRB_Rating', 'Platform', 'Publisher', 'Developer', 'Critic_Score', 'Total_Shipped', 'Year']
+#    
+#    all_keywords = ['Genre', 'ESRB_Rating', 'Platform', 'Publisher', 'Developer', 'Critic_Score', 'User_Score', 'Total_Shipped', 'Global_Sales', 'Year']
+#    
+#    platforms = ['PS4', 'NS', 'XOne', '3DS', 'PSV', 'PS3', 'WiiU', 'X360', 'PSP', 'Wii', 'DS']
+#    del_keywords = ['NA_Sales', 'PAL_Sales', 'JP_Sales', 'Other_Sales']
+#    start_year = 2004
+#    data_cleaning(fname, platforms=platforms, merge_keywords=merge_keywords, keywords=keywords, del_keywords=del_keywords, start_year=2004)
 
 
-def data_sorting(fname, keyword, limit=10, line_plot=False, bar_plot=False):
+def data_sorting(fname, keyword, limit=10, output_file=False, line_plot=False, bar_plot=False, save_fig=False):
     """
     Sorting out the total sale of a certain type (keyword) video games each year.
     Only top 'limit' video games are listed in the file and picture.
@@ -114,24 +114,25 @@ def data_sorting(fname, keyword, limit=10, line_plot=False, bar_plot=False):
     output = output.sort_values(by='total', axis=1, ascending=False)
 
     # filter out low sale games
-    output = output.drop(list(output)[limit+1:], axis=1)
+    output = output.drop(list(output)[limit+2:], axis=1)
 
     # recalculate the total sale
     output["total"] = output.drop('total',axis=1).sum(axis=1)
 
     # output
     output = output.round(2)
-    output.to_csv('../conf/video_games/output/vgsales-%s-year.csv' % keyword)
+    if output_file:
+        output.to_csv('../conf/video_games/output/vgsales-%s-year.csv' % keyword)
     output.drop('total',axis=1,inplace=True)
     output.drop('total',axis=0,inplace=True)
-    print(output)
+    output.drop(output.columns[0],axis=1,inplace=True)
     
     # plot   
     ind = list(range(2004,2019))
     plt.rcParams.update({'font.size':20})
     if line_plot:
         fig, ax = plt.subplots(figsize=(12,6))
-        [plt.plot(output[i][:-2],label=i,linewidth=5) for i in output.columns.values[1:]]
+        [plt.plot(output[i][:-2],label=i,linewidth=5) for i in output.columns.values]
         plt.legend(bbox_to_anchor=(1,1),prop={'size':15},frameon=False)
         plt.grid()
         plt.ylabel('Total Sales (millions)',fontsize=25)
@@ -140,12 +141,13 @@ def data_sorting(fname, keyword, limit=10, line_plot=False, bar_plot=False):
         plt.xlim(min(ind),max(ind))
         plt.ylim(0,output.max().max())
         ax.xaxis.set_major_formatter(FormatStrFormatter('%d'))
-        plt.savefig(f'../../../saved_plots/vgsales-{keyword}-year_line.png',bbox_inches='tight')
+        if save_fig:
+            plt.savefig(f'../../../saved_plots/vgsales-{keyword}-year_line.png',bbox_inches='tight')
     elif bar_plot:
         fig, ax = plt.subplots(figsize=(12,6))
         axes = []
         agg_sum = np.zeros(len(ind))
-        for i in list(output.columns.values[1:]):
+        for i in list(output.columns.values):
             axes.append(plt.bar(ind,output[i][:-2],label=i,edgecolor='none',bottom=agg_sum,zorder=3))
             agg_sum += output[i].values[:-2]
 
@@ -156,7 +158,8 @@ def data_sorting(fname, keyword, limit=10, line_plot=False, bar_plot=False):
         plt.yticks(fontsize=20)
         plt.xlim(min(ind)-1,max(ind)+1)
         ax.xaxis.set_major_formatter(FormatStrFormatter('%d'))
-        plt.savefig(f'../../../saved_plots/vgsales-{keyword}-year_bar.png',bbox_inches='tight')
+        if save_fig:
+            plt.savefig(f'../../../saved_plots/vgsales-{keyword}-year_bar.png',bbox_inches='tight')
     
     return output
         
@@ -285,4 +288,4 @@ def keyword_data_sorting(fname, year=[], genre=[], esrb_rating=[], platform=[], 
 
 #if __name__ == "__main__":
 #    filename = '../conf/video_games/input/vgsales-refined-data.csv'
-#    output_file = keyword_data_sorting(filename, year=[2012], genre=['Sports'], top=8)
+#    output_file = keyword_data_sorting(filename, year=[2015], genre=['Sports'], top=8)
