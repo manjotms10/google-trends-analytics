@@ -4,9 +4,10 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 from pandas.plotting import register_matplotlib_converters
-import numpy as np
-
+from matplotlib.ticker import FormatStrFormatter
 from utils import logger
+plt.style.use('seaborn-deep')
+plt.rcParams.update({'font.size':20})
 
 '''
 This is a util class that fetches the data from Google Trends using PyTrends library. First a connection request object is created for connection
@@ -18,7 +19,7 @@ gt.get_trends_data_from_multiple_keywords(keywords=['Avengers', 'Black Panther']
 '''
 class GoogleTrends:
     
-    plot_directory = '../../saved_plots/{}.png'
+    plot_directory = '../../../saved_plots/{}.png'
     
     def __init__(self):
         '''
@@ -122,7 +123,7 @@ class GoogleTrends:
         return self
     
 
-    def get_trends_data_from_multiple_keywords(self, keywords, start_date, end_date, category=None, geo='US'):
+    def get_trends_data_from_multiple_keywords(self, keywords, start_date, end_date, category=None, geo=''):
         """
         This function returns the search volume (Interest Over Time) of multiple keywords (> 5) and adjust the normalization such that the
         search result volumes of all keywords have the same normalization and are comparable.
@@ -132,7 +133,7 @@ class GoogleTrends:
             start_date (str) - The start date of the search query in YYYY-MM-DD format
             end_date (str) - The end date of the search query in YYYY-MM-DD format
             category (str) - The category to which the search results belong to. By default, it is None, which means all categories
-            geo (str) - The country whose search results is to be obtained. By default: global
+            geo (str) - The country whose search results is to be obtained. By default: Global
         
         Returns:
             A Pandas dataframe containing the search result volume for each keyword in keywords
@@ -182,69 +183,6 @@ class GoogleTrends:
         logger.info("Concatenated dataframe of size - ({}, {})".format(self.data.shape[0], self.data.shape[1]))
         logger.info("Sample rows from dataframe: \n{}".format(self.data.head(n=5)))
 
-        return self        
-        
-    
-    def get_trends_data_from_multiple_keywords(self, keywords, start_date, end_date, category=None, geo='US'):
-        """
-        This function returns the search volume (Interest Over Time) of multiple keywords (> 5) and adjust the normalization such that the
-        search result volumes of all keywords have the same normalization and are comparable.
-    
-        Args:
-            keywords (list) - A list of keywords that are to be sent to get the search volume
-            start_date (str) - The start date of the search query in YYYY-MM-DD format
-            end_date (str) - The end date of the search query in YYYY-MM-DD format
-            category (str) - The category to which the search results belong to. By default, it is None, which means all categories
-            geo (str) - The country whose search results is to be obtained. By default: global
-        
-        Returns:
-            A Pandas dataframe containing the search result volume for each keyword in keywords
-        """
-        assert isinstance(keywords, list) and len(keywords) > 0
-        assert isinstance(start_date, str)
-        assert isinstance(end_date, str)
-        if category is not None:
-            assert isinstance(category, str)
-        assert isinstance(geo, str)
-        
-        expanded_keywords = keywords
-        concat_dataframe = pd.DataFrame()  # initialize dataframe
-        keyword_ref = keywords[0]  # reference keyword, for normalization purpose
-        n_batch = 0            
-        keywords_batch = [[]]  # list of keywords batches, each batch contains <= 5 keywords including the reference keyword
-        for i in keywords[1:]:
-            keywords_batch[n_batch].append(i)
-            if len(keywords_batch[n_batch]) == 4 and keywords_batch[n_batch][-1] != keywords[-1]:
-                n_batch += 1
-                keywords_batch.append([])
-            
-        # Get normalized search result volume of all batches keywords
-        for i, keywords in enumerate(keywords_batch):
-            # current keyword batch (max=5 for each search request)
-            keywords.append(keyword_ref)
-        
-            # get search result volume
-            temp_dataframe = self.get_trends_data(keywords=keywords, start_date=start_date, end_date=end_date, category=category, geo=geo).data
-        
-            # adjust normalization from the 2nd batch onwards
-            if i > 0:  
-                r = concat_dataframe[keyword_ref] / temp_dataframe[keyword_ref]  # normalization ratio
-                m = np.ma.masked_array(r, np.isnan(r))  # remove NAN
-                m = np.ma.masked_invalid(m)  # remove inf
-                m = np.mean(m)  # mean of normalization ratio
-                temp_dataframe = temp_dataframe.loc[:, keywords[0]:keywords[-2]] * m  # adjust normalization of current batch
-        
-            # add current concat_dataframe frame to the total concat_dataframe frame
-            concat_dataframe = pd.concat([concat_dataframe, temp_dataframe], axis=1)
-        
-            # normalize by the current peak search volume
-            concat_dataframe = concat_dataframe / concat_dataframe.max().max() * 100
-        
-        self.data = concat_dataframe
-        self.keywords = expanded_keywords
-        logger.info("Concatenated dataframe of size - ({}, {})".format(self.data.shape[0], self.data.shape[1]))
-        logger.info("Sample rows from dataframe: \n{}".format(self.data.head(n=5)))
-            
         return self
     
     def get_trends_data_with_region_from_multiple_keywords(self, keywords, start_date, end_date, category=None, geo='US', resolution='COUNTRY'):
@@ -258,7 +196,7 @@ class GoogleTrends:
             start_date (str) - The start date of the search query in YYYY-MM-DD format
             end_date (str) - The end date of the search query in YYYY-MM-DD format
             category (str) - The category to which the search results belong to. By default, it is None, which means all categories
-            geo (str) - The country whose search results is to be obtained. By default: global
+            geo (str) - The country whose search results is to be obtained. By default: US
             resolution (str) - The level of data desired. Can be one of - COUNTRY, CITY, DMA, REGION
         
         Returns:
@@ -320,7 +258,6 @@ class GoogleTrends:
             a dataframe with index of Year and columns of 
             yearly search volume of keywords
         """
-        
         # reindex dataframe using Year
         self.data['Year'] = self.data.index.year
         self.data.set_index('Year',inplace=True)
@@ -335,7 +272,7 @@ class GoogleTrends:
             self.data_by_year = pd.concat((self.data_by_year,temp),axis=0)
         
         # normalize by the max aggregate search volume of years
-        self.data_by_year = self.data_by_year / self.data_by_year.sum(axis=1).max() * 100
+        self.data_by_year = self.data_by_year / self.data_by_year.max().max() * 100
         
         return self
     
@@ -348,16 +285,9 @@ class GoogleTrends:
             a dataframe with index of Year-Month and columns of "Year-Month"
             search volume of keywords
         """
-
-        # generate a CategoryDtype for Year-Month
-#        rng = self.data.index.strftime('%Y-%m-%d')
-#        rng = pd.date_range(start=rng.values[0],end=rng.values[-1],freq='m').strftime('%Y-%m')
-#        cat = pd.CategoricalDtype(rng,ordered=True)
-        
         # reindex dataframe using Year-Month      
         try:
             self.data['Year-Month'] = self.data.index.strftime('%Y-%m')
-    #        self.data['Year-Month'] = self.data['Year-Month'].astype(cat)
             self.data.set_index('Year-Month',inplace=True)
         except AttributeError:
             pass
@@ -430,13 +360,17 @@ class GoogleTrends:
         
         logger.info("Plotting dataframe of size - ({}, {})".format(self.data.shape[0], self.data.shape[1]))
             
-        plt.figure(figsize=(12,6))
-        [plt.plot(self.data_by_year[i],label=i,zorder=3) for i in self.keywords]
-        plt.legend(bbox_to_anchor=(1,1))
+        ind = list(self.data_by_year.index)
+        fig, ax = plt.subplots(figsize=(12,6))
+        [plt.plot(self.data_by_year[i],label=i,linewidth=5,zorder=3) for i in self.keywords]
+        plt.legend(bbox_to_anchor=(1,1),prop={'size':15},frameon=False)
         plt.grid(zorder=0)
-        plt.xlabel('Timeframe')
-        plt.ylabel('Normalized search interest')
-        plt.xticks(list(self.data_by_year.index),rotation=70)
+        plt.ylabel('Normalized Search Volume')
+        plt.xticks(ind,rotation=45,fontsize=25)
+        plt.yticks(fontsize=25)
+        plt.xlim(min(ind),max(ind))
+        ax.xaxis.set_major_formatter(FormatStrFormatter('%d'))
+        plt.ylim(0,100)
         
         if save_fig == True:
             file_name = GoogleTrends.plot_directory.format(plot_name)
@@ -462,14 +396,16 @@ class GoogleTrends:
             logger.warn("Using the default name - {} for saving the plot to disk".format(plot_name))
         
         logger.info("Plotting dataframe of size - ({}, {})".format(self.data.shape[0], self.data.shape[1]))
-            
-        plt.figure(figsize=(12,6))
-        [plt.plot(self.data_by_year_month[i],label=i,zorder=3) for i in self.keywords]
-        plt.legend(bbox_to_anchor=(1,1))
+        
+        ind = list(self.data_by_year_month.index)
+        fig, ax = plt.subplots(figsize=(12,6))
+        [plt.plot(self.data_by_year_month[i],label=i,linewidth=5,zorder=3) for i in self.keywords]
+        plt.legend(bbox_to_anchor=(1,1),prop={'weight':'bold','size':20},frameon=False)
         plt.grid(zorder=0)
-        plt.xlabel('Timeframe')
-        plt.ylabel('Normalized search interest')
-        plt.ylim(0,100)
+        plt.ylabel('Normalized Search Volume',fontweight='bold')
+        plt.xticks(ind,rotation=45,fontsize=20,fontweight='bold')
+        plt.yticks(fontweight='bold')
+        ax.xaxis.set_major_formatter(FormatStrFormatter('%d'))
         
         if save_fig == True:
             file_name = GoogleTrends.plot_directory.format(plot_name)
@@ -502,11 +438,12 @@ class GoogleTrends:
         df = self.data_by_year
         ind = list(df.index)
         
-        plt.figure(figsize=(12,6))
+        plt.rcParams.update({'font.size':20})
+        fig, ax = plt.subplots(figsize=(12,6))
         axes = []
         agg_sum = np.zeros(len(ind))
         for i in keywords:
-            axes.append(plt.bar(ind,df[i],label=i,bottom=agg_sum,zorder=3))
+            axes.append(plt.bar(ind,df[i],label=i,edgecolor='none',bottom=agg_sum,zorder=3))
             agg_sum += df[i].values
         
         if show_values:
@@ -518,13 +455,13 @@ class GoogleTrends:
                              value_format.format(h), ha="center", 
                              va="center",fontsize=10)
         
-        plt.legend(bbox_to_anchor=(1,1))
-#        plt.legend(bbox_to_anchor=(0,-0.8,1,0.5),ncol=5,mode="expand",borderaxespad=0.,
-#                   fontsize=12)
+        plt.legend(bbox_to_anchor=(1,1),prop={'size':15},frameon=False)
         plt.grid(axis='y',zorder=0)
-        plt.xlabel('Timeframe')
-        plt.ylabel('Normalized search interest')
-        plt.xticks(ind,rotation=70)
+        plt.ylabel('Normalized Search Volume',fontsize=25)
+        plt.xticks(ind,rotation=45,fontsize=20)
+        plt.yticks(fontsize=20)
+        plt.xlim(min(ind)-1,max(ind)+1)
+        ax.xaxis.set_major_formatter(FormatStrFormatter('%d'))
         
         if save_fig == True:
             file_name = GoogleTrends.plot_directory.format(plot_name)
