@@ -4,11 +4,7 @@ Course Project for UCSD ECE143: Programming for Data Analytics
 ## Proposal: What Google Trends Tell Us
 
 Problem: <br>
-This study is aimed at analyzing the Google Search trends and correlating them with real-world
-data via predictive analysis. The main idea is to study what Google Search data tells us about the
-real world and then develop models to predict the outcome of an event. For example, Google
-search trends can correlate well with the popularity of movies/video games. This correlation from various 
-features will be analyzed and compared to observations from other available sources. <br>
+This study is aimed at analyzing the Google Search trends and correlating them with real-world data. The main idea is to study what Google Search data tells us about the real world. For example, Google search trends can correlate well with the popularity of movies/video games. This correlation from various features will be analyzed and compared to observations from other available sources. <br>
 
 ## Dataset:
 - Google Trend data to be obtained by using Python API <br>
@@ -30,11 +26,11 @@ src - This is the source directory containing all our code <br>
 			 it consists of code for connecting to the GoogleTrends  API, obtain visualizations and log info and errors <br>
 
 ## Code Demo:
-The Jupyter notebook is present under src/analytics.demo package. The code makes use of PyTrends API to connect to Google 
+The Jupyter notebook is present under __src/analytics.demo__ package. The code makes use of PyTrends API to connect to Google 
 Search data and returns a Pandas dataframe. This data is then compared to actual sales data obtained by scraping IMDB,
 in the case of movies, and VGChartz dataset, in the case of video games. All these visualizations can be obtained from 
-the python files as well that are included in the src/analytics.movies/analysis*.py files and 
-src/analytics.video_games/analysis*.py files 
+the python files as well that are included in the __src/analytics.movies/analysis*.py files__ and 
+__src/analytics.video_games/analysis*.py__ files. To run these script files, please set the working directory to './src/'.
 
 ## Third-party Modules:
 The following modules were used - <br>
