@@ -11,7 +11,7 @@ This file gives the example of plotting a stacked bar graph of the movies based 
 
 gt = GoogleTrends()
 
-imdb = pd.read_csv("../../../conf/movies/imdb.csv")
+imdb = pd.read_csv("../conf/movies/imdb.csv")
 genres = imdb['Genre'].str.split(',', expand=True)[0]
 imdb['Genre'] = genres
 imdb = imdb.sort_values(by=['Genre','Revenue (Millions)'], ascending=[True, False])

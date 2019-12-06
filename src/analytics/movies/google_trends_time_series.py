@@ -6,7 +6,7 @@ import pandas as pd
 This file gives the example of plotting time series line plots of the movies' search data and revenue for 1 month post their release dates
 '''
 
-box_office_df = pd.read_csv("../../../conf/movies/box_office.csv").set_index('Date')
+box_office_df = pd.read_csv("../conf/movies/box_office.csv").set_index('Date')
 box_office_df.set_index(pd.to_datetime(box_office_df.index), inplace=True)
 gt = GoogleTrends()
 

@@ -7,7 +7,7 @@ This file gives the example of plotting bar graphs of Google Trends data search 
 '''
 
 gt = GoogleTrends()
-year_sales_df = pd.read_csv("../../../conf/movies/year_sales.csv").set_index('keywords')
+year_sales_df = pd.read_csv("../conf/movies/year_sales.csv").set_index('keywords')
 
 #2019
 keywords = ['Avengers', 'Toy Story', 'Lion King', 'Captain Marvel', 'Spider man', 'Aladdin', 'John Wick', 'Shazam']
