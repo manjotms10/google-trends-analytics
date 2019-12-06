@@ -1,23 +1,20 @@
 import re
 import string
 
-from matplotlib import rcParams
-
-import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
 from utils import misc
 from utils.google_trends import GoogleTrends
 
-
-rcParams.update({'figure.autolayout': True})
+'''
+This file gives the example of plotting bar graphs of Google Trends data search results with movies, according to the movies' genre
+'''
 
 gt = GoogleTrends()
 
-imdb = pd.read_csv("../../../conf/imdb.csv")
+imdb = pd.read_csv("../../../conf/movies/imdb.csv")
 genres = imdb['Genre'].str.split(',', expand=True)[0]
 imdb['Genre'] = genres
-imdb = imdb.drop(columns=["Rank", "Description", "Director", "Actors", "Runtime (Minutes)"]).sort_values(by=['Genre','Revenue (Millions)'], ascending=[True, False])
+imdb = imdb.sort_values(by=['Genre','Revenue (Millions)'], ascending=[True, False])
 pat = '|'.join(['({})'.format(re.escape(c)) for c in string.punctuation])
 
 imdb = imdb[~imdb['Title'].str.contains(pat)]
@@ -40,7 +37,7 @@ print(search_df.head())
   
 df = imdb_action_df.apply(lambda x : x*100/x.max()).merge(search_df, left_index=True, right_index=True)
 df = df[['Normalized Search Volume', 'Normalized Sales Volume']]
-misc.bar_plot_comparison(df.sort_values('Normalized Sales Volume'), save_fig=True, plot_name='action_corrected')
+misc.bar_plot_comparison(df.sort_values('Normalized Sales Volume'), save_fig=False)
 
 #Comedy
 comedy = imdb[imdb["Genre"] == "Comedy"][1:17:2]
@@ -53,11 +50,10 @@ search_data = gt.get_trends_data_from_multiple_keywords(
                                         end_date = "2016-12-01").data.sum(axis=0)
 comedy.index = comedy["Title"]
 comedy["search_data"] = search_data
-rcParams.update({'figure.autolayout': True})
 
 cols_to_norm     = ['Revenue (Millions)', 'search_data']
 comedy[cols_to_norm] = comedy[cols_to_norm].apply(lambda x: (x*100) / (x.max()))
 comedy.set_index(keys='Title', inplace=True)
 comedy = comedy[['search_data', 'Revenue (Millions)']]
 comedy.rename(columns={"Revenue (Millions)":"Normalized Sales Volume", "search_data":"Normalized Search Volume"}, inplace=True)
-misc.bar_plot_comparison(comedy.sort_values(by=['Normalized Sales Volume'], ascending=[True]), save_fig=True, plot_name='comedy')
+misc.bar_plot_comparison(comedy.sort_values(by=['Normalized Sales Volume'], ascending=[True]), save_fig=False)

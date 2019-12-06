@@ -1,16 +1,13 @@
 import re
 import string
-
-from matplotlib import rcParams
-
-import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
 from utils import misc
 from utils.google_trends import GoogleTrends
 from collections import defaultdict
 
-rcParams.update({'figure.autolayout': True})
+'''
+This file gives the example of plotting a stacked bar graph of the movies based on their popularity and their revenue, both grouped by the Metacritic ratings
+'''
 
 gt = GoogleTrends()
 
