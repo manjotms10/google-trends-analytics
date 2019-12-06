@@ -5,15 +5,20 @@ from utils.misc import bar_plot
 
 """
 This analysis compares the Total Search Volume with the Total Sales of 
-Top 8 video games released in a specified year.
+Top 8 video games released in a specified Year or by a specified Platform.
 """
 
 #%% get sorted vgchartz dataframe with Index = Game Name, Column = Total Sales
 # For example, with year = 2015, top_num = 100, it returns top 100 games released in 2015
+# For example, with platform = 'PS4', top_num = 100, it returns top 100 games released by 'PS4'
 filename = '../conf/video_games/input/vgsales-refined-data.csv'
-year = 2015
-top_num = 100 # Top number of games to be returned after sorting
-vg_df = keyword_data_sorting(filename,year=[year],genre=[], platform=[],top=top_num)
+top_num = 50 # Top number of games to be returned after sorting
+
+#year = 2017
+#vg_df = keyword_data_sorting(filename,year=[year],top=top_num)
+
+platform = 'PS4'
+vg_df = keyword_data_sorting(filename,platform=[platform],top=top_num)
 
 #%% parameters for Pytrends
 start_date = '2004-01-01'
@@ -42,7 +47,6 @@ gt.get_trends_data_from_multiple_keywords(keywords=keywords_suggested,
 gt.sort_data_by_year()
 
 # create a dataframe storing the max search volume of each year
-#gt_df = gt.data_by_year.sum(axis=0).to_frame(name='Total Search Volume')
 gt_df = gt.data_by_year.max().to_frame(name='Normalized Search Volume')
 
 # normalize
