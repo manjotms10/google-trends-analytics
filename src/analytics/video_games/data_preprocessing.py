@@ -54,7 +54,7 @@ def data_cleaning(fname, platforms=[], merge_keywords=[], keywords=[], del_keywo
     nrow, ncol = df.shape
     print(f'There are {nrow} rows and {ncol} columns in refined data')
 
-    df.to_csv('../conf/video_games/output/vgsales-refined-data.csv', index=False)
+    df.to_csv('../../../conf/video_games/output/vgsales-refined-data.csv', index=False)
 
     print('Genre includes', df['Genre'].value_counts().to_dict())
     print('ESRB_rating includes', df['ESRB_Rating'].value_counts().to_dict())
@@ -122,7 +122,7 @@ def data_sorting(fname, keyword, limit=10, output_file=False, line_plot=False, b
     # output
     output = output.round(2)
     if output_file:
-        output.to_csv('../conf/video_games/output/vgsales-%s-year.csv' % keyword)
+        output.to_csv('../../../conf/video_games/output/vgsales-%s-year.csv' % keyword)
     output.drop('total',axis=1,inplace=True)
     output.drop('total',axis=0,inplace=True)
     output.drop(output.columns[0],axis=1,inplace=True)
@@ -211,7 +211,7 @@ def sale_history(fname, limit=10, month_aft=5, plot=False):
         msale_hist = msale_hist.iloc[:,:limit]
                  
     # output to csv
-    msale_hist.swapaxes('index','columns').to_csv('../conf/video_games/output/vgsales-game-sale-history.csv')
+    msale_hist.swapaxes('index','columns').to_csv('../../../conf/video_games/output/vgsales-game-sale-history.csv')
     print(msale_hist)
     
     # plot

@@ -14,10 +14,10 @@ gt = GoogleTrends()
 
 #%% analysis
 num_games = 4 # Top number (up to 10) of games to be analyzed
-fname = '../conf/video_games/input/vgsales-game-release-date.csv'
+fname = '../../../conf/video_games/input/vgsales-game-release-date.csv'
 df = pd.read_csv(fname,delimiter=',')
 
-fname = '../conf/video_games/input/vgsales-game-sale-history.csv'
+fname = '../../../conf/video_games/input/vgsales-game-sale-history.csv'
 df2 = pd.read_csv(fname,delimiter=',').T
 df2 = df2.iloc[1:,:].astype(int)
 

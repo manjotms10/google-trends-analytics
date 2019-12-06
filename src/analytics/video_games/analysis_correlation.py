@@ -11,10 +11,10 @@ Top 8 video games released in a specified Year or by a specified Platform.
 #%% get sorted vgchartz dataframe with Index = Game Name, Column = Total Sales
 # For example, with year = 2015, top_num = 100, it returns top 100 games released in 2015
 # For example, with platform = 'PS4', top_num = 100, it returns top 100 games released by 'PS4'
-filename = '../conf/video_games/input/vgsales-refined-data.csv'
+filename = '../../../conf/video_games/input/vgsales-refined-data.csv'
 top_num = 50 # Top number of games to be returned after sorting
 
-#year = 2017
+year = 2017
 #vg_df = keyword_data_sorting(filename,year=[year],top=top_num)
 
 platform = 'PS4'
