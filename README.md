@@ -19,7 +19,7 @@ internet. <br>
 ## Project Structure:
 conf - This directory contains the data files that were used/created during the process to store all our data <br>
 ---- movies - This subdirectory contains the data files for the analysis of movies <br>
----- video_games - This subdirectory contains the data files for the analysis of games <br> <br>
+---- video_games - This subdirectory contains the data files for the analysis of games <br>
 
 src - This is the source directory containing all our code <br>
 ---- analytics - This package consists of the code that is used for creating, analyzing and plotting all the data <br>
