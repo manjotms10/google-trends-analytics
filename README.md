@@ -1,4 +1,4 @@
-# google-trends-analytics
+# Google Trends Analytics
 Course Project for UCSD ECE143: Programming for Data Analytics
 
 ## Proposal: What Google Trends Tell Us
@@ -33,3 +33,6 @@ valuable insights into the subjects of interest. <br> <br>
 - Can google trends provide some insight as to how popular a movie/video game might be?  <br>
 - What are the best features of selected topics for predictive models?  <br>
 - How to modify the model to get the best accuracy of prediction?  <br>
+
+## Contributors
+Manjot Bilkhu (mbilkhu@ucsd.edu), Tushar Dobhal (tdobhal@ucsd.edu), Xiaolong He, Zhaoru Shang, Terry Huang

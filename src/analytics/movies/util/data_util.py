@@ -56,16 +56,20 @@ class HTMLScraper:
 class IMDBWebScraper(HTMLScraper):
     '''
     A web crawler based on IMDB's box office collection HTML pages.
+
     Parameters
     ----------
     url : A valid url pointing to IMDB's box office collection page.
+
     Returns
     -------
     pd.DataFrame
+
     Example:
     >>> parser = IMDBWebScraper()
     >>> box_office_df = parser.get_box_office_collection_by_year(year="2019")
     >>> top_50_action = parser.get_top_movies_by_genre(genre="action", metric="num_votes")
+
     '''
 
     def __init__(self):
