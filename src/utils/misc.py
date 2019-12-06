@@ -52,12 +52,13 @@ def line_plot_2Yaxes(df1, df2, save_fig=False, plot_name='line_plot_by_year_mont
     ax1.legend(lines,labels,prop={'weight':'bold'})
     plt.title('Movie: ' + df1.columns.values[0],pad=20,fontweight='bold')
     fig.tight_layout()
+    plt.show()
     
     if save_fig == True:
         file_name = '../../../saved_plots/{}.png'.format(plot_name)
         plt.savefig(file_name,bbox_inches='tight')
     
-def line_plot_2Yaxes_1(df1, df2, save_fig=False, plot_name='line_plot_by_year_month'):
+def line_plot_2Yaxes_without_norm(df1, df2, save_fig=False, plot_name='line_plot_by_year_month'):
     '''
     The method plots the dataframe (with lines) that was last queried by 
     the self.get_trends_data method and sorted by Year-Month.
@@ -70,7 +71,7 @@ def line_plot_2Yaxes_1(df1, df2, save_fig=False, plot_name='line_plot_by_year_mo
     '''
 
     plt.rcParams.update({'font.size':22})
-    fig,ax1 = plt.subplots(figsize=(15,10),frameon=False)
+    fig,ax1 = plt.subplots(figsize=(15,10))
     fig.patch.set_visible(False) # remove figure border
     color1 = (0.89,0.44,0.37) # line and label colors of Google Trends
     color2 = (0.25,0.32,0.65) # line and label colors of Total Sale
@@ -106,13 +107,15 @@ def line_plot_2Yaxes_1(df1, df2, save_fig=False, plot_name='line_plot_by_year_mo
     ax1.set_xlabel('Date',color=color,rotation=0,labelpad=25,fontsize=25)
     fig.tight_layout()
     
+    plt.show()
+    
     if save_fig == True:
         file_name = '../../../saved_plots/{}.png'.format(plot_name)
         plt.savefig(file_name,bbox_inches='tight')
           
-def bar_plot_comparison_1(df, save_fig=False, plot_name='bar_plot'):
+def bar_plot(df, save_fig=False, plot_name='bar_plot'):
     '''
-    This function is to produce bar chart using the same y aixs
+    This function is to produce bar chart using the same y aixs, by making the names of index shorter
     
     Args:
         df (dataframe) - dataframe containing both search and sales data
@@ -159,6 +162,7 @@ def bar_plot_comparison_1(df, save_fig=False, plot_name='bar_plot'):
     plot.set_xlabels(fontsize=30)
     plot.set_ylabels(fontsize=30)
     plt.legend(bbox_to_anchor=(1,1))
+    plt.show()
     
     if save_fig == True:
         file_name = '../../../saved_plots/{}.png'.format(plot_name)
@@ -166,7 +170,7 @@ def bar_plot_comparison_1(df, save_fig=False, plot_name='bar_plot'):
         
 def bar_plot_comparison(df, save_fig=False, plot_name='bar_plot'):
     '''
-    This function is to produce graph using the same y aixs
+    This function is to produce a bar plot graph using the same y axis, without changing the name of index
     
     Args:
         df (dataframe) - dataframe containing both search and sales data
@@ -192,7 +196,51 @@ def bar_plot_comparison(df, save_fig=False, plot_name='bar_plot'):
     plot.set_yticklabels(fontsize=20)
     plot.set_ylabels(fontsize=25)
     plt.legend(loc='upper right',fontsize=15)
+    plt.show()
     
     if save_fig == True:
         file_name = '../../../saved_plots/{}.png'.format(plot_name)
         plot.savefig(file_name,bbox_inches='tight')
+
+def stacked_bar_plot(trend_dict, save_fig=False, plot_name='bar_plot'):
+    '''
+    This function is to produces a stacked bar plot graph using the same y axis
+    
+    Args:
+        trend_dict (dataframe) - Dictionary containing the data per year
+        save_fig (bool) - The parameter decides whether to save the plot or not. By default it is False
+        plot_name (str) - The name of the plot to be saved. Will be used if save_fig is set to true
+    '''
+    r_04 = trend_dict['0-4']
+    r_46 = trend_dict['4-6']
+    r_68 = trend_dict['6-8']
+    r_89 = trend_dict['8-10']
+    r = [0,1,2,3,4,5,6]
+     
+    # Names of group and bar width
+    names = range(2010, 2017)
+    barWidth = 0.7
+    
+    plt.subplots(figsize=(15,8))
+    # Create brown bars
+    plt.bar(r, r_04, color='#4c72b0', edgecolor='white', width=barWidth)
+    # Create green bars (middle), on top of the firs ones
+    plt.bar(r, r_46, bottom=r_04, color='#55a868', edgecolor='white', width=barWidth)
+    # Create green bars (top)
+    plt.bar(r, r_68, bottom=[sum(i) for i in zip(r_46, r_04)], color='#c44e52', edgecolor='white', width=barWidth)
+    # Create another bar
+    plt.bar(r, r_89, bottom=[sum(i) for i in zip(r_68, r_46, r_04)], color='#8172b3', edgecolor='white', width=barWidth)
+    
+     
+    # Custom X axis
+    plt.xticks(r, names, fontsize=20)
+    plt.yticks(fontsize=20)
+    plt.ylabel("Number of Movies", fontsize=25)
+    plt.legend(["0-40", "40-60", "60-80", "80-100"], loc='upper right',fontsize=15, title='Movie Ratings')
+     
+    # Show graphic
+    plt.show()   
+    
+    if save_fig == True:
+        file_name = '../../../saved_plots/{}.png'.format(plot_name)
+        plt.savefig(file_name,bbox_inches='tight')     

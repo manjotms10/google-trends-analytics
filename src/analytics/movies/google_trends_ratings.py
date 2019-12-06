@@ -14,16 +14,15 @@ rcParams.update({'figure.autolayout': True})
 
 gt = GoogleTrends()
 
-imdb = pd.read_csv("../../../conf/imdb.csv")
+imdb = pd.read_csv("../../../conf/movies/imdb.csv")
 genres = imdb['Genre'].str.split(',', expand=True)[0]
 imdb['Genre'] = genres
-imdb = imdb.drop(columns=["Rank", "Description", "Director", "Actors", "Runtime (Minutes)"]).sort_values(by=['Genre','Revenue (Millions)'], ascending=[True, False])
+imdb = imdb.sort_values(by=['Genre','Revenue (Millions)'], ascending=[True, False])
 pat = '|'.join(['({})'.format(re.escape(c)) for c in string.punctuation])
 imdb = imdb[~imdb['Title'].str.contains(pat)]
 imdb = imdb[imdb['Title'].str.split().str.len() <= 4]
 
-# Genre
-df_list = []
+df_popularity_list = []
 for year in [2010, 2011, 2012, 2013, 2014, 2015, 2016]:
     imdb_year = imdb[imdb['Year'] == year]
     imdb_score = imdb_year.sort_values(by="Metascore", ascending=False).dropna()
@@ -33,13 +32,10 @@ for year in [2010, 2011, 2012, 2013, 2014, 2015, 2016]:
     imdb_score.drop('Metascore', axis=1, inplace=True)
     imdb_score.rename(columns={"Revenue (Millions)":"Revenue", "MetascoreRange":"Score"}, inplace=True)
     imdb_score = imdb_score.sort_values(by=['Votes'], ascending=[False])[:40]
-    imdb_score_grp = imdb_score.groupby(['Score']).count()
-#     print(imdb_score_grp)
- 
-for df in df_list:
-    print(df)
+    imdb_score_grp_popularity = imdb_score.groupby(['Score']).count()['Votes'].to_frame()
+    df_popularity_list.append(imdb_score_grp_popularity)
 
-df_list = []
+df_revenue_list = []
 for year in [2010, 2011, 2012, 2013, 2014, 2015, 2016]:
     imdb_year = imdb[imdb['Year'] == year]
     imdb_score = imdb_year.sort_values(by="Metascore", ascending=False).dropna()
@@ -49,24 +45,22 @@ for year in [2010, 2011, 2012, 2013, 2014, 2015, 2016]:
     imdb_score.drop('Metascore', axis=1, inplace=True)
     imdb_score.rename(columns={"Revenue (Millions)":"Revenue", "MetascoreRange":"Score"}, inplace=True)
     imdb_score = imdb_score.sort_values(by=['Revenue'], ascending=[False])[:40]
-    imdb_score_grp = imdb_score.groupby(['Score']).count()
-    print(imdb_score_grp)
-#     movies = {}
-#     for score in scores:
-#         movies[list(imdb_score[imdb_score['Score'] == score]['Title'])[0].replace('The', '')] = score
-#     
-#     movie_pd = pd.Series(movies).to_frame()
-    
-#     start_date = '{}-01-01'.format(year)
-#     end_date = '{}-12-31'.format(year)
-#     search_df = pd.DataFrame({'Total Search Volume':gt.get_trends_data_from_multiple_keywords(list(movies.keys()), start_date, end_date, category='34').data.sum(axis=0)}).apply(lambda x : x*100/x.max()).sort_index(axis=0)
-#     search_df = search_df.merge(movie_pd, left_index=True, right_index=True)
-#     search_df.rename(columns={0: "Score"}, inplace=True)
-#     search_df.set_index("Score", inplace=True)
-#     
-#     df = imdb_score_grp.apply(lambda x : x*100/x.max()).merge(search_df, left_index=True, right_index=True).sort_values(by='Revenue')
-#     df_list.append((movie_pd, df))
+    imdb_score_grp_revenue = imdb_score.groupby(['Score']).count()['Revenue'].to_frame()
+    df_revenue_list.append(imdb_score_grp_revenue)
+ 
+revenue_dict = defaultdict(list)
+for i in range(len(df_revenue_list)):
+    revenue_dict['0-4'].append(list(df_revenue_list[i]['Revenue'])[0])
+    revenue_dict['4-6'].append(list(df_revenue_list[i]['Revenue'])[1])
+    revenue_dict['6-8'].append(list(df_revenue_list[i]['Revenue'])[2])
+    revenue_dict['8-10'].append(list(df_revenue_list[i]['Revenue'])[3])
 
-# for movie,df in df_list:
-#     print(movie)
-#     print(df)
+popularity_dict = defaultdict(list)
+for i in range(len(df_popularity_list)):
+    popularity_dict['0-4'].append(list(df_popularity_list[i]['Votes'])[0])
+    popularity_dict['4-6'].append(list(df_popularity_list[i]['Votes'])[1])
+    popularity_dict['6-8'].append(list(df_popularity_list[i]['Votes'])[2])
+    popularity_dict['8-10'].append(list(df_popularity_list[i]['Votes'])[3])  
+    
+misc.stacked_bar_plot(revenue_dict, False)   
+misc.stacked_bar_plot(popularity_dict, False) 

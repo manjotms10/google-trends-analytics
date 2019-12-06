@@ -1,0 +1,1001 @@
+Rank,Title,Genre,Year,Revenue (Millions),Metascore,Votes
+1,Guardians of the Galaxy,"Action,Adventure,Sci-Fi",2014,333.13,76,757074
+2,Prometheus,"Adventure,Mystery,Sci-Fi",2012,126.46,65,485820
+3,Split,"Horror,Thriller",2016,138.12,62,157606
+4,Sing,"Animation,Comedy,Family",2016,270.32,59,60545
+5,Suicide Squad,"Action,Adventure,Fantasy",2016,325.02,40,393727
+6,The Great Wall,"Action,Adventure,Fantasy",2016,45.13,42,56036
+7,La La Land,"Comedy,Drama,Music",2016,151.06,93,258682
+8,Mindhorn,Comedy,2016,,71,2490
+9,The Lost City of Z,"Action,Adventure,Biography",2016,8.01,78,7188
+10,Passengers,"Adventure,Drama,Romance",2016,100.01,41,192177
+11,Fantastic Beasts and Where to Find Them,"Adventure,Family,Fantasy",2016,234.02,66,232072
+12,Hidden Figures,"Biography,Drama,History",2016,169.27,74,93103
+13,Rogue One,"Action,Adventure,Sci-Fi",2016,532.17,65,323118
+14,Moana,"Animation,Adventure,Comedy",2016,248.75,81,118151
+15,Colossal,"Action,Comedy,Drama",2016,2.87,70,8612
+16,The Secret Life of Pets,"Animation,Adventure,Comedy",2016,368.31,61,120259
+17,Hacksaw Ridge,"Biography,Drama,History",2016,67.12,71,211760
+18,Jason Bourne,"Action,Thriller",2016,162.16,58,150823
+19,Lion,"Biography,Drama",2016,51.69,69,102061
+20,Arrival,"Drama,Mystery,Sci-Fi",2016,100.5,81,340798
+21,Gold,"Adventure,Drama,Thriller",2016,7.22,49,19053
+22,Manchester by the Sea,Drama,2016,47.7,96,134213
+23,Hounds of Love,"Crime,Drama,Horror",2016,,72,1115
+24,Trolls,"Animation,Adventure,Comedy",2016,153.69,56,38552
+25,Independence Day: Resurgence,"Action,Adventure,Sci-Fi",2016,103.14,32,127553
+26,Paris pieds nus,Comedy,2016,,,222
+27,Bahubali: The Beginning,"Action,Adventure,Drama",2015,6.5,,76193
+28,Dead Awake,"Horror,Thriller",2016,0.01,,523
+29,Bad Moms,Comedy,2016,113.08,60,66540
+30,Assassin's Creed,"Action,Adventure,Drama",2016,54.65,36,112813
+31,Why Him?,Comedy,2016,60.31,39,48123
+32,Nocturnal Animals,"Drama,Thriller",2016,10.64,67,126030
+33,X-Men: Apocalypse,"Action,Adventure,Sci-Fi",2016,155.33,52,275510
+34,Deadpool,"Action,Adventure,Comedy",2016,363.02,65,627797
+35,Resident Evil: The Final Chapter,"Action,Horror,Sci-Fi",2016,26.84,49,46165
+36,Captain America: Civil War,"Action,Adventure,Sci-Fi",2016,408.08,75,411656
+37,Interstellar,"Adventure,Drama,Sci-Fi",2014,187.99,74,1047747
+38,Doctor Strange,"Action,Adventure,Fantasy",2016,232.6,72,293732
+39,The Magnificent Seven,"Action,Adventure,Western",2016,93.38,54,122853
+40,05/25/1977,"Comedy,Drama",2007,,,241
+41,Sausage Party,"Animation,Adventure,Comedy",2016,97.66,66,120690
+42,Moonlight,Drama,2016,27.85,99,135095
+43,Don't Fuck in the Woods,Horror,2016,,,496
+44,The Founder,"Biography,Drama,History",2016,12.79,66,37033
+45,Lowriders,Drama,2016,4.21,57,279
+46,Pirates of the Caribbean: On Stranger Tides,"Action,Adventure,Fantasy",2011,241.06,45,395025
+47,Miss Sloane,"Drama,Thriller",2016,3.44,64,17818
+48,Fallen,"Adventure,Drama,Fantasy",2016,,,5103
+49,Star Trek Beyond,"Action,Adventure,Sci-Fi",2016,158.8,68,164567
+50,The Last Face,Drama,2016,,16,987
+51,Star Wars: Episode VII - The Force Awakens,"Action,Adventure,Fantasy",2015,936.63,81,661608
+52,Underworld: Blood Wars,"Action,Adventure,Fantasy",2016,30.35,23,41362
+53,Mother's Day,"Comedy,Drama",2016,32.46,18,20221
+54,John Wick,"Action,Crime,Thriller",2014,43,68,321933
+55,The Dark Knight,"Action,Crime,Drama",2008,533.32,82,1791916
+56,Silence,"Adventure,Drama,History",2016,7.08,79,49190
+57,Don't Breathe,"Crime,Horror,Thriller",2016,89.21,71,121103
+58,Me Before You,"Drama,Romance",2016,56.23,51,113322
+59,Their Finest,"Comedy,Drama,Romance",2016,3.18,76,3739
+60,Sully,"Biography,Drama",2016,125.07,74,137608
+61,Batman v Superman: Dawn of Justice,"Action,Adventure,Sci-Fi",2016,330.25,44,472307
+62,The Autopsy of Jane Doe,"Horror,Mystery,Thriller",2016,,65,35870
+63,The Girl on the Train,"Crime,Drama,Mystery",2016,75.31,48,102177
+64,Fifty Shades of Grey,"Drama,Romance,Thriller",2015,166.15,46,244474
+65,The Prestige,"Drama,Mystery,Sci-Fi",2006,53.08,66,913152
+66,Kingsman: The Secret Service,"Action,Adventure,Comedy",2014,128.25,58,440209
+67,Patriots Day,"Drama,History,Thriller",2016,31.86,69,39784
+68,Mad Max: Fury Road,"Action,Adventure,Sci-Fi",2015,153.63,90,632842
+69,Wakefield,Drama,2016,0.01,61,291
+70,Deepwater Horizon,"Action,Drama,Thriller",2016,61.28,68,89849
+71,The Promise,"Drama,History",2016,,49,149791
+72,Allied,"Action,Drama,Romance",2016,40.07,60,78079
+73,A Monster Calls,"Drama,Fantasy",2016,3.73,76,39134
+74,Collateral Beauty,"Drama,Romance",2016,30.98,23,43977
+75,Zootopia,"Animation,Adventure,Comedy",2016,341.26,78,296853
+76,Pirates of the Caribbean: At World's End,"Action,Adventure,Fantasy",2007,309.4,50,498821
+77,The Avengers,"Action,Sci-Fi",2012,623.28,69,1045588
+78,Inglourious Basterds,"Adventure,Drama,War",2009,120.52,69,959065
+79,Pirates of the Caribbean: Dead Man's Chest,"Action,Adventure,Fantasy",2006,423.03,53,552027
+80,Ghostbusters,"Action,Comedy,Fantasy",2016,128.34,60,147717
+81,Inception,"Action,Adventure,Sci-Fi",2010,292.57,74,1583625
+82,Captain Fantastic,"Comedy,Drama",2016,5.88,72,105081
+83,The Wolf of Wall Street,"Biography,Comedy,Crime",2013,116.87,75,865134
+84,Gone Girl,"Crime,Drama,Mystery",2014,167.74,79,636243
+85,Furious Seven,"Action,Crime,Thriller",2015,350.03,67,301249
+86,Jurassic World,"Action,Adventure,Sci-Fi",2015,652.18,59,455169
+87,Live by Night,"Crime,Drama",2016,10.38,49,27869
+88,Avatar,"Action,Adventure,Fantasy",2009,760.51,83,935408
+89,The Hateful Eight,"Crime,Drama,Mystery",2015,54.12,68,341170
+90,The Accountant,"Action,Crime,Drama",2016,86.2,51,162122
+91,Prisoners,"Crime,Drama,Mystery",2013,60.96,74,431185
+92,Warcraft,"Action,Adventure,Fantasy",2016,47.17,32,187547
+93,The Help,Drama,2011,169.71,62,342429
+94,War Dogs,"Comedy,Crime,Drama",2016,43.02,57,106463
+95,Avengers: Age of Ultron,"Action,Adventure,Sci-Fi",2015,458.99,66,516895
+96,The Nice Guys,"Action,Comedy,Crime",2016,36.25,70,175067
+97,Kimi no na wa,"Animation,Drama,Fantasy",2016,4.68,79,34110
+98,The Void,"Horror,Mystery,Sci-Fi",2016,0.15,62,9247
+99,Personal Shopper,"Drama,Mystery,Thriller",2016,1.29,77,10181
+100,The Departed,"Crime,Drama,Thriller",2006,132.37,85,937414
+101,Legend,"Biography,Crime,Drama",2015,1.87,55,108836
+102,Thor,"Action,Adventure,Fantasy",2011,181.02,57,570814
+103,The Martian,"Adventure,Drama,Sci-Fi",2015,228.43,80,556097
+104,Contratiempo,"Crime,Mystery,Thriller",2016,,,7204
+105,The Man from U.N.C.L.E.,"Action,Adventure,Comedy",2015,45.43,56,202973
+106,Hell or High Water,"Crime,Drama,Thriller",2016,26.86,88,115546
+107,The Comedian,Comedy,2016,1.66,40,1954
+108,The Legend of Tarzan,"Action,Adventure,Drama",2016,126.59,44,117590
+109,All We Had,Drama,2016,,48,1004
+110,Ex Machina,"Drama,Mystery,Sci-Fi",2014,25.44,78,339797
+111,The Belko Experiment,"Action,Horror,Thriller",2016,10.16,44,3712
+112,12 Years a Slave,"Biography,Drama,History",2013,56.67,96,486338
+113,The Bad Batch,"Romance,Sci-Fi",2016,,65,512
+114,300,"Action,Fantasy,War",2006,210.59,52,637104
+115,Harry Potter and the Deathly Hallows: Part 2,"Adventure,Drama,Fantasy",2011,380.96,87,590595
+116,Office Christmas Party,Comedy,2016,54.73,42,30761
+117,The Neon Demon,"Horror,Thriller",2016,1.33,51,50359
+118,Dangal,"Action,Biography,Drama",2016,11.15,,48969
+119,10 Cloverfield Lane,"Drama,Horror,Mystery",2016,71.9,76,192968
+120,Finding Dory,"Animation,Adventure,Comedy",2016,486.29,77,157026
+121,Miss Peregrine's Home for Peculiar Children,"Adventure,Drama,Family",2016,87.24,57,101058
+122,Divergent,"Adventure,Mystery,Sci-Fi",2014,150.83,48,362093
+123,Mike and Dave Need Wedding Dates,"Adventure,Comedy,Romance",2016,46.01,51,53183
+124,Boyka: Undisputed IV,Action,2016,,,10428
+125,The Dark Knight Rises,"Action,Thriller",2012,448.13,78,1222645
+126,The Jungle Book,"Adventure,Drama,Family",2016,364,77,198243
+127,Transformers: Age of Extinction,"Action,Adventure,Sci-Fi",2014,245.43,32,255483
+128,Nerve,"Adventure,Crime,Mystery",2016,38.56,58,69651
+129,Mamma Mia!,"Comedy,Family,Musical",2008,143.7,51,153481
+130,The Revenant,"Adventure,Drama,Thriller",2015,183.64,76,499424
+131,Fences,Drama,2016,57.64,79,50953
+132,Into the Woods,"Adventure,Comedy,Drama",2014,128,69,109756
+133,The Shallows,"Drama,Horror,Thriller",2016,55.12,59,78328
+134,Whiplash,"Drama,Music",2014,13.09,88,477276
+135,Furious 6,"Action,Crime,Thriller",2013,238.67,61,318051
+136,The Place Beyond the Pines,"Crime,Drama,Thriller",2012,21.38,68,200090
+137,No Country for Old Men,"Crime,Drama,Thriller",2007,74.27,91,660286
+138,The Great Gatsby,"Drama,Romance",2013,144.81,55,386102
+139,Shutter Island,"Mystery,Thriller",2010,127.97,63,855604
+140,Brimstone,"Mystery,Thriller,Western",2016,,44,13004
+141,Star Trek,"Action,Adventure,Sci-Fi",2009,257.7,82,526324
+142,Diary of a Wimpy Kid,"Comedy,Family",2010,64,56,34184
+143,The Big Short,"Biography,Comedy,Drama",2015,70.24,81,246360
+144,Room,Drama,2015,14.68,86,224132
+145,Django Unchained,"Drama,Western",2012,162.8,81,1039115
+146,Ah-ga-ssi,"Drama,Mystery,Romance",2016,2.01,84,33418
+147,The Edge of Seventeen,"Comedy,Drama",2016,14.26,77,47694
+148,Watchmen,"Action,Drama,Mystery",2009,107.5,56,410249
+149,Superbad,Comedy,2007,121.46,76,442082
+150,Inferno,"Action,Adventure,Crime",2016,34.26,42,97623
+151,The BFG,"Adventure,Family,Fantasy",2016,55.47,66,50853
+152,The Hunger Games,"Adventure,Sci-Fi,Thriller",2012,408,68,735604
+153,White Girl,Drama,2016,0.2,65,4299
+154,Sicario,"Action,Crime,Drama",2015,46.88,82,243230
+155,Twin Peaks: The Missing Pieces,"Drama,Horror,Mystery",2014,,,1973
+156,Aliens vs Predator - Requiem,"Action,Horror,Sci-Fi",2007,41.8,29,97618
+157,Pacific Rim,"Action,Adventure,Sci-Fi",2013,101.79,64,400519
+158,"Crazy, Stupid, Love.","Comedy,Drama,Romance",2011,84.24,68,396714
+159,Scott Pilgrim vs. the World,"Action,Comedy,Fantasy",2010,31.49,69,291457
+160,Hot Fuzz,"Action,Comedy,Mystery",2007,23.62,81,373244
+161,Mine,"Thriller,War",2016,,40,5926
+162,Free Fire,"Action,Comedy,Crime",2016,1.8,63,6946
+163,X-Men: Days of Future Past,"Action,Adventure,Sci-Fi",2014,233.91,74,552298
+164,Jack Reacher: Never Go Back,"Action,Adventure,Crime",2016,58.4,47,78043
+165,Casino Royale,"Action,Adventure,Thriller",2006,167.01,80,495106
+166,Twilight,"Drama,Fantasy,Romance",2008,191.45,56,361449
+167,Now You See Me 2,"Action,Adventure,Comedy",2016,65.03,46,156567
+168,Woman in Gold,"Biography,Drama,History",2015,33.31,51,39723
+169,13 Hours,"Action,Drama,History",2016,52.82,48,76935
+170,Spectre,"Action,Adventure,Thriller",2015,200.07,60,308981
+171,Nightcrawler,"Crime,Drama,Thriller",2014,32.28,76,332476
+172,Kubo and the Two Strings,"Animation,Adventure,Family",2016,48.02,84,72778
+173,Beyond the Gates,"Adventure,Horror",2016,,59,2127
+174,Her,"Drama,Romance,Sci-Fi",2013,25.56,90,390531
+175,Frozen,"Animation,Adventure,Comedy",2013,400.74,74,451894
+176,Tomorrowland,"Action,Adventure,Family",2015,93.42,60,143069
+177,Dawn of the Planet of the Apes,"Action,Adventure,Drama",2014,208.54,79,337777
+178,Tropic Thunder,"Action,Comedy",2008,110.42,71,321442
+179,The Conjuring 2,"Horror,Mystery,Thriller",2016,102.46,65,137203
+180,Ant-Man,"Action,Adventure,Comedy",2015,180.19,64,368912
+181,Bridget Jones's Baby,"Comedy,Romance",2016,24.09,59,43086
+182,The VVitch: A New-England Folktale,"Horror,Mystery",2015,25.14,83,101781
+183,Cinderella,"Drama,Family,Fantasy",2015,201.15,67,117018
+184,Realive,Sci-Fi,2016,,,1176
+185,Forushande,"Drama,Thriller",2016,3.4,85,22389
+186,Love,"Drama,Romance",2015,,51,24003
+187,Billy Lynn's Long Halftime Walk,"Drama,War",2016,1.72,53,11944
+188,Crimson Peak,"Drama,Fantasy,Horror",2015,31.06,66,97454
+189,Drive,"Crime,Drama",2011,35.05,78,461509
+190,Trainwreck,"Comedy,Drama,Romance",2015,110.01,75,106364
+191,The Light Between Oceans,"Drama,Romance",2016,12.53,60,27382
+192,Below Her Mouth,Drama,2016,,42,1445
+193,Spotlight,"Crime,Drama,History",2015,44.99,93,268282
+194,Morgan,"Horror,Sci-Fi,Thriller",2016,3.91,48,22107
+195,Warrior,"Action,Drama,Sport",2011,13.65,71,355722
+196,Captain America: The First Avenger,"Action,Adventure,Sci-Fi",2011,176.64,66,547368
+197,Hacker,"Crime,Drama,Thriller",2016,,,3799
+198,Into the Wild,"Adventure,Biography,Drama",2007,18.35,73,459304
+199,The Imitation Game,"Biography,Drama,Thriller",2014,91.12,73,532353
+200,Central Intelligence,"Action,Comedy,Crime",2016,127.38,52,97082
+201,Edge of Tomorrow,"Action,Adventure,Sci-Fi",2014,100.19,71,471815
+202,A Cure for Wellness,"Drama,Fantasy,Horror",2016,8.1,47,12193
+203,Snowden,"Biography,Drama,Thriller",2016,21.48,58,79855
+204,Iron Man,"Action,Adventure,Sci-Fi",2008,318.3,79,737719
+205,Allegiant,"Action,Adventure,Mystery",2016,66,33,70504
+206,X: First Class,"Action,Adventure,Sci-Fi",2011,146.41,65,550011
+207,Raw (II),"Drama,Horror",2016,0.51,81,5435
+208,Paterson,"Comedy,Drama,Romance",2016,2.14,90,26089
+209,Bridesmaids,"Comedy,Romance",2011,169.08,75,227912
+210,The Girl with All the Gifts,"Drama,Horror,Thriller",2016,,67,23713
+211,San Andreas,"Action,Adventure,Drama",2015,155.18,43,161396
+212,Spring Breakers,Drama,2012,14.12,63,114290
+213,Transformers,"Action,Adventure,Sci-Fi",2007,318.76,61,531112
+214,Old Boy,"Action,Drama,Mystery",2013,,49,54679
+215,Thor: The Dark World,"Action,Adventure,Fantasy",2013,206.36,54,443584
+216,Gods of Egypt,"Action,Adventure,Fantasy",2016,31.14,25,73568
+217,Captain America: The Winter Soldier,"Action,Adventure,Sci-Fi",2014,259.75,70,542362
+218,Monster Trucks,"Action,Adventure,Comedy",2016,33.04,41,7044
+219,A Dark Song,"Drama,Horror",2016,,67,1703
+220,Kick-Ass,"Action,Comedy",2010,48.04,66,456749
+221,Hardcore Henry,"Action,Adventure,Sci-Fi",2015,9.24,51,61098
+222,Cars,"Animation,Adventure,Comedy",2006,244.05,73,283445
+223,It Follows,"Horror,Mystery",2014,14.67,83,136399
+224,The Girl with the Dragon Tattoo,"Crime,Drama,Mystery",2011,102.52,71,348551
+225,We're the Millers,"Comedy,Crime",2013,150.37,44,334867
+226,American Honey,Drama,2016,0.66,79,19660
+227,The Lobster,"Comedy,Drama,Romance",2015,8.7,82,121313
+228,Predators,"Action,Adventure,Sci-Fi",2010,52,51,179450
+229,Maleficent,"Action,Adventure,Family",2014,241.41,56,268877
+230,Rupture,"Horror,Sci-Fi,Thriller",2016,,35,2382
+231,Pan's Labyrinth,"Drama,Fantasy,War",2006,37.62,98,498879
+232,A Kind of Murder,"Crime,Drama,Thriller",2016,0,50,3305
+233,Apocalypto,"Action,Adventure,Drama",2006,50.86,68,247926
+234,Mission: Impossible - Rogue Nation,"Action,Adventure,Thriller",2015,195,75,257472
+235,The Huntsman: Winter's War,"Action,Adventure,Drama",2016,47.95,35,66766
+236,The Perks of Being a Wallflower,"Drama,Romance",2012,17.74,67,377336
+237,Jackie,"Biography,Drama,History",2016,13.96,81,41446
+238,The Disappointments Room,"Drama,Horror,Thriller",2016,2.41,31,4895
+239,The Grand Budapest Hotel,"Adventure,Comedy,Drama",2014,59.07,88,530881
+240,The Host,"Action,Adventure,Romance",2013,26.62,35,96852
+241,Fury,"Action,Drama,War",2014,85.71,64,332234
+242,Inside Out,"Animation,Adventure,Comedy",2015,356.45,94,416689
+243,Rock Dog,"Animation,Adventure,Comedy",2016,9.4,48,1109
+244,Terminator Genisys,"Action,Adventure,Sci-Fi",2015,89.73,38,205365
+245,Percy Jackson & the Olympians: The Lightning Thief,"Adventure,Family,Fantasy",2010,88.76,47,148949
+246,Les Misérables,"Drama,Musical,Romance",2012,148.78,63,257426
+247,Children of Men,"Drama,Sci-Fi,Thriller",2006,35.29,84,382910
+248,20th Century Women,"Comedy,Drama",2016,5.66,83,14708
+249,Spy,"Action,Comedy,Crime",2015,110.82,75,188017
+250,The Intouchables,"Biography,Comedy,Drama",2011,13.18,57,557965
+251,Bonjour Anne,"Comedy,Drama,Romance",2016,0.32,50,178
+252,Kynodontas,"Drama,Thriller",2009,0.11,73,50946
+253,Straight Outta Compton,"Biography,Drama,History",2015,161.03,72,139831
+254,The Amazing Spider-Man 2,"Action,Adventure,Sci-Fi",2014,202.85,53,342183
+255,The Conjuring,"Horror,Mystery,Thriller",2013,137.39,68,330305
+256,The Hangover,Comedy,2009,277.31,73,611563
+257,Battleship,"Action,Adventure,Sci-Fi",2012,65.17,41,210349
+258,Rise of the Planet of the Apes,"Action,Drama,Sci-Fi",2011,176.74,68,422290
+259,Lights Out,Horror,2016,67.24,58,69823
+260,Norman: The Moderate Rise and Tragic Fall of a New York Fixer,"Drama,Thriller",2016,2.27,76,664
+261,Birdman or (The Unexpected Virtue of Ignorance),"Comedy,Drama,Romance",2014,42.34,88,440299
+262,Black Swan,"Drama,Thriller",2010,106.95,79,581518
+263,Dear White People,"Comedy,Drama",2014,4.4,79,21715
+264,Nymphomaniac: Vol. I,Drama,2013,0.79,64,90556
+265,Teenage Mutant Ninja Turtles: Out of the Shadows,"Action,Adventure,Comedy",2016,0.54,40,59312
+266,Knock Knock,"Drama,Horror,Thriller",2015,0.03,53,53441
+267,Dirty Grandpa,Comedy,2016,35.54,18,75137
+268,Cloud Atlas,"Drama,Sci-Fi",2012,27.1,55,298651
+269,X-Men Origins: Wolverine,"Action,Adventure,Sci-Fi",2009,179.88,40,388447
+270,Satanic,Horror,2016,,,2384
+271,Skyfall,"Action,Adventure,Thriller",2012,304.36,81,547386
+272,The Hobbit: An Unexpected Journey,"Adventure,Fantasy",2012,303,58,668651
+273,21 Jump Street,"Action,Comedy,Crime",2012,138.45,69,432046
+274,Sing Street,"Comedy,Drama,Music",2016,3.23,79,52144
+275,Ballerina,"Animation,Adventure,Comedy",2016,,,4729
+276,Oblivion,"Action,Adventure,Mystery",2013,89.02,54,410125
+277,22 Jump Street,"Action,Comedy,Crime",2014,191.62,71,280110
+278,Zodiac,"Crime,Drama,History",2007,33.05,78,329683
+279,Everybody Wants Some!!,Comedy,2016,3.37,83,36312
+280,Iron Man Three,"Action,Adventure,Sci-Fi",2013,408.99,62,591023
+281,Now You See Me,"Crime,Mystery,Thriller",2013,117.7,50,492324
+282,Sherlock Holmes,"Action,Adventure,Crime",2009,209.02,57,501769
+283,Death Proof,Thriller,2007,,,220236
+284,The Danish Girl,"Biography,Drama,Romance",2015,12.71,66,110773
+285,Hercules,"Action,Adventure",2014,72.66,47,122838
+286,Sucker Punch,"Action,Fantasy",2011,36.38,33,204874
+287,Keeping Up with the Joneses,"Action,Comedy",2016,14.9,34,30405
+288,Jupiter Ascending,"Action,Adventure,Sci-Fi",2015,47.38,40,150121
+289,Masterminds,"Action,Comedy,Crime",2016,17.36,47,26508
+290,Iris,Thriller,2016,,,726
+291,Busanhaeng,"Action,Drama,Horror",2016,2.13,72,58782
+292,Pitch Perfect,"Comedy,Music,Romance",2012,65,66,226631
+293,Neighbors 2: Sorority Rising,Comedy,2016,55.29,58,76327
+294,The Exception,Drama,2016,,,96
+295,Man of Steel,"Action,Adventure,Fantasy",2013,291.02,55,577010
+296,The Choice,"Drama,Romance",2016,18.71,26,20514
+297,Ice Age: Collision Course,"Animation,Adventure,Comedy",2016,64.06,34,34523
+298,The Devil Wears Prada,"Comedy,Drama",2006,124.73,62,302268
+299,The Infiltrator,"Biography,Crime,Drama",2016,15.43,66,43929
+300,There Will Be Blood,"Drama,History",2007,40.22,92,400682
+301,The Equalizer,"Action,Crime,Thriller",2014,101.53,57,249425
+302,Lone Survivor,"Action,Biography,Drama",2013,125.07,60,218996
+303,The Cabin in the Woods,Horror,2012,42.04,72,295554
+304,The House Bunny,"Comedy,Romance",2008,48.24,55,67033
+305,She's Out of My League,"Comedy,Romance",2010,31.58,46,105619
+306,Inherent Vice,"Comedy,Crime,Drama",2014,8.09,81,69509
+307,Alice Through the Looking Glass,"Adventure,Family,Fantasy",2016,77.04,34,57207
+308,Vincent N Roxxy,"Crime,Drama,Thriller",2016,,,403
+309,The Fast and the Furious: Tokyo Drift,"Action,Crime,Thriller",2006,62.49,45,193479
+310,How to Be Single,"Comedy,Romance",2016,46.81,51,59886
+311,The Blind Side,"Biography,Drama,Sport",2009,255.95,53,237221
+312,La vie d'Adèle,"Drama,Romance",2013,2.2,88,103150
+313,The Babadook,"Drama,Horror",2014,0.92,86,132580
+314,The Hobbit: The Battle of the Five Armies,"Adventure,Fantasy",2014,255.11,59,385598
+315,Harry Potter and the Order of the Phoenix,"Adventure,Family,Fantasy",2007,292,71,385325
+316,Snowpiercer,"Action,Drama,Sci-Fi",2013,4.56,84,199048
+317,The 5th Wave,"Action,Adventure,Sci-Fi",2016,34.91,33,73093
+318,The Stakelander,"Action,Horror",2016,,,1263
+319,The Visit,"Comedy,Horror,Thriller",2015,65.07,55,81429
+320,Fast Five,"Action,Crime,Thriller",2011,209.81,66,300803
+321,Step Up,"Crime,Drama,Music",2006,65.27,48,95960
+322,Lovesong,Drama,2016,0.01,74,616
+323,RocknRolla,"Action,Crime,Thriller",2008,5.69,53,203096
+324,In Time,"Action,Sci-Fi,Thriller",2011,37.55,53,319025
+325,The Social Network,"Biography,Drama",2010,96.92,95,510100
+326,The Last Witch Hunter,"Action,Adventure,Fantasy",2015,27.36,34,71149
+327,Victor Frankenstein,"Drama,Horror,Sci-Fi",2015,5.77,36,37975
+328,A Street Cat Named Bob,"Biography,Comedy,Drama",2016,0.04,54,12643
+329,Green Room,"Crime,Horror,Thriller",2015,3.22,79,62885
+330,Blackhat,"Crime,Drama,Mystery",2015,7.1,51,43085
+331,Storks,"Animation,Adventure,Comedy",2016,72.66,56,34248
+332,American Sniper,"Action,Biography,Drama",2014,350.12,72,353305
+333,Dallas Buyers Club,"Biography,Drama",2013,27.3,84,352801
+334,Lincoln,"Biography,Drama,History",2012,182.2,86,207497
+335,Rush,"Action,Biography,Drama",2013,26.9,75,339722
+336,Before I Wake,"Drama,Fantasy,Horror",2016,,,18201
+337,Silver Linings Playbook,"Comedy,Drama,Romance",2012,132.09,81,564364
+338,Tracktown,"Drama,Sport",2016,,64,115
+339,The Fault in Our Stars,"Drama,Romance",2014,124.87,69,271301
+340,Blended,"Comedy,Romance",2014,46.28,31,93764
+341,Fast & Furious,"Action,Crime,Thriller",2009,155.02,46,217464
+342,Looper,"Action,Crime,Drama",2012,66.47,84,452369
+343,White House Down,"Action,Drama,Thriller",2013,73.1,52,173320
+344,Pete's Dragon,"Adventure,Family,Fantasy",2016,76.2,71,36322
+345,Spider-Man 3,"Action,Adventure",2007,336.53,59,406219
+346,The Three Musketeers,"Action,Adventure,Romance",2011,20.32,35,92329
+347,Stardust,"Adventure,Family,Fantasy",2007,38.35,66,220664
+348,American Hustle,"Crime,Drama",2013,150.12,90,379088
+349,Jennifer's Body,"Comedy,Horror",2009,16.2,47,96617
+350,Midnight in Paris,"Comedy,Fantasy,Romance",2011,56.82,81,320323
+351,Lady Macbeth,Drama,2016,,83,1396
+352,Joy,Drama,2015,56.44,56,97679
+353,The Dressmaker,"Comedy,Drama",2015,2.02,47,33352
+354,Café Society,"Comedy,Drama,Romance",2016,11.08,64,45579
+355,Insurgent,"Adventure,Sci-Fi,Thriller",2015,130,42,171970
+356,Seventh Son,"Action,Adventure,Fantasy",2014,17.18,30,59958
+357,Demain tout commence,"Comedy,Drama",2016,,,5496
+358,The Theory of Everything,"Biography,Drama,Romance",2014,35.89,72,299718
+359,This Is the End,"Comedy,Fantasy",2013,101.47,67,327838
+360,About Time,"Comedy,Drama,Fantasy",2013,15.29,55,221600
+361,Step Brothers,Comedy,2008,100.47,51,223065
+362,Clown,"Horror,Thriller",2014,0.05,42,14248
+363,Star Trek Into Darkness,"Action,Adventure,Sci-Fi",2013,228.76,72,417663
+364,Zombieland,"Adventure,Comedy,Horror",2009,75.59,73,409403
+365,"Hail, Caesar!","Comedy,Mystery",2016,30,72,89059
+366,Slumdog Millionaire,Drama,2008,141.32,86,677044
+367,The Twilight Saga: Breaking Dawn - Part 2,"Adventure,Drama,Fantasy",2012,292.3,52,194329
+368,American Wrestler: The Wizard,"Drama,Sport",2016,,,286
+369,The Amazing Spider-Man,"Action,Adventure",2012,262.03,66,474320
+370,Ben-Hur,"Action,Adventure,Drama",2016,26.38,38,28326
+371,Sleight,"Action,Drama,Sci-Fi",2016,3.85,62,702
+372,The Maze Runner,"Action,Mystery,Sci-Fi",2014,102.41,57,335531
+373,Criminal,"Action,Crime,Drama",2016,14.27,36,38430
+374,Wanted,"Action,Crime,Fantasy",2008,134.57,64,312495
+375,Florence Foster Jenkins,"Biography,Comedy,Drama",2016,27.37,71,31776
+376,Collide,"Action,Crime,Thriller",2016,2.2,33,7583
+377,Black Mass,"Biography,Crime,Drama",2015,62.56,68,135706
+378,Creed,"Drama,Sport",2015,109.71,82,175673
+379,Swiss Army Man,"Adventure,Comedy,Drama",2016,4.21,64,61812
+380,The Expendables 3,"Action,Adventure,Thriller",2014,39.29,35,137568
+381,What We Do in the Shadows,"Comedy,Fantasy,Horror",2014,3.33,76,84016
+382,Southpaw,"Drama,Sport",2015,52.42,57,169083
+383,Hush,"Horror,Thriller",2016,,67,45867
+384,Bridge of Spies,"Drama,History,Thriller",2015,72.31,81,217938
+385,The Lego Movie,"Animation,Action,Adventure",2014,257.76,83,266508
+386,Everest,"Action,Adventure,Drama",2015,43.25,64,154647
+387,Pixels,"Action,Comedy,Family",2015,78.75,27,101092
+388,Robin Hood,"Action,Adventure,Drama",2010,105.22,53,221117
+389,The Wolverine,"Action,Adventure,Sci-Fi",2013,132.55,60,355362
+390,John Carter,"Action,Adventure,Sci-Fi",2012,73.06,51,220667
+391,Keanu,"Action,Comedy",2016,20.57,63,31913
+392,The Gunman,"Action,Crime,Drama",2015,10.64,39,31194
+393,Steve Jobs,"Biography,Drama",2015,17.75,82,116112
+394,Whisky Galore,"Comedy,Romance",2016,,43,102
+395,Grown Ups 2,Comedy,2013,133.67,19,114482
+396,The Age of Adaline,"Drama,Fantasy,Romance",2015,42.48,51,112288
+397,The Incredible Hulk,"Action,Adventure,Sci-Fi",2008,134.52,61,342355
+398,Couples Retreat,Comedy,2009,109.18,23,86417
+399,Absolutely Anything,"Comedy,Sci-Fi",2015,,31,26587
+400,Magic Mike,"Comedy,Drama",2012,113.71,72,113686
+401,Minions,"Animation,Action,Adventure",2015,336.03,56,159830
+402,The Black Room,Horror,2016,,71,240
+403,Bronson,"Action,Biography,Crime",2008,0.1,,93972
+404,Despicable Me,"Animation,Adventure,Comedy",2010,251.5,72,410607
+405,The Best of Me,"Drama,Romance",2014,26.76,29,49041
+406,The Invitation,"Drama,Mystery,Thriller",2015,0.23,74,40529
+407,Zero Dark Thirty,"Drama,History,Thriller",2012,95.72,95,226661
+408,Tangled,"Animation,Adventure,Comedy",2010,200.81,71,316459
+409,The Hunger Games: Mockingjay - Part 2,"Action,Adventure,Sci-Fi",2015,281.67,65,202380
+410,Vacation,"Adventure,Comedy",2015,58.88,34,74589
+411,Taken,"Action,Thriller",2008,145,50,502961
+412,Pitch Perfect 2,"Comedy,Music",2015,183.44,63,108306
+413,Monsters University,"Animation,Adventure,Comedy",2013,268.49,65,252119
+414,Elle,"Crime,Drama,Thriller",2016,,89,35417
+415,Mechanic: Resurrection,"Action,Adventure,Crime",2016,21.2,38,48161
+416,Tusk,"Comedy,Drama,Horror",2014,1.82,55,34546
+417,The Headhunter's Calling,Drama,2016,,85,164
+418,Atonement,"Drama,Mystery,Romance",2007,50.92,,202890
+419,Harry Potter and the Deathly Hallows: Part 1,"Adventure,Family,Fantasy",2010,294.98,65,357213
+420,Shame,Drama,2011,4,72,155010
+421,Hanna,"Action,Drama,Thriller",2011,40.25,65,164208
+422,The Babysitters,Drama,2007,0.04,35,8914
+423,Pride and Prejudice and Zombies,"Action,Horror,Romance",2016,10.91,45,35003
+424,300: Rise of an Empire,"Action,Drama,Fantasy",2014,106.37,48,237887
+425,London Has Fallen,"Action,Crime,Drama",2016,62.4,28,100702
+426,The Curious Case of Benjamin Button,"Drama,Fantasy,Romance",2008,127.49,70,485075
+427,Sin City: A Dame to Kill For,"Action,Crime,Thriller",2014,13.75,46,122185
+428,The Bourne Ultimatum,"Action,Mystery,Thriller",2007,227.14,85,525700
+429,Srpski film,"Horror,Mystery,Thriller",2010,,55,43648
+430,The Purge: Election Year,"Action,Horror,Sci-Fi",2016,79,,54216
+431,3 Idiots,"Comedy,Drama",2009,6.52,67,238789
+432,Zoolander 2,Comedy,2016,28.84,34,48297
+433,World War Z,"Action,Adventure,Horror",2013,202.35,63,494819
+434,Mission: Impossible - Ghost Protocol,"Action,Adventure,Thriller",2011,209.36,73,382459
+435,Let Me Make You a Martyr,"Action,Crime,Drama",2016,,56,223
+436,Filth,"Comedy,Crime,Drama",2013,0.03,,81301
+437,The Longest Ride,"Drama,Romance",2015,37.43,33,58421
+438,The imposible,"Drama,Thriller",2012,19,73,156189
+439,Kick-Ass 2,"Action,Comedy,Crime",2013,28.75,41,214825
+440,Folk Hero & Funny Guy,Comedy,2016,,63,220
+441,Oz the Great and Powerful,"Adventure,Family,Fantasy",2013,234.9,44,181521
+442,Brooklyn,"Drama,Romance",2015,38.32,87,94977
+443,Coraline,"Animation,Family,Fantasy",2009,75.28,80,156620
+444,Blue Valentine,"Drama,Romance",2010,9.7,81,151409
+445,The Thinning,Thriller,2016,,31,4531
+446,Silent Hill,"Adventure,Horror,Mystery",2006,46.98,,184152
+447,Dredd,"Action,Sci-Fi",2012,13.4,59,213764
+448,Hunt for the Wilderpeople,"Adventure,Comedy,Drama",2016,5.2,81,52331
+449,Big Hero 6,"Animation,Action,Adventure",2014,222.49,74,309186
+450,Carrie,"Drama,Horror",2013,35.27,53,113272
+451,Iron Man 2,"Action,Adventure,Sci-Fi",2010,312.06,57,556666
+452,Demolition,"Comedy,Drama",2015,1.82,49,58720
+453,Pandorum,"Action,Horror,Mystery",2009,10.33,28,126656
+454,Olympus Has Fallen,"Action,Thriller",2013,98.9,41,214994
+455,I Am Number Four,"Action,Adventure,Sci-Fi",2011,55.09,36,202682
+456,Jagten,Drama,2012,0.61,76,192263
+457,The Proposal,"Comedy,Drama,Romance",2009,163.95,48,241709
+458,Get Hard,"Comedy,Crime",2015,90.35,34,95119
+459,Just Go with It,"Comedy,Romance",2011,103.03,33,182069
+460,Revolutionary Road,"Drama,Romance",2008,22.88,69,159736
+461,The Town,"Crime,Drama,Thriller",2010,92.17,74,294553
+462,The Boy,"Horror,Mystery,Thriller",2016,35.79,42,51235
+463,Denial,"Biography,Drama",2016,4.07,63,8229
+464,Predestination,"Drama,Mystery,Sci-Fi",2014,,69,187760
+465,Goosebumps,"Adventure,Comedy,Family",2015,80.02,60,57602
+466,Sherlock Holmes: A Game of Shadows,"Action,Adventure,Crime",2011,186.83,48,357436
+467,Salt,"Action,Crime,Mystery",2010,118.31,65,255813
+468,Enemy,"Mystery,Thriller",2013,1.01,61,111558
+469,District 9,"Action,Sci-Fi,Thriller",2009,115.65,81,556794
+470,The Other Guys,"Action,Comedy,Crime",2010,119.22,64,199900
+471,American Gangster,"Biography,Crime,Drama",2007,130.13,76,337835
+472,Marie Antoinette,"Biography,Drama,History",2006,15.96,65,83941
+473,2012,"Action,Adventure,Sci-Fi",2009,166.11,49,297984
+474,Harry Potter and the Half-Blood Prince,"Adventure,Family,Fantasy",2009,301.96,78,351059
+475,Argo,"Biography,Drama,History",2012,136.02,86,481274
+476,Eddie the Eagle,"Biography,Comedy,Drama",2016,15.79,54,56332
+477,The Lives of Others,"Drama,Thriller",2006,11.28,89,278103
+478,Pet,"Horror,Thriller",2016,,48,8404
+479,Paint It Black,Drama,2016,,71,61
+480,Macbeth,"Drama,War",2015,,71,41642
+481,Forgetting Sarah Marshall,"Comedy,Drama,Romance",2008,62.88,67,226619
+482,The Giver,"Drama,Romance,Sci-Fi",2014,45.09,47,93799
+483,Triple 9,"Action,Crime,Drama",2016,12.63,52,48400
+484,Perfetti sconosciuti,"Comedy,Drama",2016,,43,17584
+485,Angry Birds,"Animation,Action,Adventure",2016,107.51,,55781
+486,Moonrise Kingdom,"Adventure,Comedy,Drama",2012,45.51,84,254446
+487,Hairspray,"Comedy,Drama,Family",2007,118.82,81,102954
+488,Safe Haven,"Drama,Romance,Thriller",2013,71.35,34,84765
+489,Focus,"Comedy,Crime,Drama",2015,53.85,56,166489
+490,Ratatouille,"Animation,Comedy,Family",2007,206.44,96,504039
+491,Stake Land,"Drama,Horror,Sci-Fi",2010,0.02,66,36091
+492,The Book of Eli,"Action,Adventure,Drama",2010,94.82,53,241359
+493,Cloverfield,"Action,Horror,Sci-Fi",2008,80.03,64,313803
+494,Point Break,"Action,Crime,Sport",2015,28.77,34,44553
+495,Under the Skin,"Drama,Horror,Sci-Fi",2013,2.61,78,94707
+496,I Am Legend,"Drama,Horror,Sci-Fi",2007,256.39,65,565721
+497,Men in Black 3,"Action,Adventure,Comedy",2012,179.02,58,278379
+498,Super 8,"Mystery,Sci-Fi,Thriller",2011,126.98,72,298913
+499,Law Abiding Citizen,"Crime,Drama,Thriller",2009,73.34,34,228339
+500,Up,"Animation,Adventure,Comedy",2009,292.98,88,722203
+501,Maze Runner: The Scorch Trials,"Action,Sci-Fi,Thriller",2015,81.69,43,159364
+502,Carol,"Drama,Romance",2015,0.25,95,77995
+503,Imperium,"Crime,Drama,Thriller",2016,,68,27428
+504,Youth,"Comedy,Drama,Music",2015,2.7,64,52636
+505,Mr. Nobody,"Drama,Fantasy,Romance",2009,,63,166872
+506,City of Tiny Lights,"Crime,Drama,Thriller",2016,,54,291
+507,Savages,"Crime,Drama,Thriller",2012,47.31,59,107960
+508,(500) Days of Summer,"Comedy,Drama,Romance",2009,32.39,76,398972
+509,Movie 43,"Comedy,Romance",2013,8.83,18,83625
+510,Gravity,"Drama,Sci-Fi,Thriller",2013,274.08,96,622089
+511,The Boy in the Striped Pyjamas,"Drama,War",2008,9.03,55,144614
+512,Shooter,"Action,Crime,Drama",2007,46.98,53,267820
+513,The Happening,"Sci-Fi,Thriller",2008,64.51,34,170897
+514,Bone Tomahawk,"Adventure,Drama,Horror",2015,66.01,72,47289
+515,Magic Mike XXL,"Comedy,Drama,Music",2015,,60,42506
+516,Easy A,"Comedy,Drama,Romance",2010,58.4,72,294950
+517,Exodus: Gods and Kings,"Action,Adventure,Drama",2014,65.01,52,137299
+518,Chappie,"Action,Crime,Drama",2015,31.57,41,188769
+519,The Hobbit: The Desolation of Smaug,"Adventure,Fantasy",2013,258.36,66,513744
+520,Half of a Yellow Sun,"Drama,Romance",2013,0.05,51,1356
+521,Anthropoid,"Biography,History,Thriller",2016,2.96,59,24100
+522,The Counselor,"Crime,Drama,Thriller",2013,16.97,48,84927
+523,Viking,"Action,Drama,History",2016,23.05,57,1830
+524,Whiskey Tango Foxtrot,"Biography,Comedy,Drama",2016,,,36156
+525,Trust,"Crime,Drama,Thriller",2010,0.06,60,36043
+526,Birth of the Dragon,"Action,Biography,Drama",2016,93.05,61,552
+527,Elysium,"Action,Drama,Sci-Fi",2013,,,358932
+528,The Green Inferno,"Adventure,Horror",2013,7.19,38,26461
+529,Godzilla,"Action,Adventure,Sci-Fi",2014,200.66,62,318058
+530,The Bourne Legacy,"Action,Adventure,Mystery",2012,113.17,61,245374
+531,A Good Year,"Comedy,Drama,Romance",2006,7.46,47,74674
+532,Friend Request,"Horror,Thriller",2016,64.03,59,12758
+533,Deja Vu,"Action,Sci-Fi,Thriller",2006,,,253858
+534,Lucy,"Action,Sci-Fi,Thriller",2014,126.55,61,352698
+535,A Quiet Passion,"Biography,Drama",2016,1.08,77,1024
+536,Need for Speed,"Action,Crime,Drama",2014,43.57,39,143389
+537,Jack Reacher,"Action,Crime,Mystery",2012,58.68,50,250811
+538,The Do-Over,"Action,Adventure,Comedy",2016,0.54,22,24761
+539,True Crimes,"Crime,Drama,Thriller",2016,,43,198
+540,American Pastoral,"Crime,Drama",2016,,,7115
+541,The Ghost Writer,"Mystery,Thriller",2010,15.52,77,137964
+542,Limitless,"Mystery,Sci-Fi,Thriller",2011,79.24,59,444417
+543,Spectral,"Action,Mystery,Sci-Fi",2016,,39,27042
+544,P.S. I Love You,"Drama,Romance",2007,53.68,,177247
+545,Zipper,"Drama,Thriller",2015,,39,4912
+546,Midnight Special,"Drama,Mystery,Sci-Fi",2016,3.71,76,54787
+547,Don't Think Twice,"Comedy,Drama",2016,4.42,83,10485
+548,Alice in Wonderland,"Adventure,Family,Fantasy",2010,334.19,53,324898
+549,Chuck,"Biography,Drama,Sport",2016,0.11,68,391
+550,"I, Daniel Blake",Drama,2016,,77,22941
+551,The Break-Up,"Comedy,Drama,Romance",2006,118.68,45,106381
+552,Loving,"Biography,Drama,Romance",2016,7.7,79,17141
+553,Fantastic Four,"Action,Adventure,Sci-Fi",2015,56.11,27,121847
+554,The Survivalist,"Drama,Sci-Fi,Thriller",2015,,80,9187
+555,Colonia,"Drama,Romance,Thriller",2015,,33,30074
+556,The Boy Next Door,"Mystery,Thriller",2015,35.39,30,30180
+557,The Gift,"Mystery,Thriller",2015,43.77,77,96688
+558,Dracula Untold,"Action,Drama,Fantasy",2014,55.94,40,148504
+559,In the Heart of the Sea,"Action,Adventure,Biography",2015,24.99,47,90372
+560,Idiocracy,"Adventure,Comedy,Sci-Fi",2006,0.44,66,115355
+561,The Expendables,"Action,Adventure,Thriller",2010,102.98,45,283282
+562,Evil Dead,"Fantasy,Horror",2013,54.24,57,133113
+563,Sinister,"Horror,Mystery",2012,48.06,53,171169
+564,Wreck-It Ralph,"Animation,Adventure,Comedy",2012,189.41,72,290559
+565,Snow White and the Huntsman,"Action,Adventure,Drama",2012,155.11,57,239772
+566,Pan,"Adventure,Family,Fantasy",2015,34.96,36,47804
+567,Transformers: Dark of the Moon,"Action,Adventure,Sci-Fi",2011,352.36,42,338369
+568,Juno,"Comedy,Drama",2007,143.49,81,432461
+569,A Hologram for the King,"Comedy,Drama",2016,4.2,58,26521
+570,Money Monster,"Crime,Drama,Thriller",2016,41.01,55,68654
+571,The Other Woman,"Comedy,Romance",2014,83.91,39,110825
+572,Enchanted,"Animation,Comedy,Family",2007,127.71,75,150353
+573,The Intern,"Comedy,Drama",2015,75.27,51,159582
+574,Little Miss Sunshine,"Comedy,Drama",2006,59.89,80,374044
+575,Bleed for This,"Biography,Drama,Sport",2016,4.85,62,11900
+576,Clash of the Titans,"Action,Adventure,Fantasy",2010,163.19,39,238206
+577,The Finest Hours,"Action,Drama,History",2016,27.55,58,44425
+578,Tron,"Action,Adventure,Sci-Fi",2010,172.05,49,273959
+579,The Hunger Games: Catching Fire,"Action,Adventure,Mystery",2013,424.65,76,525646
+580,All Good Things,"Crime,Drama,Mystery",2010,0.58,57,44158
+581,Kickboxer: Vengeance,Action,2016,131.56,37,6809
+582,The Last Airbender,"Action,Adventure,Family",2010,,20,125129
+583,Sex Tape,"Comedy,Romance",2014,38.54,36,89885
+584,What to Expect When You're Expecting,"Comedy,Drama,Romance",2012,41.1,41,60059
+585,Moneyball,"Biography,Drama,Sport",2011,75.61,87,297395
+586,Ghost Rider,"Action,Fantasy,Thriller",2007,115.8,35,190673
+587,Unbroken,"Biography,Drama,Sport",2014,115.6,59,114006
+588,Immortals,"Action,Drama,Fantasy",2011,83.5,46,142900
+589,Sunshine,"Adventure,Sci-Fi,Thriller",2007,3.68,64,199860
+590,Brave,"Animation,Adventure,Comedy",2012,237.28,69,293941
+591,Män som hatar kvinnor,"Drama,Mystery,Thriller",2009,10.1,76,182074
+592,Adoration,"Drama,Romance",2013,0.32,37,25208
+593,The Drop,"Crime,Drama,Mystery",2014,10.72,69,116118
+594,She's the Man,"Comedy,Romance,Sport",2006,2.34,45,122864
+595,Daddy's Home,"Comedy,Family",2015,150.32,42,68306
+596,Let Me In,"Drama,Horror,Mystery",2010,12.13,79,97141
+597,Never Back Down,"Action,Drama,Sport",2008,24.85,39,84083
+598,Grimsby,"Action,Adventure,Comedy",2016,6.86,44,63408
+599,Moon,"Drama,Mystery,Sci-Fi",2009,5.01,67,277123
+600,Megamind,"Animation,Action,Comedy",2010,148.34,63,183926
+601,Gangster Squad,"Action,Crime,Drama",2013,46,40,181432
+602,Blood Father,"Action,Crime,Drama",2016,93.95,66,40357
+603,He's Just Not That Into You,"Comedy,Drama,Romance",2009,,47,137684
+604,Kung Fu Panda 3,"Animation,Action,Adventure",2016,143.52,66,89791
+605,The Rise of the Krays,"Crime,Drama",2015,6.53,90,1630
+606,Handsome Devil,Drama,2016,,,338
+607,Winter's Bone,Drama,2010,,,116435
+608,Horrible Bosses,"Comedy,Crime",2011,117.53,57,368556
+609,Mommy,Drama,2014,3.49,74,33560
+610,Hellboy II: The Golden Army,"Action,Adventure,Fantasy",2008,75.75,78,216932
+611,Beautiful Creatures,"Drama,Fantasy,Romance",2013,19.45,52,71822
+612,Toni Erdmann,"Comedy,Drama",2016,1.48,93,24387
+613,The Lovely Bones,"Drama,Fantasy,Thriller",2009,43.98,42,130702
+614,The Assassination of Jesse James by the Coward Robert Ford,"Biography,Crime,Drama",2007,3.9,68,143564
+615,Don Jon,"Comedy,Drama,Romance",2013,24.48,66,199973
+616,Bastille Day,"Action,Crime,Drama",2016,0.04,48,21089
+617,2307: Winter's Dream,Sci-Fi,2016,20.76,53,277
+618,Free State of Jones,"Action,Biography,Drama",2016,,,29895
+619,Mr. Right,"Action,Comedy,Romance",2015,0.03,52,30053
+620,The Secret Life of Walter Mitty,"Adventure,Comedy,Drama",2013,58.23,54,249877
+621,Dope,"Comedy,Crime,Drama",2015,17.47,72,66400
+622,Underworld Awakening,"Action,Fantasy,Horror",2012,62.32,39,127157
+623,Antichrist,"Drama,Horror",2009,0.4,49,94069
+624,Friday the 13th,Horror,2009,65,34,78631
+625,Taken 3,"Action,Thriller",2014,89.25,26,144715
+626,Total Recall,"Action,Adventure,Mystery",2012,58.88,43,210965
+627,X-Men: The Last Stand,"Action,Adventure,Fantasy",2006,234.36,58,406540
+628,The Escort,"Comedy,Drama,Romance",2016,,46,7181
+629,The Whole Truth,"Crime,Drama,Mystery",2016,,,10700
+630,Night at the Museum: Secret of the Tomb,"Adventure,Comedy,Family",2014,113.73,47,74886
+631,Love & Other Drugs,"Comedy,Drama,Romance",2010,32.36,55,151519
+632,The Interview,Comedy,2014,6.11,52,261536
+633,The Host,"Comedy,Drama,Horror",2006,2.2,85,73491
+634,Megan Is Missing,"Drama,Horror,Thriller",2011,,94,6683
+635,WALL·E,"Animation,Adventure,Family",2008,223.81,,776897
+636,Knocked Up,"Comedy,Romance",2007,148.73,85,309398
+637,Source Code,"Mystery,Romance,Sci-Fi",2011,54.7,74,404884
+638,Lawless,"Crime,Drama",2012,37.4,58,195360
+639,Unfriended,"Drama,Horror,Mystery",2014,31.54,59,50402
+640,American Reunion,Comedy,2012,56.72,49,178471
+641,The Pursuit of Happyness,"Biography,Drama",2006,162.59,64,361105
+642,Relatos salvajes,"Comedy,Drama,Thriller",2014,3.08,77,110100
+643,The Ridiculous 6,"Comedy,Western",2015,,18,31149
+644,Frantz,"Drama,History,War",2016,0.86,73,4304
+645,Viral,"Drama,Horror,Sci-Fi",2016,,72,3564
+646,Gran Torino,Drama,2008,148.09,,595779
+647,Burnt,"Comedy,Drama",2015,13.65,42,76469
+648,Tall Men,"Fantasy,Horror,Thriller",2016,,57,173
+649,Sleeping Beauty,"Drama,Romance",2011,0.03,,27006
+650,Vampire Academy,"Action,Comedy,Fantasy",2014,7.79,30,44111
+651,Sweeney Todd: The Demon Barber of Fleet Street,"Drama,Horror,Musical",2007,52.88,83,296289
+652,Solace,"Crime,Drama,Mystery",2015,,36,36300
+653,Insidious,"Horror,Mystery,Thriller",2010,53.99,52,219916
+654,Popstar: Never Stop Never Stopping,"Comedy,Music",2016,9.39,68,30875
+655,The Levelling,Drama,2016,,82,482
+656,Public Enemies,"Biography,Crime,Drama",2009,97.03,70,240323
+657,Boyhood,Drama,2014,25.36,100,286722
+658,Teenage Mutant Ninja Turtles,"Action,Adventure,Comedy",2014,190.87,31,178527
+659,Eastern Promises,"Crime,Drama,Mystery",2007,17.11,82,198006
+660,The Daughter,Drama,2015,0.03,62,2798
+661,Pineapple Express,"Action,Comedy,Crime",2008,87.34,64,267872
+662,The First Time,"Comedy,Drama,Romance",2012,0.02,55,54027
+663,Gone Baby Gone,"Crime,Drama,Mystery",2007,20.3,72,206707
+664,The Heat,"Action,Comedy,Crime",2013,159.58,60,140151
+665,L'avenir,Drama,2016,0.28,88,5796
+666,Anna Karenina,"Drama,Romance",2012,12.8,63,75291
+667,Regression,"Crime,Drama,Mystery",2015,0.05,32,26320
+668,Ted 2,"Adventure,Comedy,Romance",2015,81.26,48,136323
+669,Pain & Gain,"Comedy,Crime,Drama",2013,49.87,45,168875
+670,Blood Diamond,"Adventure,Drama,Thriller",2006,57.37,64,422014
+671,Devil's Knot,"Biography,Crime,Drama",2013,,42,15514
+672,Child 44,"Crime,Drama,Thriller",2015,1.21,41,47703
+673,The Hurt Locker,"Drama,History,Thriller",2008,15.7,94,352023
+674,Green Lantern,"Action,Adventure,Sci-Fi",2011,116.59,39,231907
+675,War on Everyone,"Action,Comedy",2016,,50,9285
+676,The Mist,Horror,2007,25.59,58,233346
+677,Escape Plan,"Action,Crime,Mystery",2013,25.12,49,188004
+678,"Love, Rosie","Comedy,Romance",2014,0.01,44,80415
+679,The DUFF,Comedy,2015,34.02,56,57874
+680,The Age of Shadows,"Action,Drama,Thriller",2016,0.54,78,2403
+681,The Hunger Games: Mockingjay - Part 1,"Action,Adventure,Sci-Fi",2014,337.1,64,331902
+682,We Need to Talk About Kevin,"Drama,Mystery,Thriller",2011,1.74,68,104953
+683,Love & Friendship,"Comedy,Drama,Romance",2016,14.01,87,16164
+684,The Mortal Instruments: City of Bones,"Action,Fantasy,Horror",2013,31.17,33,112313
+685,Seven Pounds,"Drama,Romance",2008,69.95,36,245144
+686,The King's Speech,"Biography,Drama",2010,138.8,88,534388
+687,Hunger,"Biography,Drama",2008,0.15,82,54486
+688,Jumper,"Action,Adventure,Sci-Fi",2008,80.17,35,252503
+689,Toy Story 3,"Animation,Adventure,Comedy",2010,414.98,92,586669
+690,Tinker Tailor Soldier Spy,"Drama,Mystery,Thriller",2011,24.1,85,157053
+691,Resident Evil: Retribution,"Action,Horror,Sci-Fi",2012,42.35,39,114144
+692,Dear Zindagi,"Drama,Romance",2016,1.4,56,23540
+693,Genius,"Biography,Drama",2016,1.36,,10708
+694,Pompeii,"Action,Adventure,Drama",2014,23.22,39,90188
+695,Life of Pi,"Adventure,Drama,Fantasy",2012,124.98,79,471109
+696,Hachi: A Dog's Tale,"Drama,Family",2009,,61,177602
+697,10 Years,"Comedy,Drama,Romance",2011,0.2,,19636
+698,I Origins,"Drama,Romance,Sci-Fi",2014,0.33,57,86271
+699,Live Free or Die Hard,"Action,Adventure,Thriller",2007,134.52,69,347567
+700,The Matchbreaker,"Comedy,Romance",2016,,44,1427
+701,Funny Games,"Crime,Drama,Horror",2007,1.29,,73835
+702,Ted,"Comedy,Fantasy",2012,218.63,62,494641
+703,RED,"Action,Comedy,Crime",2010,90.36,60,250012
+704,Australia,"Adventure,Drama,Romance",2008,49.55,53,106115
+705,Faster,"Action,Crime,Drama",2010,23.23,44,83788
+706,The Neighbor,"Crime,Horror,Thriller",2016,,60,4754
+707,The Adjustment Bureau,"Romance,Sci-Fi,Thriller",2011,62.45,,208632
+708,The Hollars,"Comedy,Drama,Romance",2016,1.02,53,5908
+709,The Judge,"Crime,Drama",2014,47.11,48,146812
+710,Closed Circuit,"Crime,Drama,Mystery",2013,5.73,50,18437
+711,Transformers: Revenge of the Fallen,"Action,Adventure,Sci-Fi",2009,402.08,35,335757
+712,La tortue rouge,"Animation,Fantasy",2016,0.92,86,11482
+713,The Book of Life,"Animation,Adventure,Comedy",2014,50.15,67,50388
+714,Incendies,"Drama,Mystery,War",2010,6.86,80,92863
+715,The Heartbreak Kid,"Comedy,Romance",2007,36.77,46,74664
+716,Happy Feet,"Animation,Comedy,Family",2006,197.99,77,141141
+717,Entourage,Comedy,2015,32.36,38,64557
+718,The Strangers,"Horror,Mystery,Thriller",2008,52.53,47,96718
+719,Noah,"Action,Adventure,Drama",2014,101.16,68,209700
+720,Neighbors,Comedy,2014,150.06,68,236500
+721,Nymphomaniac: Vol. II,Drama,2013,0.33,60,65824
+722,Wild,"Adventure,Biography,Drama",2014,37.88,76,95553
+723,Grown Ups,Comedy,2010,162,30,190385
+724,Blair Witch,"Horror,Thriller",2016,20.75,47,26088
+725,The Karate Kid,"Action,Drama,Family",2010,176.59,61,127983
+726,Dark Shadows,"Comedy,Fantasy,Horror",2012,79.71,55,209326
+727,Friends with Benefits,"Comedy,Romance",2011,55.8,63,286543
+728,The Illusionist,"Drama,Mystery,Romance",2006,39.83,68,309934
+729,The A-Team,"Action,Adventure,Comedy",2010,77.21,47,219116
+730,The Guest,Thriller,2014,0.32,76,71069
+731,The Internship,Comedy,2013,44.67,42,166342
+732,Paul,"Adventure,Comedy,Sci-Fi",2011,37.37,57,201707
+733,This Beautiful Fantastic,"Comedy,Drama,Fantasy",2016,,51,688
+734,The Da Vinci Code,"Mystery,Thriller",2006,217.54,46,338280
+735,Mr. Church,"Comedy,Drama",2016,0.69,37,16163
+736,Hugo,"Adventure,Drama,Family",2011,73.82,83,259182
+737,The Blackcoat's Daughter,"Horror,Thriller",2015,0.02,68,4155
+738,Body of Lies,"Action,Drama,Romance",2008,39.38,57,182305
+739,Knight of Cups,"Drama,Romance",2015,0.56,53,17439
+740,The Mummy: Tomb of the Dragon Emperor,"Action,Adventure,Fantasy",2008,102.18,31,124554
+741,The Boss,Comedy,2016,63.03,40,29642
+742,Hands of Stone,"Action,Biography,Drama",2016,4.71,54,8998
+743,El secreto de sus ojos,"Drama,Mystery,Romance",2009,20.17,80,144524
+744,True Grit,"Adventure,Drama,Western",2010,171.03,80,254904
+745,We Are Your Friends,"Drama,Music,Romance",2015,3.59,46,25903
+746,A Million Ways to Die in the West,"Comedy,Romance,Western",2014,42.62,44,144779
+747,Only for One Night,Thriller,2016,,60,313
+748,Rules Don't Apply,"Comedy,Drama,Romance",2016,3.65,,3731
+749,Ouija: Origin of Evil,"Horror,Thriller",2016,34.9,65,30035
+750,Percy Jackson: Sea of Monsters,"Adventure,Family,Fantasy",2013,68.56,39,91684
+751,Fracture,"Crime,Drama,Mystery",2007,39,68,148943
+752,Oculus,"Horror,Mystery",2013,27.69,61,92875
+753,In Bruges,"Comedy,Crime,Drama",2008,7.76,67,322536
+754,This Means War,"Action,Comedy,Romance",2012,54.76,31,154400
+755,Lída Baarová,"Biography,Drama,History",2016,,64,353
+756,The Road,"Adventure,Drama",2009,0.06,,187302
+757,Lavender,"Drama,Thriller",2016,,46,2083
+758,Deuces,Drama,2016,,36,256
+759,Conan the Barbarian,"Action,Adventure,Fantasy",2011,21.27,,84893
+760,The Fighter,"Action,Biography,Drama",2010,93.57,79,290056
+761,August Rush,"Drama,Music",2007,31.66,38,91229
+762,Chef,"Comedy,Drama",2014,31.24,68,151970
+763,Eye in the Sky,"Drama,Thriller,War",2015,18.7,73,57826
+764,Eagle Eye,"Action,Mystery,Thriller",2008,101.11,43,156158
+765,The Purge,"Horror,Sci-Fi,Thriller",2013,64.42,41,154588
+766,PK,"Comedy,Drama,Romance",2014,10.57,51,103279
+767,Ender's Game,"Action,Sci-Fi",2013,61.66,,194236
+768,Indiana Jones and the Kingdom of the Crystal Skull,"Action,Adventure,Fantasy",2008,317.01,65,351361
+769,Paper Towns,"Drama,Mystery,Romance",2015,31.99,56,72515
+770,High-Rise,Drama,2015,0.34,65,25928
+771,Quantum of Solace,"Action,Adventure,Thriller",2008,168.37,58,347798
+772,The Assignment,"Action,Crime,Thriller",2016,,34,2043
+773,How to Train Your Dragon,"Animation,Action,Adventure",2010,217.39,74,523893
+774,Lady in the Water,"Drama,Fantasy,Mystery",2006,42.27,36,82701
+775,The Fountain,"Drama,Sci-Fi",2006,10.14,51,199193
+776,Cars 2,"Animation,Adventure,Comedy",2011,191.45,57,110490
+777,31,"Horror,Thriller",2016,0.78,35,10871
+778,Final Girl,"Action,Thriller",2015,,56,9026
+779,Chalk It Up,Comedy,2016,,,499
+780,The Man Who Knew Infinity,"Biography,Drama",2015,3.86,,29912
+781,Unknown,"Action,Mystery,Thriller",2011,61.09,56,218679
+782,Self/less,"Action,Mystery,Sci-Fi",2015,12.28,34,67196
+783,Mr. Brooks,"Crime,Drama,Thriller",2007,28.48,45,128146
+784,Tramps,"Comedy,Romance",2016,,77,1031
+785,Before We Go,"Comedy,Drama,Romance",2014,0.04,31,31370
+786,Captain Phillips,"Biography,Drama,Thriller",2013,107.1,83,346154
+787,The Secret Scripture,Drama,2016,,37,378
+788,Max Steel,"Action,Adventure,Family",2016,3.77,22,11555
+789,Hotel Transylvania 2,"Animation,Comedy,Family",2015,169.69,44,69157
+790,Hancock,"Action,Crime,Drama",2008,227.95,49,366138
+791,Sisters,Comedy,2015,87.03,58,50241
+792,The Family,"Comedy,Crime,Thriller",2013,36.92,42,92868
+793,Zack and Miri Make a Porno,"Comedy,Romance",2008,31.45,56,154936
+794,Ma vie de Courgette,"Animation,Comedy,Drama",2016,0.29,85,4370
+795,Man on a Ledge,"Action,Crime,Thriller",2012,18.6,40,129252
+796,No Strings Attached,"Comedy,Romance",2011,70.63,50,178243
+797,Rescue Dawn,"Adventure,Biography,Drama",2006,5.48,77,87887
+798,Despicable Me 2,"Animation,Adventure,Comedy",2013,368.05,62,304837
+799,A Walk Among the Tombstones,"Crime,Drama,Mystery",2014,25.98,57,93883
+800,The World's End,"Action,Comedy,Sci-Fi",2013,26,81,199813
+801,Yoga Hosers,"Comedy,Fantasy,Horror",2016,,23,7091
+802,Seven Psychopaths,"Comedy,Crime",2012,14.99,66,196652
+803,Beowulf,"Animation,Action,Adventure",2007,82.16,59,146566
+804,Jack Ryan: Shadow Recruit,"Action,Drama,Thriller",2014,50.55,57,103681
+805,1408,"Fantasy,Horror",2007,71.98,64,221073
+806,The Gambler,"Crime,Drama,Thriller",2014,33.63,55,52537
+807,Prince of Persia: The Sands of Time,"Action,Adventure,Fantasy",2010,90.76,50,233148
+808,The Spectacular Now,"Comedy,Drama,Romance",2013,6.85,82,115751
+809,A United Kingdom,"Biography,Drama,Romance",2016,3.9,65,4771
+810,USS Indianapolis: Men of Courage,"Action,Drama,History",2016,,30,4964
+811,Turbo Kid,"Action,Adventure,Comedy",2015,0.05,60,19309
+812,Mama,"Horror,Thriller",2013,71.59,57,142560
+813,Orphan,"Horror,Mystery,Thriller",2009,41.57,42,153448
+814,To Rome with Love,"Comedy,Romance",2012,16.68,54,72050
+815,Fantastic Mr. Fox,"Animation,Adventure,Comedy",2009,21,83,149779
+816,Inside Man,"Crime,Drama,Mystery",2006,88.5,76,285441
+817,I.T.,"Crime,Drama,Mystery",2016,,27,8755
+818,127 Hours,"Adventure,Biography,Drama",2010,18.33,82,294010
+819,Annabelle,"Horror,Mystery,Thriller",2014,84.26,37,91106
+820,Wolves at the Door,"Horror,Thriller",2016,,63,564
+821,Suite Française,"Drama,Romance,War",2014,,,13711
+822,The Imaginarium of Doctor Parnassus,"Adventure,Fantasy,Mystery",2009,7.69,65,130153
+823,G.I. Joe: The Rise of Cobra,"Action,Adventure,Sci-Fi",2009,150.17,32,180105
+824,Christine,"Biography,Drama",2016,0.3,72,5855
+825,Man Down,"Drama,Thriller",2015,,27,4779
+826,Crawlspace,"Horror,Thriller",2016,,25,1427
+827,Shut In,"Drama,Horror,Thriller",2016,6.88,,5715
+828,The Warriors Gate,"Action,Adventure,Fantasy",2016,,77,1391
+829,Grindhouse,"Action,Horror,Thriller",2007,25.03,,160350
+830,Disaster Movie,Comedy,2008,14.17,15,77207
+831,Rocky Balboa,"Drama,Sport",2006,70.27,63,171356
+832,Diary of a Wimpy Kid: Dog Days,"Comedy,Family",2012,49,54,16917
+833,Jane Eyre,"Drama,Romance",2011,11.23,76,67464
+834,Fool's Gold,"Action,Adventure,Comedy",2008,70.22,29,62719
+835,The Dictator,Comedy,2012,59.62,58,225394
+836,The Loft,"Mystery,Romance,Thriller",2014,5.98,24,38804
+837,Bacalaureat,"Crime,Drama",2016,0.13,84,5531
+838,You Don't Mess with the Zohan,"Action,Comedy",2008,100.02,54,163144
+839,Exposed,"Crime,Drama,Mystery",2016,,23,8409
+840,Maudie,"Biography,Drama,Romance",2016,,60,346
+841,Horrible Bosses 2,"Comedy,Crime",2014,54.41,40,125190
+842,A Bigger Splash,"Drama,Thriller",2015,1.98,74,15232
+843,Melancholia,Drama,2011,3.03,80,137117
+844,The Princess and the Frog,"Animation,Adventure,Comedy",2009,104.37,73,95480
+845,Unstoppable,"Action,Thriller",2010,81.56,69,157499
+846,Flight,"Drama,Thriller",2012,93.75,76,276347
+847,Home,"Animation,Adventure,Comedy",2015,177.34,55,77447
+848,La migliore offerta,"Crime,Drama,Mystery",2013,0.09,49,77986
+849,Mean Dreams,Thriller,2016,,64,1066
+850,42,"Biography,Drama,Sport",2013,95,62,69659
+851,21,"Crime,Drama,Thriller",2008,81.16,48,198395
+852,Begin Again,"Drama,Music",2013,16.17,62,111875
+853,Out of the Furnace,"Crime,Drama,Thriller",2013,11.33,63,88829
+854,Vicky Cristina Barcelona,"Drama,Romance",2008,23.21,70,208770
+855,Kung Fu Panda,"Animation,Action,Adventure",2008,215.4,73,329788
+856,Barbershop: The Next Cut,"Comedy,Drama",2016,54.01,67,9993
+857,Terminator Salvation,"Action,Adventure,Drama",2009,125.32,49,297093
+858,Freedom Writers,"Biography,Crime,Drama",2007,36.58,64,55648
+859,The Hills Have Eyes,Horror,2006,41.78,52,136642
+860,Changeling,"Biography,Drama,Mystery",2008,35.71,63,206793
+861,Remember Me,"Drama,Romance",2010,19.06,40,119376
+862,Koe no katachi,"Animation,Drama,Romance",2016,,80,2421
+863,"Alexander and the Terrible, Horrible, No Good, Very Bad Day","Comedy,Family",2014,66.95,54,32310
+864,Locke,Drama,2013,1.36,81,100890
+865,The 9th Life of Louis Drax,"Mystery,Thriller",2016,,41,6175
+866,Horns,"Drama,Fantasy,Horror",2013,0.16,46,61060
+867,Indignation,"Drama,Romance",2016,3.4,78,7402
+868,The Stanford Prison Experiment,"Biography,Drama,History",2015,0.64,67,20907
+869,Diary of a Wimpy Kid: Rodrick Rules,"Comedy,Family",2011,52.69,51,20194
+870,Mission: Impossible III,"Action,Adventure,Thriller",2006,133.38,66,270429
+871,En man som heter Ove,"Comedy,Drama",2015,3.36,70,21569
+872,Dragonball Evolution,"Action,Adventure,Fantasy",2009,9.35,45,59512
+873,Red Dawn,"Action,Thriller",2012,44.8,31,64584
+874,One Day,"Drama,Romance",2011,13.77,48,113599
+875,Life as We Know It,"Comedy,Drama,Romance",2010,53.36,39,101301
+876,28 Weeks Later,"Drama,Horror,Sci-Fi",2007,28.64,78,221858
+877,Warm Bodies,"Comedy,Horror,Romance",2013,66.36,59,193579
+878,Blue Jasmine,Drama,2013,33.4,78,160592
+879,G.I. Joe: Retaliation,"Action,Adventure,Sci-Fi",2013,122.51,41,152145
+880,Wrath of the Titans,"Action,Adventure,Fantasy",2012,83.64,37,159230
+881,Shin Gojira,"Action,Adventure,Drama",2016,1.91,68,8365
+882,Saving Mr. Banks,"Biography,Comedy,Drama",2013,83.3,65,125693
+883,Transcendence,"Drama,Mystery,Romance",2014,23.01,42,184564
+884,Rio,"Animation,Adventure,Comedy",2011,143.62,63,173919
+885,Equals,"Drama,Romance,Sci-Fi",2015,0.03,43,16361
+886,Babel,Drama,2006,34.3,69,253417
+887,The Tree of Life,"Drama,Fantasy",2011,13.3,85,143517
+888,The Lucky One,"Drama,Romance",2012,60.44,39,82874
+889,Piranha 3D,"Comedy,Horror,Thriller",2010,25,53,75262
+890,50/50,"Comedy,Drama,Romance",2011,34.96,72,281625
+891,The Intent,"Crime,Drama",2016,,59,202
+892,This Is 40,"Comedy,Romance",2012,67.52,,108156
+893,Real Steel,"Action,Drama,Family",2011,85.46,56,264480
+894,Sex and the City,"Comedy,Drama,Romance",2008,152.64,53,102547
+895,Rambo,"Action,Thriller,War",2008,42.72,46,187077
+896,Planet Terror,"Action,Comedy,Horror",2007,,55,174553
+897,Concussion,"Biography,Drama,Sport",2015,34.53,,61274
+898,The Fall,"Adventure,Comedy,Drama",2006,2.28,64,93036
+899,The Ugly Truth,"Comedy,Romance",2009,88.92,28,172558
+900,Bride Wars,"Comedy,Romance",2009,58.72,24,83976
+901,Sleeping with Other People,"Comedy,Drama,Romance",2015,0.81,64,27730
+902,Snakes on a Plane,"Action,Adventure,Crime",2006,34.01,58,118905
+903,What If,"Comedy,Romance",2013,3.45,59,55243
+904,How to Train Your Dragon 2,"Animation,Action,Adventure",2014,177,76,237565
+905,RoboCop,"Action,Crime,Sci-Fi",2014,58.61,52,190833
+906,In Dubious Battle,Drama,2016,,43,1455
+907,"Hello, My Name Is Doris","Comedy,Drama,Romance",2015,14.44,63,12361
+908,Ocean's Thirteen,"Crime,Thriller",2007,117.14,62,269581
+909,Slither,"Comedy,Horror,Sci-Fi",2006,7.77,69,64351
+910,Contagion,"Drama,Thriller",2011,75.64,70,187004
+911,Il racconto dei racconti - Tale of Tales,"Drama,Fantasy,Horror",2015,0.08,72,17565
+912,I Am the Pretty Thing That Lives in the House,Thriller,2016,,68,4204
+913,Bridge to Terabithia,"Adventure,Drama,Family",2007,82.23,74,117297
+914,Coherence,"Mystery,Sci-Fi,Thriller",2013,0.07,65,66265
+915,Notorious,"Biography,Crime,Drama",2009,36.84,60,33007
+916,Goksung,"Drama,Fantasy,Horror",2016,0.79,81,17962
+917,The Expendables 2,"Action,Adventure,Thriller",2012,85.02,51,257395
+918,The Girl Next Door,"Crime,Drama,Horror",2007,,29,19351
+919,Perfume: The Story of a Murderer,"Crime,Drama,Fantasy",2006,2.21,56,199387
+920,The Golden Compass,"Adventure,Family,Fantasy",2007,70.08,51,155078
+921,Centurion,"Action,Adventure,Drama",2010,0.12,62,67801
+922,Scouts Guide to the Zombie Apocalypse,"Action,Comedy,Horror",2015,3.64,32,31651
+923,17 Again,"Comedy,Drama,Family",2009,64.15,48,152808
+924,No Escape,"Action,Thriller",2015,27.29,38,57921
+925,Superman Returns,"Action,Adventure,Sci-Fi",2006,200.07,72,246797
+926,The Twilight Saga: Breaking Dawn - Part 1,"Adventure,Drama,Fantasy",2011,281.28,45,190244
+927,Precious,Drama,2009,47.54,79,91623
+928,The Sea of Trees,Drama,2015,0.02,23,7475
+929,Good Kids,Comedy,2016,,86,3843
+930,The Master,Drama,2012,16.38,,112902
+931,Footloose,"Comedy,Drama,Music",2011,51.78,58,39380
+932,If I Stay,"Drama,Fantasy,Music",2014,50.46,46,92170
+933,The Ticket,Drama,2016,,52,924
+934,Detour,Thriller,2016,,46,2205
+935,The Love Witch,"Comedy,Horror",2016,0.22,82,4669
+936,Talladega Nights: The Ballad of Ricky Bobby,"Action,Comedy,Sport",2006,148.21,66,137502
+937,The Human Centipede (First Sequence),Horror,2009,0.18,33,60655
+938,Super,"Comedy,Drama",2010,0.32,50,64535
+939,The Siege of Jadotville,"Action,Drama,Thriller",2016,,83,14689
+940,Up in the Air,"Drama,Romance",2009,83.81,,279694
+941,The Midnight Meat Train,"Horror,Mystery",2008,0.07,58,50255
+942,The Twilight Saga: Eclipse,"Adventure,Drama,Fantasy",2010,300.52,58,192740
+943,Transpecos,Thriller,2016,,73,1292
+944,What's Your Number?,"Comedy,Romance",2011,13.99,35,62095
+945,Riddick,"Action,Sci-Fi,Thriller",2013,42,49,132098
+946,Triangle,"Fantasy,Mystery,Thriller",2009,,66,72533
+947,The Butler,"Biography,Drama",2013,116.63,,93322
+948,King Cobra,"Crime,Drama",2016,0.03,48,3990
+949,After Earth,"Action,Adventure,Sci-Fi",2013,60.52,33,166512
+950,Kicks,Adventure,2016,0.15,69,2417
+951,Me and Earl and the Dying Girl,"Comedy,Drama",2015,6.74,74,92076
+952,The Descendants,"Comedy,Drama",2011,82.62,84,211348
+953,Sex and the City 2,"Comedy,Drama,Romance",2010,95.33,27,62403
+954,The Kings of Summer,"Adventure,Comedy,Drama",2013,1.29,61,65653
+955,Death Race,"Action,Sci-Fi,Thriller",2008,36.06,43,173731
+956,That Awkward Moment,"Comedy,Romance",2014,26.05,36,81823
+957,Legion,"Action,Fantasy,Horror",2010,40.17,32,84158
+958,End of Watch,"Crime,Drama,Thriller",2012,40.98,68,192190
+959,3 Days to Kill,"Action,Drama,Thriller",2014,30.69,40,73567
+960,Lucky Number Slevin,"Crime,Drama,Mystery",2006,22.49,53,271940
+961,Trance,"Crime,Drama,Mystery",2013,2.32,61,97141
+962,Into the Forest,"Drama,Sci-Fi,Thriller",2015,0.01,59,10220
+963,The Other Boleyn Girl,"Biography,Drama,History",2008,26.81,50,88260
+964,I Spit on Your Grave,"Crime,Horror,Thriller",2010,0.09,27,60133
+965,Custody,Drama,2016,,72,280
+966,Inland Empire,"Drama,Mystery,Thriller",2006,,,44227
+967,L'odyssée,"Adventure,Biography",2016,,70,1810
+968,The Walk,"Adventure,Biography,Crime",2015,10.14,,92378
+969,Wrecker,"Action,Horror,Thriller",2015,,37,1210
+970,The Lone Ranger,"Action,Adventure,Western",2013,89.29,,190855
+971,Texas Chainsaw 3D,"Horror,Thriller",2013,34.33,62,37060
+972,Disturbia,"Drama,Mystery,Thriller",2007,80.05,,193491
+973,Rock of Ages,"Comedy,Drama,Musical",2012,38.51,47,64513
+974,Scream 4,"Horror,Mystery",2011,38.18,52,108544
+975,Queen of Katwe,"Biography,Drama,Sport",2016,8.81,73,6753
+976,My Big Fat Greek Wedding 2,"Comedy,Family,Romance",2016,59.57,37,20966
+977,Dark Places,"Drama,Mystery,Thriller",2015,,39,31634
+978,Amateur Night,Comedy,2016,,38,2229
+979,It's Only the End of the World,Drama,2016,,48,10658
+980,The Skin I Live In,"Drama,Thriller",2011,3.19,70,108772
+981,Miracles from Heaven,"Biography,Drama,Family",2016,61.69,44,12048
+982,Annie,"Comedy,Drama,Family",2014,85.91,33,27312
+983,Across the Universe,"Drama,Fantasy,Musical",2007,24.34,56,95172
+984,Let's Be Cops,Comedy,2014,82.39,30,112729
+985,Max,"Adventure,Family",2015,42.65,47,21405
+986,Your Highness,"Adventure,Comedy,Fantasy",2011,21.56,31,87904
+987,Final Destination 5,"Horror,Thriller",2011,42.58,50,88000
+988,Endless Love,"Drama,Romance",2014,23.39,30,33688
+989,Martyrs,Horror,2008,,89,63785
+990,Selma,"Biography,Drama,History",2014,52.07,,67637
+991,Underworld: Rise of the Lycans,"Action,Adventure,Fantasy",2009,45.8,44,129708
+992,Taare Zameen Par,"Drama,Family,Music",2007,1.2,42,102697
+993,Take Me Home Tonight,"Comedy,Drama,Romance",2011,6.92,,45419
+994,Resident Evil: Afterlife,"Action,Adventure,Horror",2010,60.13,37,140900
+995,Project X,Comedy,2012,54.72,48,164088
+996,Secret in Their Eyes,"Crime,Drama,Mystery",2015,,45,27585
+997,Hostel: Part II,Horror,2007,17.54,46,73152
+998,Step Up 2: The Streets,"Drama,Music,Romance",2008,58.01,50,70699
+999,Search Party,"Adventure,Comedy",2014,,22,4881
+1000,Nine Lives,"Comedy,Family,Fantasy",2016,19.64,11,12435
