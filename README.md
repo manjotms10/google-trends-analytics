@@ -13,8 +13,8 @@ features will be analyzed and compared to observations from other available sour
 ## Dataset:
 - Google Trend data to be obtained by using Python API <br>
 - Datasets from other sources, depending on specific topics. For example, the popularity of
-a movie can be ascertained from its box office collection which can be scraped from the
-internet. <br>
+a movie can be ascertained from its box office collection which can be scraped from IMDB or Metacritic websites. 
+For video games, we make use of the VGChartz dataset <br>
 
 ## Project Structure:
 conf - This directory contains the data files that were used/created during the process to store all our data <br>
