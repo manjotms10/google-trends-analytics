@@ -1,3 +1,5 @@
+import sys
+sys.path.append('../../')
 from utils.google_trends import GoogleTrends
 import pandas as pd
 from analytics.video_games.data_preprocessing import keyword_data_sorting
@@ -5,19 +7,15 @@ from utils.misc import bar_plot
 
 """
 This analysis compares the Total Search Volume with the Total Sales of 
-Top 8 video games released in a specified Year or by a specified Platform.
+Top 8 video games released by a specified Platform.
 """
 
 #%% get sorted vgchartz dataframe with Index = Game Name, Column = Total Sales
-# For example, with year = 2015, top_num = 100, it returns top 100 games released in 2015
 # For example, with platform = 'PS4', top_num = 100, it returns top 100 games released by 'PS4'
 filename = '../../../conf/video_games/input/vgsales-refined-data.csv'
-top_num = 50 # Top number of games to be returned after sorting
+top_num = 100 # Top number of games to be returned after sorting
 
-year = 2017
-#vg_df = keyword_data_sorting(filename,year=[year],top=top_num)
-
-platform = 'PS4'
+platform = 'PS4' # 'PS4', 'XOne'
 vg_df = keyword_data_sorting(filename,platform=[platform],top=top_num)
 
 #%% parameters for Pytrends
@@ -49,10 +47,8 @@ gt.sort_data_by_year()
 # create a dataframe storing the max search volume of each year
 gt_df = gt.data_by_year.max().to_frame(name='Normalized Search Volume')
 
-# normalize
+# normalize and set names as index
 gt_df = gt_df / gt_df.max() * 100
-
-# set names as index
 gt_df.set_index(vg_df.index,inplace=True)
 
 #%% combine dataframes
@@ -65,14 +61,11 @@ max_diff = 5
 df['diff'] = abs(df.iloc[:,0]-df.iloc[:,1])
 df2 = df.drop(df[df['diff'] > max_diff].index)
 
-# normalize by max of each column
+# normalize by max of each column and resort by Total Sale Volume
 df2 = df2 / df2.max() * 100 
 df2['diff'] = abs(df2.iloc[:,0]-df2.iloc[:,1])
-
-# resort by Total Sale Volume
 df2 = df2.sort_values(by='Normalized Sales Volume',ascending=False)
 
 #%% bar plot
 num_games = 8 # Top number of games to be plotted
-fig_name = 'bar_plot_' + str(year) + '_' + str(top_num)
-bar_plot(df2.iloc[:num_games,:],ylabel='Games',save_fig=True,plot_name=fig_name)
+bar_plot(df2.iloc[:num_games,:],ylabel='Games')

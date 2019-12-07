@@ -44,7 +44,7 @@ def weekly_sales_scrape(weeks):
                 a1 = info.split('\n')  #process the data
                 a2 = []  
                 for element in a1:
-                    if element is not '':
+                    if element != '':
                         a2.append(element)
                 a3.append(a2)
                     
@@ -71,5 +71,5 @@ def weekly_sales_scrape(weeks):
 if __name__ == "__main__":
     weeks = 10 #for example if you want to look for the past year data
     sales_data = weekly_sales_scrape(weeks)
-    sales_data.to_csv("../conf/video_games/scraped/vgsales-game-sale-%dweeks.csv"% (weeks), sep=',',index=False)
+    sales_data.to_csv("../../../../conf/video_games/scraped/vgsales-game-sale-%dweeks.csv"% (weeks), sep=',',index=False)
     

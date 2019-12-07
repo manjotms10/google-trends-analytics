@@ -1,5 +1,5 @@
 {
-  "output_filename": "../conf/video_games/scraped/vgsales-scraped-data.csv",
+  "output_filename": "../../../../conf/video_games/scraped/vgsales-scraped-data.csv",
   "separator": ",",
   "encoding": "utf-8",
   "start_page": 1,

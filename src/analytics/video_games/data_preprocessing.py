@@ -21,7 +21,12 @@ def data_cleaning(fname, platforms=[], merge_keywords=[], keywords=[], del_keywo
     Return:
         A cleaned dataframe
     """
-
+    assert isinstance(fname,str), 'fname is not a string'
+    assert isinstance(platforms,list), 'platforms is not a list'
+    assert isinstance(merge_keywords,list), 'merge_keywords is not a list'
+    assert isinstance(keywords,list), 'keywords is not a list'
+    assert isinstance(del_keywords,list), 'del_keywords is not a list'
+    
     df = pd.read_csv(fname, delimiter=',')
     nrow, ncol = df.shape
     print(f'There are {nrow} rows and {ncol} columns in raw data')
@@ -90,6 +95,9 @@ def data_sorting(fname, keyword, limit=10, output_file=False, line_plot=False, b
     Return:
         A sorted dataframe
     """
+    assert isinstance(fname,str), 'fname is not a string'
+    assert isinstance(keyword,str), 'keyword is not a string'
+    assert isinstance(limit,int), 'limit is not a integer'
     
     # read file
     df = pd.read_csv(fname, delimiter=',')
@@ -172,11 +180,14 @@ def sale_history(fname, limit=10, month_aft=5, plot=False):
     Args:
         :param fname: string
         :param limit: integer, output sale history of top 'limit' number of games
-        :param month_aft: the specified number of months after release
+        :param month_aft: the specified number of months after release, including the release month
         :param plot: bool, if True, line plot is produced and saved
     Return:
         A dataframe that contains monthly sales of games
     """
+    assert isinstance(fname,str), 'fname is not a string'
+    assert isinstance(month_aft,int), 'month_aft is not a integer'
+    assert isinstance(limit,int), 'limit is not a integer'
     
     # read data file
     df = pd.read_csv(fname, delimiter=',')
@@ -236,11 +247,37 @@ def keyword_data_sorting(fname, year=[], genre=[], esrb_rating=[], platform=[], 
     
     Args:
         :param fname: string
+        :param year: list of years (int)
+        :param genre: list of genres (string)
+        :param esrb_rating: list of esrb_rating (string)
+        :param platform: list of platforms (string)
+        :param publisher: list of publishers (string)
+        :param developer: list of developers (string)
         :param top: integer, only show top 'limit' number of data
     Retrun:
         A dataframe sorted by specified keywords
     """
-
+    assert isinstance(fname,str), 'fname is not a string'
+    assert isinstance(year,list), 'year is not a list'
+    assert isinstance(genre,list), 'genre is not a list'
+    assert isinstance(esrb_rating,list), 'esrb_rating is not a list'
+    assert isinstance(platform,list), 'platform is not a list'
+    assert isinstance(publisher,list), 'publisher is not a list'
+    assert isinstance(developer,list), 'developer is not a list'
+    assert isinstance(top,int), 'top is not a int'
+    for i,j in enumerate(year):
+        assert isinstance(j,int), f'{i} component in year is not integer'
+    for i,j in enumerate(genre):
+        assert isinstance(j,str), f'{i} component in genre is not string'
+    for i,j in enumerate(esrb_rating):
+        assert isinstance(j,str), f'{i} component in esrb_rating is not string'
+    for i,j in enumerate(platform):
+        assert isinstance(j,str), f'{i} component in platform is not string'
+    for i,j in enumerate(publisher):
+        assert isinstance(j,str), f'{i} component in publisher is not string'
+    for i,j in enumerate(developer):
+        assert isinstance(j,str), f'{i} component in developer is not string'
+        
     # read file
     df = pd.read_csv(fname, delimiter=',')
     nrow, ncol = df.shape

@@ -1,3 +1,5 @@
+import sys
+sys.path.append('../../')
 from utils.google_trends import GoogleTrends
 from analytics.video_games.data_preprocessing import data_sorting
 
@@ -29,5 +31,5 @@ gt.get_trends_data_from_multiple_keywords(keywords=keywords,
 gt.sort_data_by_year()
 
 #%% plot
-gt.line_plot_by_year(save_fig=True,plot_name=feature +'_line_plot')
-gt.stack_bar_plot(show_values=False,value_format='{:.2f}',save_fig=True,plot_name=feature +'_bar_plot')
+gt.line_plot_by_year()
+gt.stack_bar_plot(show_values=False,value_format='{:.2f}')

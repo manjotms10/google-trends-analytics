@@ -4,6 +4,9 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 plt.rcParams.update({'font.size':20})
+"""
+This module contains data visualization functions, line plots (shared x axis), bar plots, etc.
+"""
 
 def line_plot_2Yaxes(df1, df2, save_fig=False, plot_name='line_plot_by_year_month'):
     '''

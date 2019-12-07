@@ -1,3 +1,5 @@
+import sys
+sys.path.append('../../')
 from utils.google_trends import GoogleTrends
 from utils.misc import line_plot_2Yaxes
 import pandas as pd
@@ -35,11 +37,8 @@ for i,game in enumerate(df.game.tolist()[:num_games]):
                                               start_date=start_date,
                                               end_date=end_date, 
                                               category=cat)
-    print(gt.data.index)
-    
     # data processing
     gt.sort_data_by_year_month()
     
     # plot
-    fig_name = 'game' + str(i) + '_line_plot_comparison'
-    line_plot_2Yaxes(gt.data_by_year_month, df2.iloc[:,i], save_fig=True, plot_name=fig_name)
+    line_plot_2Yaxes(gt.data_by_year_month, df2.iloc[:,i])
