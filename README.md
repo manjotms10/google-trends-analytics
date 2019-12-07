@@ -11,16 +11,16 @@ a movie can be ascertained from its box office collection which can be scraped f
 For video games, we make use of the VGChartz dataset <br>
 
 ## Repository Structure
-conf - This directory contains the data files that were used/created during the process to store all our data <br>
----- movies - This subdirectory contains the data files for the analysis of movies <br>
----- video_games - This subdirectory contains the data files for the analysis of games <br>
+**conf** - This directory contains the data files that were used/created during the process to store all our data <br>
+---- **movies** - This subdirectory contains the data files for the analysis of movies <br>
+---- **video_games** - This subdirectory contains the data files for the analysis of games <br>
 
-src - This is the source directory containing all our code <br>
----- analytics - This package consists of the code that is used for creating, analyzing and plotting all the data <br>
--------- demo - This package contains the Jupyter notebook that showcases all our plots <br>
--------- movies - This package contains the web scraping and analysis code for movies topic <br>
--------- video_games - This package contains the data processsing and analysis code for video games topic <br>
----- utils - This is a common package that is used by both movies and video games for common processing. For e.g.,
+**src** - This is the source directory containing all our code <br>
+---- **analytics** - This package consists of the code that is used for creating, analyzing and plotting all the data <br>
+-------- **demo** - This package contains the Jupyter notebook that showcases all our plots <br>
+-------- **movies** - This package contains the web scraping and analysis code for movies topic <br>
+-------- **video_games** - This package contains the data processsing and analysis code for video games topic <br>
+---- **utils** - This is a common package that is used by both movies and video games for common processing. For e.g.,
 		it consists of code for connecting to the GoogleTrends  API, obtaining visualizations and log info and errors <br>
 
 ## Code Demo:
@@ -35,5 +35,8 @@ The following modules were used - <br>
 beautifulsoup4-4.8.1, bs4-0.0.1, certifi-2019.9.11, chardet-3.0.4, cycler-0.10.0, idna-2.8, kiwisolver-1.1.0, lxml-4.4.1, matplotlib-3.1.1, numpy-1.17.4, pandas-0.25.3, pkg-resources-0.0.0, pyparsing-2.4.5, python-dateutil-2.8.1, pytrends-4.7.2, pytz-2019.3, requests-2.22.0, six-1.13.0, soupsieve-1.9.5, urllib3-1.25.7
 
 ## Contributors
-Manjot Bilkhu (mbilkhu@ucsd.edu), Tushar Dobhal (tdobhal@ucsd.edu), Xiaolong He (xih251@ucsd.edu), 
-Zhaoru Shang (z5shang@ucsd.edu), Terry Huang (t1huang@ucsd.edu)
+- Manjot Bilkhu (mbilkhu@ucsd.edu)<br> 
+- Tushar Dobhal (tdobhal@ucsd.edu)<br>
+- Xiaolong He (xih251@ucsd.edu)<br>
+- Zhaoru Shang (z5shang@ucsd.edu)<br>
+- Terry Huang (t1huang@ucsd.edu)
