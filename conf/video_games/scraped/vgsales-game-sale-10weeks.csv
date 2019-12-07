@@ -1,0 +1,751 @@
+rank of the week,name,weekly sales,total sales,week after release
+1,"Super Smash Bros. (2018) (NS)Nintendo, Fighting","1,103,894","8,951,009",4
+2,"Red Dead Redemption 2 (PS4)Take-Two Interactive, Action-Adventure","705,407","13,940,203",10
+3,"Call of Duty: Black Ops IIII (PS4)Activision, Shooter","511,667","9,317,241",12
+4,"Mario Kart 8 Deluxe (NS)Nintendo, Racing","438,400","13,046,117",88
+5,"Spider-Man (PS4) (PS4)Sony Interactive Entertainment, Action-Adventure","426,691","8,757,859",17
+6,"Super Mario Party (NS)Nintendo, Party","422,274","4,972,711",13
+7,"FIFA 19 (PS4)Electronic Arts, Sports","373,147","9,147,505",14
+8,"Pokemon: Let's Go, Pikachu! (NS)Nintendo, Role-Playing","337,851","4,566,580",7
+9,"Red Dead Redemption 2 (XOne)Take-Two Interactive, Action-Adventure","281,247","5,771,147",10
+10,"Call of Duty: Black Ops IIII (XOne)Activision, Shooter","250,631","4,850,704",12
+11,"Battlefield V (PS4)Electronic Arts, Shooter","218,421","2,224,270",6
+12,"Super Mario Odyssey (NS)Nintendo, Platform","187,233","11,714,226",62
+13,"Pokemon: Let's Go, Eevee! (NS)Nintendo, Role-Playing","182,083","2,728,386",7
+14,"Assassin's Creed Odyssey (PS4)Ubisoft, Action-Adventure","175,143","3,176,082",13
+15,"Spyro Reignited Trilogy (PS4)Activision, Platform","170,019","2,172,947",7
+16,"The Legend of Zelda: Breath of the Wild (NS)Nintendo, Action-Adventure","151,892","9,460,827",96
+17,"Battlefield V (XOne)Electronic Arts, Shooter","149,200","1,547,325",6
+18,"Minecraft (NS)Mojang, Sandbox","125,185","1,888,081",28
+19,"Forza Horizon 4 (XOne)Microsoft Studios, Racing","121,485","1,839,995",13
+20,"NBA 2K19 (PS4)Take-Two Interactive, Sports","120,794","2,627,728",16
+21,"Grand Theft Auto V (PS4)Take-Two Interactive, Action","111,760","19,392,497",215
+22,"God of War (PS4) (PS4)Sony Interactive Entertainment, Action","103,134","6,153,527",37
+23,"Splatoon 2 (NS)Nintendo, Shooter","96,554","7,037,733",76
+24,"FIFA 19 (XOne)Electronic Arts, Sports","94,049","2,223,288",14
+25,"Just Cause 4 (PS4)Square Enix, Action-Adventure","84,669","558,661",4
+26,"NBA 2K19 (XOne)Take-Two Interactive, Sports","84,187","1,737,777",16
+27,"Madden NFL 19 (PS4)Electronic Arts, Sports","83,796","2,214,368",21
+28,"Assassin's Creed Odyssey (XOne)Ubisoft, Action-Adventure","78,669","1,388,057",13
+29,"Grand Theft Auto V (XOne)Take-Two Interactive, Action","73,714","8,720,682",215
+30,"Fortnite (XOne)Gearbox Software, Action","66,653","769,347",76
+31,"Fallout 76 (PS4)Bethesda Softworks, Role-Playing",Pro,N/A,7
+32,"Just Dance 2019 (NS)Ubisoft, Music",Pro,N/A,10
+33,"Shadow of the Tomb Raider (PS4)Square Enix, Action-Adventure",Pro,N/A,16
+34,"Fortnite (NS)Warner Bros. Interactive Entertainment, Shooter",Pro,N/A,7
+35,"Fortnite (PS4)Gearbox Software, Action",Pro,N/A,76
+36,"Crash Bandicoot N. Sane Trilogy (NS)Activision, Platform",Pro,N/A,27
+37,"Astro Bot Rescue Mission (PS4)Sony Interactive Entertainment, Platform",Pro,N/A,13
+38,"WWE 2K19 (PS4)Take-Two Interactive, Fighting",Pro,N/A,12
+39,"Crash Bandicoot N. Sane Trilogy (PS4)Activision, Platform",Pro,N/A,79
+40,"Mario + Rabbids Kingdom Battle (NS)Ubisoft, Strategy",Pro,N/A,70
+41,"PlayStation VR Worlds (PS4)Sony Interactive Entertainment, Misc",Pro,N/A,116
+42,"Diablo III: Eternal Collection (NS)Activision, Action",Pro,N/A,9
+43,"FIFA 19 (NS)Electronic Arts, Sports",Pro,N/A,14
+44,"Starlink: Battle for Atlas (NS)Ubisoft, Action-Adventure",Pro,N/A,11
+45,"Madden NFL 19 (XOne)Electronic Arts, Sports",Pro,N/A,21
+46,"Farming Simulator 19 (PS4)Focus Home Interactive, Simulation",Pro,N/A,6
+47,"Hitman 2 (PS4)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,7
+48,"Fallout 76 (XOne)Bethesda Softworks, Role-Playing",Pro,N/A,7
+49,"PlayerUnknown's Battlegrounds (PS4)Sony Interactive Entertainment, Shooter",Pro,N/A,4
+50,"Donkey Kong Country: Tropical Freeze (NS)Nintendo, Platform",Pro,N/A,35
+51,"Mario Tennis Aces (NS)Nintendo, Sports",Pro,N/A,28
+52,"Tetris Effect (PS4)Sony Interactive Entertainment, Puzzle",Pro,N/A,8
+53,"Kirby (NS)Nintendo, Platform",Pro,N/A,42
+54,"Nintendo Labo: Toy-Con 01 Variety Kit (NS)Nintendo, Misc",Pro,N/A,37
+55,"Spyro Reignited Trilogy (XOne)Activision, Platform",Pro,N/A,7
+56,"Just Cause 4 (XOne)Square Enix, Action-Adventure",Pro,N/A,4
+57,"Project Octopath Traveler (NS)Nintendo, Role-Playing",Pro,N/A,25
+58,"Go Vacation (NS)Nintendo, Misc",Pro,N/A,23
+59,"Detroit: Become Human (PS4)Sony Interactive Entertainment, Adventure",Pro,N/A,32
+60,"1-2-Switch (NS)Nintendo, Party",Pro,N/A,96
+61,"LEGO DC Super-Villains (PS4)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,11
+62,"Carnival Games (NS)Take-Two Interactive, Party",Pro,N/A,8
+63,"Crash Bandicoot N.Sane Trilogy (XOne)Activision, Platform",Pro,N/A,27
+64,"Borderlands 2 VR (PS4)Take-Two Interactive, Shooter",Pro,N/A,3
+65,"Dragon Quest Builders 2 (NS)Square Enix, Adventure",Pro,N/A,2
+66,"LEGO Marvel Super Heroes 2 (NS)Warner Bros. Interactive Entertainment, Action",Pro,N/A,59
+67,"Creed: Rise to Glory (PS4)Sony Interactive Entertainment, Sports",Pro,N/A,14
+68,"LEGO Harry Potter Collection (NS)Warner Bros. Interactive Entertainment, Action",Pro,N/A,9
+69,"MineCraft (PS4)Sony Computer Entertainment, Misc",Pro,N/A,222
+70,"Mario Kart (3DS)Nintendo, Racing",Pro,N/A,370
+71,"Overcooked! 2 (NS)Sold Out, Simulation",Pro,N/A,21
+72,"LEGO DC Super-Villains (NS)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,11
+73,"Gran Turismo Sport (PS4)Sony Interactive Entertainment, Racing",Pro,N/A,63
+74,"Pokemon: Ultra Sun and Ultra Moon (3DS)Nintendo, Role-Playing",Pro,N/A,59
+75,"Dragon Quest Builders 2 (PS4)Square Enix, Adventure",Pro,N/A,2
+1,"Super Smash Bros. (2018) (NS)Nintendo, Fighting","1,651,501","7,847,115",3
+2,"Red Dead Redemption 2 (PS4)Take-Two Interactive, Action-Adventure","1,037,426","13,234,796",9
+3,"Call of Duty: Black Ops IIII (PS4)Activision, Shooter","701,380","8,805,574",11
+4,"Super Mario Party (NS)Nintendo, Party","661,185","4,550,437",12
+5,"Mario Kart 8 Deluxe (NS)Nintendo, Racing","635,341","12,607,717",87
+6,"Pokemon: Let's Go, Pikachu! (NS)Nintendo, Role-Playing","632,668","4,228,729",6
+7,"Spider-Man (PS4) (PS4)Sony Interactive Entertainment, Action-Adventure","571,935","8,331,168",16
+8,"FIFA 19 (PS4)Electronic Arts, Sports","531,234","8,774,358",13
+9,"Red Dead Redemption 2 (XOne)Take-Two Interactive, Action-Adventure","476,961","5,489,900",9
+10,"Call of Duty: Black Ops IIII (XOne)Activision, Shooter","385,358","4,600,073",11
+11,"Battlefield V (PS4)Electronic Arts, Shooter","293,380","2,005,849",5
+12,"Super Mario Odyssey (NS)Nintendo, Platform","262,146","11,526,993",61
+13,"Pokemon: Let's Go, Eevee! (NS)Nintendo, Role-Playing","261,628","2,546,303",6
+14,"Assassin's Creed Odyssey (PS4)Ubisoft, Action-Adventure","236,536","3,000,939",12
+15,"Spyro Reignited Trilogy (PS4)Activision, Platform","234,696","2,002,928",6
+16,"Battlefield V (XOne)Electronic Arts, Shooter","208,072","1,398,125",5
+17,"The Legend of Zelda: Breath of the Wild (NS)Nintendo, Action-Adventure","199,745","9,308,935",95
+18,"Minecraft (NS)Mojang, Sandbox","179,665","1,762,896",27
+19,"God of War (PS4) (PS4)Sony Interactive Entertainment, Action","168,601","6,050,393",36
+20,"Forza Horizon 4 (XOne)Microsoft Studios, Racing","162,585","1,718,510",12
+21,"NBA 2K19 (PS4)Take-Two Interactive, Sports","159,555","2,506,934",15
+22,"FIFA 19 (XOne)Electronic Arts, Sports","148,970","2,129,239",13
+23,"Grand Theft Auto V (XOne)Take-Two Interactive, Action","146,083","8,646,968",214
+24,"Just Dance 2019 (NS)Ubisoft, Music","138,998","696,209",9
+25,"Grand Theft Auto V (PS4)Take-Two Interactive, Action","132,253","19,280,737",214
+26,"Fortnite (XOne)Gearbox Software, Action","127,876","702,694",75
+27,"Splatoon 2 (NS)Nintendo, Shooter","125,140","6,941,179",75
+28,"Dragon Quest Builders 2 (PS4)Square Enix, Adventure","117,247","117,247",1
+29,"NBA 2K19 (XOne)Take-Two Interactive, Sports","116,005","1,653,590",15
+30,"Assassin's Creed Odyssey (XOne)Ubisoft, Action-Adventure","112,993","1,309,388",12
+31,"Just Cause 4 (PS4)Square Enix, Action-Adventure",Pro,N/A,3
+32,"Dragon Quest Builders 2 (NS)Square Enix, Adventure",Pro,N/A,1
+33,"Fallout 76 (PS4)Bethesda Softworks, Role-Playing",Pro,N/A,6
+34,"Mario + Rabbids Kingdom Battle (NS)Ubisoft, Strategy",Pro,N/A,69
+35,"Fortnite (PS4)Gearbox Software, Action",Pro,N/A,75
+36,"Fallout 76 (XOne)Bethesda Softworks, Role-Playing",Pro,N/A,6
+37,"Tetris Effect (PS4)Sony Interactive Entertainment, Puzzle",Pro,N/A,7
+38,"Madden NFL 19 (PS4)Electronic Arts, Sports",Pro,N/A,20
+39,"Fortnite (NS)Warner Bros. Interactive Entertainment, Shooter",Pro,N/A,6
+40,"Crash Bandicoot N. Sane Trilogy (NS)Activision, Platform",Pro,N/A,26
+41,"Farming Simulator 19 (PS4)Focus Home Interactive, Simulation",Pro,N/A,5
+42,"Spyro Reignited Trilogy (XOne)Activision, Platform",Pro,N/A,6
+43,"LEGO DC Super-Villains (NS)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,10
+44,"PlayStation VR Worlds (PS4)Sony Interactive Entertainment, Misc",Pro,N/A,115
+45,"Diablo III: Eternal Collection (NS)Activision, Action",Pro,N/A,8
+46,"Shadow of the Tomb Raider (PS4)Square Enix, Action-Adventure",Pro,N/A,15
+47,"Astro Bot Rescue Mission (PS4)Sony Interactive Entertainment, Platform",Pro,N/A,12
+48,"Starlink: Battle for Atlas (NS)Ubisoft, Action-Adventure",Pro,N/A,10
+49,"WWE 2K19 (PS4)Take-Two Interactive, Fighting",Pro,N/A,11
+50,"FIFA 19 (NS)Electronic Arts, Sports",Pro,N/A,13
+51,"Crash Bandicoot N. Sane Trilogy (PS4)Activision, Platform",Pro,N/A,78
+52,"Nintendo Labo: Toy-Con 01 Variety Kit (NS)Nintendo, Misc",Pro,N/A,36
+53,"PlayerUnknown's Battlegrounds (PS4)Sony Interactive Entertainment, Shooter",Pro,N/A,3
+54,"Pokemon: Ultra Sun and Ultra Moon (3DS)Nintendo, Role-Playing",Pro,N/A,58
+55,"Madden NFL 19 (XOne)Electronic Arts, Sports",Pro,N/A,20
+56,"Shadow of the Colossus (PS4)Sony Interactive Entertainment, Action-Adventure",Pro,N/A,46
+57,"Donkey Kong Country: Tropical Freeze (NS)Nintendo, Platform",Pro,N/A,34
+58,"Mario Tennis Aces (NS)Nintendo, Sports",Pro,N/A,27
+59,"Just Cause 4 (XOne)Square Enix, Action-Adventure",Pro,N/A,3
+60,"Project Octopath Traveler (NS)Nintendo, Role-Playing",Pro,N/A,24
+61,"Kirby (NS)Nintendo, Platform",Pro,N/A,41
+62,"Hitman 2 (PS4)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,6
+63,"MineCraft (XOne)Microsoft Studios, Misc",Pro,N/A,214
+64,"Farming Simulator 19 (XOne)Focus Home Interactive, Simulation",Pro,N/A,5
+65,"Nintendo Labo: Toy-Con 03 Vehicle Kit (NS)Nintendo, Racing",Pro,N/A,15
+66,"Mario Kart (3DS)Nintendo, Racing",Pro,N/A,369
+67,"MineCraft (PS4)Sony Computer Entertainment, Misc",Pro,N/A,221
+68,"Sonic Mania (NS)Sega, Platform",Pro,N/A,71
+69,"Overcooked! 2 (NS)Sold Out, Simulation",Pro,N/A,20
+70,"Crash Bandicoot N.Sane Trilogy (XOne)Activision, Platform",Pro,N/A,26
+71,"Captain Toad: Treasure Tracker (NS)Nintendo, Puzzle",Pro,N/A,24
+72,"Sega Genesis Classics (NS)Sega, Misc",Pro,N/A,3
+73,"Just Dance 2019 (Wii)Ubisoft, Music",Pro,N/A,9
+74,"Sid Meier's Civilization VI (NS)Take-Two Interactive, Strategy",Pro,N/A,6
+75,"1-2-Switch (NS)Nintendo, Party",Pro,N/A,95
+1,"Super Smash Bros. (2018) (NS)Nintendo, Fighting","1,770,809","6,195,614",2
+2,"Red Dead Redemption 2 (PS4)Take-Two Interactive, Action-Adventure","893,225","12,197,370",8
+3,"Call of Duty: Black Ops IIII (PS4)Activision, Shooter","559,118","8,104,194",10
+4,"Mario Kart 8 Deluxe (NS)Nintendo, Racing","538,110","11,972,376",86
+5,"Super Mario Party (NS)Nintendo, Party","513,809","3,889,252",11
+6,"FIFA 19 (PS4)Electronic Arts, Sports","423,664","8,243,124",12
+7,"Pokemon: Let's Go, Pikachu! (NS)Nintendo, Role-Playing","398,055","3,596,061",5
+8,"Spider-Man (PS4) (PS4)Sony Interactive Entertainment, Action-Adventure","387,221","7,759,233",15
+9,"Red Dead Redemption 2 (XOne)Take-Two Interactive, Action-Adventure","379,553","5,012,939",8
+10,"Call of Duty: Black Ops IIII (XOne)Activision, Shooter","287,663","4,214,715",10
+11,"Battlefield V (PS4)Electronic Arts, Shooter","246,983","1,712,469",4
+12,"Pokemon: Let's Go, Eevee! (NS)Nintendo, Role-Playing","238,120","2,284,675",5
+13,"Super Mario Odyssey (NS)Nintendo, Platform","192,111","11,264,847",60
+14,"Spyro Reignited Trilogy (PS4)Activision, Platform","184,149","1,768,232",5
+15,"Minecraft (NS)Mojang, Sandbox","177,640","1,583,231",26
+16,"Battlefield V (XOne)Electronic Arts, Shooter","166,417","1,190,053",4
+17,"The Legend of Zelda: Breath of the Wild (NS)Nintendo, Action-Adventure","165,115","9,109,190",94
+18,"Assassin's Creed Odyssey (PS4)Ubisoft, Action-Adventure","149,459","2,764,403",11
+19,"Judgment (PS4)Sega, Action-Adventure","147,993","147,993",1
+20,"God Eater 3 (PS4)Bandai Namco Entertainment, Role-Playing","146,772","146,772",1
+21,"NBA 2K19 (PS4)Take-Two Interactive, Sports","140,559","2,347,379",14
+22,"Forza Horizon 4 (XOne)Microsoft Studios, Racing","131,241","1,555,925",11
+23,"Just Dance 2019 (NS)Ubisoft, Music","122,604","557,211",8
+24,"Just Cause 4 (PS4)Square Enix, Action-Adventure","111,419","364,994",2
+25,"Fortnite (XOne)Gearbox Software, Action","111,069","574,818",74
+26,"God of War (PS4) (PS4)Sony Interactive Entertainment, Action","103,558","5,881,792",35
+27,"FIFA 19 (XOne)Electronic Arts, Sports","101,546","1,980,269",12
+28,"Splatoon 2 (NS)Nintendo, Shooter","97,576","6,816,039",74
+29,"NBA 2K19 (XOne)Take-Two Interactive, Sports","96,624","1,537,585",14
+30,"Fortnite (NS)Warner Bros. Interactive Entertainment, Shooter","96,559","533,333",5
+31,"Crash Bandicoot N. Sane Trilogy (NS)Activision, Platform",Pro,N/A,25
+32,"Fortnite (PS4)Gearbox Software, Action",Pro,N/A,74
+33,"Fallout 76 (PS4)Bethesda Softworks, Role-Playing",Pro,N/A,5
+34,"PlayerUnknown's Battlegrounds (PS4)Sony Interactive Entertainment, Shooter",Pro,N/A,2
+35,"Fallout 76 (XOne)Bethesda Softworks, Role-Playing",Pro,N/A,5
+36,"Assassin's Creed Odyssey (XOne)Ubisoft, Action-Adventure",Pro,N/A,11
+37,"Madden NFL 19 (PS4)Electronic Arts, Sports",Pro,N/A,19
+38,"Spyro Reignited Trilogy (XOne)Activision, Platform",Pro,N/A,5
+39,"Farming Simulator 19 (PS4)Focus Home Interactive, Simulation",Pro,N/A,4
+40,"Nintendo Labo: Toy-Con 01 Variety Kit (NS)Nintendo, Misc",Pro,N/A,35
+41,"PlayStation VR Worlds (PS4)Sony Interactive Entertainment, Misc",Pro,N/A,114
+42,"Astro Bot Rescue Mission (PS4)Sony Interactive Entertainment, Platform",Pro,N/A,11
+43,"MineCraft (XOne)Microsoft Studios, Misc",Pro,N/A,213
+44,"Shadow of the Tomb Raider (PS4)Square Enix, Action-Adventure",Pro,N/A,14
+45,"Madden NFL 19 (XOne)Electronic Arts, Sports",Pro,N/A,19
+46,"Grand Theft Auto V (PS4)Take-Two Interactive, Action",Pro,N/A,213
+47,"Hitman 2 (PS4)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,5
+48,"Diablo III: Eternal Collection (NS)Activision, Action",Pro,N/A,7
+49,"LEGO The Incredibles (NS)Warner Bros. Interactive Entertainment, Action",Pro,N/A,27
+50,"Starlink: Battle for Atlas (NS)Ubisoft, Action-Adventure",Pro,N/A,9
+51,"Just Cause 4 (XOne)Square Enix, Action-Adventure",Pro,N/A,2
+52,"WWE 2K19 (PS4)Take-Two Interactive, Fighting",Pro,N/A,10
+53,"Donkey Kong Country: Tropical Freeze (NS)Nintendo, Platform",Pro,N/A,33
+54,"Katamari Damacy Reroll (NS)Bandai Namco Entertainment, Action",Pro,N/A,2
+55,"Nintendo Labo: Toy-Con 03 Vehicle Kit (NS)Nintendo, Racing",Pro,N/A,14
+56,"Mario Kart (3DS)Nintendo, Racing",Pro,N/A,368
+57,"Mario Tennis Aces (NS)Nintendo, Sports",Pro,N/A,26
+58,"MineCraft (PS4)Sony Computer Entertainment, Misc",Pro,N/A,220
+59,"Crash Bandicoot N. Sane Trilogy (PS4)Activision, Platform",Pro,N/A,77
+60,"FIFA 19 (NS)Electronic Arts, Sports",Pro,N/A,12
+61,"Luigi's Mansion (3DS)Nintendo, Adventure",Pro,N/A,10
+62,"Kirby (NS)Nintendo, Platform",Pro,N/A,40
+63,"1-2-Switch (NS)Nintendo, Party",Pro,N/A,94
+64,"Captain Toad: Treasure Tracker (NS)Nintendo, Puzzle",Pro,N/A,23
+65,"Horizon: Zero Dawn (PS4)Sony Interactive Entertainment, Action",Pro,N/A,94
+66,"No Man's Sky (PS4)Hello Games, Action-Adventure",Pro,N/A,123
+67,"Tetris Effect (PS4)Sony Interactive Entertainment, Puzzle",Pro,N/A,6
+68,"Rocket League (PS4)505 Games, Sports",Pro,N/A,130
+69,"Carnival Games (NS)Take-Two Interactive, Party",Pro,N/A,6
+70,"Mario + Rabbids Kingdom Battle (NS)Ubisoft, Strategy",Pro,N/A,68
+71,"Sonic Mania (NS)Sega, Platform",Pro,N/A,70
+72,"Sports Party (NS)Ubisoft, Sports",Pro,N/A,7
+73,"Farming Simulator 19 (PC)Focus Home Interactive, Simulation",Pro,N/A,4
+74,"Bendy and the Ink Machine (NS)Rooster Teeth Games, Puzzle",Pro,N/A,4
+75,"Pokemon: Ultra Sun and Ultra Moon (3DS)Nintendo, Role-Playing",Pro,N/A,57
+1,"Super Smash Bros. (2018) (NS)Nintendo, Fighting","4,424,805","4,424,805",1
+2,"Red Dead Redemption 2 (PS4)Take-Two Interactive, Action-Adventure","754,403","11,304,145",7
+3,"Super Mario Party (NS)Nintendo, Party","537,281","3,375,443",10
+4,"Call of Duty: Black Ops IIII (PS4)Activision, Shooter","455,327","7,545,076",9
+5,"Mario Kart 8 Deluxe (NS)Nintendo, Racing","452,318","11,434,266",85
+6,"Pokemon: Let's Go, Pikachu! (NS)Nintendo, Role-Playing","407,005","3,198,006",4
+7,"FIFA 19 (PS4)Electronic Arts, Sports","364,186","7,819,460",11
+8,"Spider-Man (PS4) (PS4)Sony Interactive Entertainment, Action-Adventure","331,083","7,372,012",14
+9,"Red Dead Redemption 2 (XOne)Take-Two Interactive, Action-Adventure","288,684","4,633,386",7
+10,"Just Cause 4 (PS4)Square Enix, Action-Adventure","253,575","253,575",1
+11,"Battlefield V (PS4)Electronic Arts, Shooter","252,064","1,465,486",3
+12,"Pokemon: Let's Go, Eevee! (NS)Nintendo, Role-Playing","242,607","2,046,555",4
+13,"Call of Duty: Black Ops IIII (XOne)Activision, Shooter","237,809","3,927,052",9
+14,"Battlefield V (XOne)Electronic Arts, Shooter","218,097","1,023,636",3
+15,"Super Mario Odyssey (NS)Nintendo, Platform","167,163","11,072,736",59
+16,"NBA 2K19 (PS4)Take-Two Interactive, Sports","165,887","2,206,820",13
+17,"Spyro Reignited Trilogy (PS4)Activision, Platform","162,853","1,584,083",4
+18,"The Legend of Zelda: Breath of the Wild (NS)Nintendo, Action-Adventure","149,181","8,944,075",93
+19,"Assassin's Creed Odyssey (PS4)Ubisoft, Action-Adventure","147,542","2,614,944",10
+20,"Minecraft (NS)Mojang, Sandbox","139,582","1,405,591",25
+21,"MineCraft (XOne)Microsoft Studios, Misc","133,426","5,285,325",212
+22,"PlayerUnknown's Battlegrounds (PS4)Sony Interactive Entertainment, Shooter","130,145","130,145",1
+23,"Just Cause 4 (XOne)Square Enix, Action-Adventure","124,481","124,481",1
+24,"God of War (PS4) (PS4)Sony Interactive Entertainment, Action","108,630","5,778,234",34
+25,"NBA 2K19 (XOne)Take-Two Interactive, Sports","107,602","1,440,961",13
+26,"Madden NFL 19 (PS4)Electronic Arts, Sports","93,145","1,965,810",18
+27,"Just Dance 2019 (NS)Ubisoft, Music","87,709","434,607",7
+28,"Forza Horizon 4 (XOne)Microsoft Studios, Racing","86,731","1,424,684",10
+29,"Splatoon 2 (NS)Nintendo, Shooter","86,252","6,718,463",73
+30,"Fortnite (PS4)Gearbox Software, Action","85,093","638,942",73
+31,"Fallout 76 (PS4)Bethesda Softworks, Role-Playing",Pro,N/A,4
+32,"Fallout 76 (XOne)Bethesda Softworks, Role-Playing",Pro,N/A,4
+33,"Fortnite (NS)Warner Bros. Interactive Entertainment, Shooter",Pro,N/A,4
+34,"Assassin's Creed Odyssey (XOne)Ubisoft, Action-Adventure",Pro,N/A,10
+35,"LEGO The Incredibles (NS)Warner Bros. Interactive Entertainment, Action",Pro,N/A,26
+36,"FIFA 19 (XOne)Electronic Arts, Sports",Pro,N/A,11
+37,"Crash Bandicoot N. Sane Trilogy (NS)Activision, Platform",Pro,N/A,24
+38,"Shadow of the Tomb Raider (PS4)Square Enix, Action-Adventure",Pro,N/A,13
+39,"WWE 2K19 (PS4)Take-Two Interactive, Fighting",Pro,N/A,9
+40,"Sega Genesis Classics (NS)Sega, Misc",Pro,N/A,1
+41,"PlayStation VR Worlds (PS4)Sony Interactive Entertainment, Misc",Pro,N/A,113
+42,"Fortnite (XOne)Gearbox Software, Action",Pro,N/A,73
+43,"Spyro Reignited Trilogy (XOne)Activision, Platform",Pro,N/A,4
+44,"Katamari Damacy Reroll (NS)Bandai Namco Entertainment, Action",Pro,N/A,1
+45,"Madden NFL 19 (XOne)Electronic Arts, Sports",Pro,N/A,18
+46,"Nintendo Labo: Toy-Con 01 Variety Kit (NS)Nintendo, Misc",Pro,N/A,34
+47,"Persona Dancing: All-Star Triple Pack (PS4)Atlus, Music",Pro,N/A,29
+48,"Grand Theft Auto V (PS4)Take-Two Interactive, Action",Pro,N/A,212
+49,"Mario Kart (3DS)Nintendo, Racing",Pro,N/A,367
+50,"Donkey Kong Country: Tropical Freeze (NS)Nintendo, Platform",Pro,N/A,32
+51,"Astro Bot Rescue Mission (PS4)Sony Interactive Entertainment, Platform",Pro,N/A,10
+52,"Starlink: Battle for Atlas (NS)Ubisoft, Action-Adventure",Pro,N/A,8
+53,"Diablo III: Eternal Collection (NS)Activision, Action",Pro,N/A,6
+54,"Hitman 2 (PS4)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,4
+55,"FIFA 19 (NS)Electronic Arts, Sports",Pro,N/A,11
+56,"Mario Tennis Aces (NS)Nintendo, Sports",Pro,N/A,25
+57,"MineCraft (PS4)Sony Computer Entertainment, Misc",Pro,N/A,219
+58,"Sonic Mania (NS)Sega, Platform",Pro,N/A,69
+59,"Nintendo Labo: Toy-Con 03 Vehicle Kit (NS)Nintendo, Racing",Pro,N/A,13
+60,"Farming Simulator 19 (PC)Focus Home Interactive, Simulation",Pro,N/A,3
+61,"Farming Simulator 19 (PS4)Focus Home Interactive, Simulation",Pro,N/A,3
+62,"Farming Simulator 19 (XOne)Focus Home Interactive, Simulation",Pro,N/A,3
+63,"Pokemon: Ultra Sun and Ultra Moon (3DS)Nintendo, Role-Playing",Pro,N/A,56
+64,"LEGO DC Super-Villains (NS)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,8
+65,"Subnautica (PS4)Gearbox Software, Adventure",Pro,N/A,1
+66,"Darksiders III (PS4)THQ Nordic, Action",Pro,N/A,2
+67,"1-2-Switch (NS)Nintendo, Party",Pro,N/A,93
+68,"Dragon Quest XI (PS4)Square Enix, Role-Playing",Pro,N/A,72
+69,"Luigi's Mansion (3DS)Nintendo, Adventure",Pro,N/A,9
+70,"Dragon Ball Fighter Z (PS4)Namco Bandai Games, Fighting",Pro,N/A,46
+71,"Kirby (NS)Nintendo, Platform",Pro,N/A,39
+72,"Mario + Rabbids Kingdom Battle (NS)Ubisoft, Strategy",Pro,N/A,67
+73,"Horizon: Zero Dawn (PS4)Sony Interactive Entertainment, Action",Pro,N/A,93
+74,"Dragon Ball FighterZ (NS)Bandai Namco Entertainment, Fighting",Pro,N/A,11
+75,"Detroit: Become Human (PS4)Sony Interactive Entertainment, Adventure",Pro,N/A,29
+1,"Red Dead Redemption 2 (PS4)Take-Two Interactive, Action-Adventure","776,342","10,549,742",6
+2,"Call of Duty: Black Ops IIII (PS4)Activision, Shooter","569,520","7,089,749",8
+3,"FIFA 19 (PS4)Electronic Arts, Sports","516,941","7,455,274",10
+4,"Super Mario Party (NS)Nintendo, Party","498,616","2,838,162",9
+5,"Pokemon: Let's Go, Pikachu! (NS)Nintendo, Role-Playing","493,204","2,791,001",3
+6,"Spider-Man (PS4) (PS4)Sony Interactive Entertainment, Action-Adventure","455,042","7,040,929",13
+7,"Mario Kart 8 Deluxe (NS)Nintendo, Racing","424,353","10,981,948",84
+8,"Battlefield V (PS4)Electronic Arts, Shooter","379,258","1,213,422",2
+9,"Call of Duty: Black Ops IIII (XOne)Activision, Shooter","337,060","3,689,243",8
+10,"Pokemon: Let's Go, Eevee! (NS)Nintendo, Role-Playing","299,625","1,803,948",3
+11,"Red Dead Redemption 2 (XOne)Take-Two Interactive, Action-Adventure","299,609","4,344,702",6
+12,"Battlefield V (XOne)Electronic Arts, Shooter","271,654","805,539",2
+13,"Assassin's Creed Odyssey (PS4)Ubisoft, Action-Adventure","244,173","2,467,402",9
+14,"Spyro Reignited Trilogy (PS4)Activision, Platform","221,634","1,421,230",3
+15,"NBA 2K19 (PS4)Take-Two Interactive, Sports","214,465","2,040,933",12
+16,"MineCraft (XOne)Microsoft Studios, Misc","208,887","5,151,899",211
+17,"God of War (PS4) (PS4)Sony Interactive Entertainment, Action","200,721","5,669,604",33
+18,"Fallout 76 (PS4)Bethesda Softworks, Role-Playing","148,137","981,080",3
+19,"Madden NFL 19 (PS4)Electronic Arts, Sports","140,363","1,872,665",17
+20,"Forza Horizon 4 (XOne)Microsoft Studios, Racing","134,964","1,337,953",9
+21,"The Legend of Zelda: Breath of the Wild (NS)Nintendo, Action-Adventure","129,719","8,794,894",92
+22,"Darksiders III (PS4)THQ Nordic, Action","128,698","128,698",1
+23,"NBA 2K19 (XOne)Take-Two Interactive, Sports","128,695","1,333,359",12
+24,"Shadow of the Tomb Raider (PS4)Square Enix, Action-Adventure","128,361","1,457,905",12
+25,"Super Mario Odyssey (NS)Nintendo, Platform","127,811","10,905,573",58
+26,"Minecraft (NS)Mojang, Sandbox","118,210","1,266,009",24
+27,"Fallout 76 (XOne)Bethesda Softworks, Role-Playing","114,802","619,174",3
+28,"FIFA 19 (XOne)Electronic Arts, Sports","113,211","1,799,283",10
+29,"Assassin's Creed Odyssey (XOne)Ubisoft, Action-Adventure","111,526","1,041,835",9
+30,"WWE 2K19 (PS4)Take-Two Interactive, Fighting","99,617","719,217",8
+31,"Just Dance 2019 (NS)Ubisoft, Music",Pro,N/A,6
+32,"Astro Bot Rescue Mission (PS4)Sony Interactive Entertainment, Platform",Pro,N/A,9
+33,"PlayStation VR Worlds (PS4)Sony Interactive Entertainment, Misc",Pro,N/A,112
+34,"Horizon: Zero Dawn (PS4)Sony Interactive Entertainment, Action",Pro,N/A,92
+35,"Spyro Reignited Trilogy (XOne)Activision, Platform",Pro,N/A,3
+36,"Splatoon 2 (NS)Nintendo, Shooter",Pro,N/A,72
+37,"Fortnite (PS4)Gearbox Software, Action",Pro,N/A,72
+38,"Fortnite (NS)Warner Bros. Interactive Entertainment, Shooter",Pro,N/A,3
+39,"FIFA 19 (NS)Electronic Arts, Sports",Pro,N/A,10
+40,"Persona Q2: New Cinema Labyrinth (3DS)Atlus, Role-Playing",Pro,N/A,1
+41,"Farming Simulator 19 (PC)Focus Home Interactive, Simulation",Pro,N/A,2
+42,"LEGO The Incredibles (NS)Warner Bros. Interactive Entertainment, Action",Pro,N/A,25
+43,"Madden NFL 19 (XOne)Electronic Arts, Sports",Pro,N/A,17
+44,"Crash Bandicoot N. Sane Trilogy (NS)Activision, Platform",Pro,N/A,23
+45,"Hitman 2 (PS4)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,3
+46,"Grand Theft Auto V (PS4)Take-Two Interactive, Action",Pro,N/A,211
+47,"Diablo III: Eternal Collection (NS)Activision, Action",Pro,N/A,5
+48,"Mario Kart (3DS)Nintendo, Racing",Pro,N/A,366
+49,"Nintendo Labo: Toy-Con 01 Variety Kit (NS)Nintendo, Misc",Pro,N/A,33
+50,"Starlink: Battle for Atlas (NS)Ubisoft, Action-Adventure",Pro,N/A,7
+51,"Donkey Kong Country: Tropical Freeze (NS)Nintendo, Platform",Pro,N/A,31
+52,"Darksiders III (XOne)THQ Nordic, Action",Pro,N/A,1
+53,"Mario Tennis Aces (NS)Nintendo, Sports",Pro,N/A,24
+54,"Dragon Ball FighterZ (NS)Bandai Namco Entertainment, Fighting",Pro,N/A,10
+55,"Pokemon: Ultra Sun and Ultra Moon (3DS)Nintendo, Role-Playing",Pro,N/A,55
+56,"Dragon Quest XI (PS4)Square Enix, Role-Playing",Pro,N/A,71
+57,"Uncharted: The Lost Legacy (PS4)Sony Interactive Entertainment, Action",Pro,N/A,67
+58,"LEGO DC Super-Villains (NS)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,7
+59,"Crash Bandicoot N. Sane Trilogy (PS4)Activision, Platform",Pro,N/A,75
+60,"Farming Simulator 19 (PS4)Focus Home Interactive, Simulation",Pro,N/A,2
+61,"Fortnite (XOne)Gearbox Software, Action",Pro,N/A,72
+62,"Grand Theft Auto V (XOne)Take-Two Interactive, Action",Pro,N/A,211
+63,"MineCraft (PS4)Sony Computer Entertainment, Misc",Pro,N/A,218
+64,"Shadow of the Tomb Raider (XOne)Square Enix, Action-Adventure",Pro,N/A,12
+65,"Nintendo Labo: Toy-Con 03 Vehicle Kit (NS)Nintendo, Racing",Pro,N/A,12
+66,"Mario + Rabbids Kingdom Battle (NS)Ubisoft, Strategy",Pro,N/A,66
+67,"Far Cry 5 (PS4)Ubisoft, Action",Pro,N/A,36
+68,"Farming Simulator 19 (XOne)Focus Home Interactive, Simulation",Pro,N/A,2
+69,"WWE 2K19 (XOne)Take-Two Interactive, Fighting",Pro,N/A,8
+70,"1-2-Switch (NS)Nintendo, Party",Pro,N/A,92
+71,"Luigi's Mansion (3DS)Nintendo, Adventure",Pro,N/A,8
+72,"Resident Evil VII: Biohazard (PS4)Capcom, Action",Pro,N/A,97
+73,"LEGO The Incredibles (PS4)Warner Bros. Interactive Entertainment, Action",Pro,N/A,25
+74,"LEGO Harry Potter Collection (NS)Warner Bros. Interactive Entertainment, Action",Pro,N/A,5
+75,"Monster Hunter: World (PS4)Capcom, Action",Pro,N/A,45
+1,"Red Dead Redemption 2 (PS4)Take-Two Interactive, Action-Adventure","853,779","9,773,400",5
+2,"Battlefield V (PS4)Electronic Arts, Shooter","834,164","834,164",1
+3,"Pokemon: Let's Go, Pikachu! (NS)Nintendo, Role-Playing","775,909","2,297,797",2
+4,"FIFA 19 (PS4)Electronic Arts, Sports","775,269","6,938,333",9
+5,"Spider-Man (PS4) (PS4)Sony Interactive Entertainment, Action-Adventure","748,592","6,585,887",12
+6,"Call of Duty: Black Ops IIII (PS4)Activision, Shooter","693,571","6,520,229",7
+7,"Super Mario Party (NS)Nintendo, Party","555,420","2,339,546",8
+8,"Battlefield V (XOne)Electronic Arts, Shooter","533,885","533,885",1
+9,"Mario Kart 8 Deluxe (NS)Nintendo, Racing","483,416","10,557,595",83
+10,"Pokemon: Let's Go, Eevee! (NS)Nintendo, Role-Playing","481,704","1,504,323",2
+11,"Call of Duty: Black Ops IIII (XOne)Activision, Shooter","429,249","3,352,183",7
+12,"Red Dead Redemption 2 (XOne)Take-Two Interactive, Action-Adventure","390,771","4,045,093",5
+13,"Farming Simulator 19 (PC)Focus Home Interactive, Simulation","349,281","349,281",1
+14,"Spyro Reignited Trilogy (PS4)Activision, Platform","349,094","1,199,596",2
+15,"God of War (PS4) (PS4)Sony Interactive Entertainment, Action","255,205","5,468,883",32
+16,"Assassin's Creed Odyssey (PS4)Ubisoft, Action-Adventure","241,430","2,223,229",8
+17,"Forza Horizon 4 (XOne)Microsoft Studios, Racing","238,613","1,202,989",8
+18,"Fallout 76 (PS4)Bethesda Softworks, Role-Playing","236,700","832,943",2
+19,"NBA 2K19 (PS4)Take-Two Interactive, Sports","197,340","1,826,468",11
+20,"Super Mario Odyssey (NS)Nintendo, Platform","180,412","10,777,762",57
+21,"Madden NFL 19 (PS4)Electronic Arts, Sports","176,685","1,732,302",16
+22,"Astro Bot Rescue Mission (PS4)Sony Interactive Entertainment, Platform","169,797","356,466",8
+23,"Fallout 76 (XOne)Bethesda Softworks, Role-Playing","168,900","504,372",2
+24,"FIFA 19 (XOne)Electronic Arts, Sports","166,610","1,686,072",9
+25,"Farming Simulator 19 (PS4)Focus Home Interactive, Simulation","165,389","165,389",1
+26,"The Legend of Zelda: Breath of the Wild (NS)Nintendo, Action-Adventure","156,919","8,665,175",91
+27,"PlayStation VR Worlds (PS4)Sony Interactive Entertainment, Misc","151,113","1,798,050",111
+28,"Shadow of the Tomb Raider (PS4)Square Enix, Action-Adventure","144,986","1,329,544",11
+29,"Minecraft (NS)Mojang, Sandbox","139,397","1,147,799",23
+30,"WWE 2K19 (PS4)Take-Two Interactive, Fighting","132,938","619,600",7
+31,"Detroit: Become Human (PS4)Sony Interactive Entertainment, Adventure",Pro,N/A,27
+32,"MineCraft (XOne)Microsoft Studios, Misc",Pro,N/A,210
+33,"NBA 2K19 (XOne)Take-Two Interactive, Sports",Pro,N/A,11
+34,"Just Dance 2019 (NS)Ubisoft, Music",Pro,N/A,5
+35,"Assassin's Creed Odyssey (XOne)Ubisoft, Action-Adventure",Pro,N/A,8
+36,"Farming Simulator 19 (XOne)Focus Home Interactive, Simulation",Pro,N/A,1
+37,"Spyro Reignited Trilogy (XOne)Activision, Platform",Pro,N/A,2
+38,"FIFA 19 (NS)Electronic Arts, Sports",Pro,N/A,9
+39,"Splatoon 2 (NS)Nintendo, Shooter",Pro,N/A,71
+40,"Starlink: Battle for Atlas (NS)Ubisoft, Action-Adventure",Pro,N/A,6
+41,"Diablo III: Eternal Collection (NS)Activision, Action",Pro,N/A,4
+42,"Fortnite (PS4)Gearbox Software, Action",Pro,N/A,71
+43,"Horizon: Zero Dawn (PS4)Sony Interactive Entertainment, Action",Pro,N/A,91
+44,"Fortnite (NS)Warner Bros. Interactive Entertainment, Shooter",Pro,N/A,2
+45,"Madden NFL 19 (XOne)Electronic Arts, Sports",Pro,N/A,16
+46,"Uncharted: The Lost Legacy (PS4)Sony Interactive Entertainment, Action",Pro,N/A,66
+47,"Grand Theft Auto V (PS4)Take-Two Interactive, Action",Pro,N/A,210
+48,"Hitman 2 (PS4)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,2
+49,"LEGO The Incredibles (NS)Warner Bros. Interactive Entertainment, Action",Pro,N/A,24
+50,"Crash Bandicoot N. Sane Trilogy (NS)Activision, Platform",Pro,N/A,22
+51,"Nintendo Labo: Toy-Con 01 Variety Kit (NS)Nintendo, Misc",Pro,N/A,32
+52,"LEGO The Incredibles (PS4)Warner Bros. Interactive Entertainment, Action",Pro,N/A,24
+53,"Resident Evil VII: Biohazard (PS4)Capcom, Action",Pro,N/A,96
+54,"Shadow of the Tomb Raider (XOne)Square Enix, Action-Adventure",Pro,N/A,11
+55,"LEGO DC Super-Villains (PS4)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,6
+56,"Mario Tennis Aces (NS)Nintendo, Sports",Pro,N/A,23
+57,"Donkey Kong Country: Tropical Freeze (NS)Nintendo, Platform",Pro,N/A,30
+58,"MineCraft (PS4)Sony Computer Entertainment, Misc",Pro,N/A,217
+59,"Bendy and the Ink Machine (PS4)Rooster Teeth Games, Puzzle",Pro,N/A,1
+60,"The Elder Scrolls V: Skyrim PSVR (PS4)Bethesda Softworks, Role-Playing",Pro,N/A,54
+61,"Mario + Rabbids Kingdom Battle (NS)Ubisoft, Strategy",Pro,N/A,65
+62,"Far Cry 5 (PS4)Ubisoft, Action",Pro,N/A,35
+63,"Bendy and the Ink Machine (XOne)Rooster Teeth Games, Puzzle",Pro,N/A,1
+64,"Mario Kart (3DS)Nintendo, Racing",Pro,N/A,365
+65,"Crash Bandicoot N. Sane Trilogy (PS4)Activision, Platform",Pro,N/A,74
+66,"WWE 2K19 (XOne)Take-Two Interactive, Fighting",Pro,N/A,7
+67,"LEGO Harry Potter Collection (NS)Warner Bros. Interactive Entertainment, Action",Pro,N/A,4
+68,"Bendy and the Ink Machine (NS)Rooster Teeth Games, Puzzle",Pro,N/A,1
+69,"Shadow of the Colossus (PS4)Sony Interactive Entertainment, Action-Adventure",Pro,N/A,42
+70,"Monster Hunter: World (PS4)Capcom, Action",Pro,N/A,44
+71,"1-2-Switch (NS)Nintendo, Party",Pro,N/A,91
+72,"Pokemon: Ultra Sun and Ultra Moon (3DS)Nintendo, Role-Playing",Pro,N/A,54
+73,"LEGO DC Super-Villains (NS)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,6
+74,"NBA 2K19 (NS)Take-Two Interactive, Sports",Pro,N/A,11
+75,"EA Sports UFC 3 (PS4)Electronic Arts, Sports",Pro,N/A,43
+1,"Pokemon: Let's Go, Pikachu! (NS)Nintendo, Role-Playing","1,521,888","1,521,888",1
+2,"Pokemon: Let's Go, Eevee! (NS)Nintendo, Role-Playing","1,022,619","1,022,619",1
+3,"Red Dead Redemption 2 (PS4)Take-Two Interactive, Action-Adventure","939,837","8,919,621",4
+4,"Spyro Reignited Trilogy (PS4)Activision, Platform","850,502","850,502",1
+5,"Fallout 76 (PS4)Bethesda Softworks, Role-Playing","596,243","596,243",1
+6,"Red Dead Redemption 2 (XOne)Take-Two Interactive, Action-Adventure","425,118","3,654,322",4
+7,"Call of Duty: Black Ops IIII (PS4)Activision, Shooter","386,153","5,826,658",6
+8,"Fallout 76 (XOne)Bethesda Softworks, Role-Playing","335,472","335,472",1
+9,"Call of Duty: Black Ops IIII (XOne)Activision, Shooter","255,306","2,922,934",6
+10,"FIFA 19 (PS4)Electronic Arts, Sports","224,323","6,163,064",8
+11,"Spyro Reignited Trilogy (XOne)Activision, Platform","191,323","191,323",1
+12,"Fortnite (NS)Warner Bros. Interactive Entertainment, Shooter","184,624","184,624",1
+13,"Super Mario Party (NS)Nintendo, Party","170,963","1,784,126",7
+14,"Hitman 2 (PS4)Warner Bros. Interactive Entertainment, Action-Adventure","139,674","139,674",1
+15,"Fallout 76 (PC)Bethesda Softworks, Role-Playing","130,169","130,169",1
+16,"Mario Kart 8 Deluxe (NS)Nintendo, Racing","128,642","10,074,179",82
+17,"Spider-Man (PS4) (PS4)Sony Interactive Entertainment, Action-Adventure","128,074","5,837,295",11
+18,"Assassin's Creed Odyssey (PS4)Ubisoft, Action-Adventure","127,372","1,981,799",7
+19,"Fortnite (PS4)Gearbox Software, Action","94,647","373,467",70
+20,"Super Mario Odyssey (NS)Nintendo, Platform","83,019","10,597,350",56
+21,"Minecraft (NS)Mojang, Sandbox","72,753","1,008,402",22
+22,"The Legend of Zelda: Breath of the Wild (NS)Nintendo, Action-Adventure","69,051","8,508,256",90
+23,"FIFA 19 (XOne)Electronic Arts, Sports","61,494","1,519,462",8
+24,"Forza Horizon 4 (XOne)Microsoft Studios, Racing","60,237","964,376",7
+25,"PlayStation VR Worlds (PS4)Sony Interactive Entertainment, Misc","59,642","1,646,937",110
+26,"Diablo III: Eternal Collection (NS)Activision, Action","59,430","251,545",3
+27,"Just Dance 2019 (NS)Ubisoft, Music","58,251","129,809",4
+28,"WWE 2K19 (PS4)Take-Two Interactive, Fighting","57,207","486,662",6
+29,"Hitman 2 (XOne)Warner Bros. Interactive Entertainment, Action-Adventure","56,669","56,669",1
+30,"NBA 2K19 (PS4)Take-Two Interactive, Sports","55,665","1,629,128",10
+31,"God of War (PS4) (PS4)Sony Interactive Entertainment, Action",Pro,N/A,31
+32,"Sid Meier's Civilization VI (NS)Take-Two Interactive, Strategy",Pro,N/A,1
+33,"Fortnite (XOne)Gearbox Software, Action",Pro,N/A,70
+34,"Assassin's Creed Odyssey (XOne)Ubisoft, Action-Adventure",Pro,N/A,7
+35,"Splatoon 2 (NS)Nintendo, Shooter",Pro,N/A,70
+36,"Astro Bot Rescue Mission (PS4)Sony Interactive Entertainment, Platform",Pro,N/A,7
+37,"Madden NFL 19 (PS4)Electronic Arts, Sports",Pro,N/A,15
+38,"Shadow of the Tomb Raider (PS4)Square Enix, Action-Adventure",Pro,N/A,10
+39,"Detroit: Become Human (PS4)Sony Interactive Entertainment, Adventure",Pro,N/A,26
+40,"Grand Theft Auto V (PS4)Take-Two Interactive, Action",Pro,N/A,209
+41,"NBA 2K19 (XOne)Take-Two Interactive, Sports",Pro,N/A,10
+42,"Crash Bandicoot N. Sane Trilogy (NS)Activision, Platform",Pro,N/A,21
+43,"Mario Kart (3DS)Nintendo, Racing",Pro,N/A,364
+44,"FIFA 19 (NS)Electronic Arts, Sports",Pro,N/A,8
+45,"Luigi's Mansion (3DS)Nintendo, Adventure",Pro,N/A,6
+46,"Mario Tennis Aces (NS)Nintendo, Sports",Pro,N/A,22
+47,"Resident Evil VII: Biohazard (PS4)Capcom, Action",Pro,N/A,95
+48,"Madden NFL 19 (XOne)Electronic Arts, Sports",Pro,N/A,15
+49,"LEGO DC Super-Villains (PS4)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,5
+50,"SoulCalibur VI (PS4)Namco Bandai Games, Fighting",Pro,N/A,5
+51,"Nintendo Labo: Toy-Con 01 Variety Kit (NS)Nintendo, Misc",Pro,N/A,31
+52,"Donkey Kong Country: Tropical Freeze (NS)Nintendo, Platform",Pro,N/A,29
+53,"LEGO The Incredibles (NS)Warner Bros. Interactive Entertainment, Action",Pro,N/A,23
+54,"EA Sports UFC 3 (PS4)Electronic Arts, Sports",Pro,N/A,42
+55,"WWE 2K19 (XOne)Take-Two Interactive, Fighting",Pro,N/A,6
+56,"Pokemon: Ultra Sun and Ultra Moon (3DS)Nintendo, Role-Playing",Pro,N/A,53
+57,"NBA 2K Playgrounds 2 (NS)Take-Two Interactive, Sports",Pro,N/A,2
+58,"Monster Hunter: World (PS4)Capcom, Action",Pro,N/A,43
+59,"Crash Bandicoot N. Sane Trilogy (PS4)Activision, Platform",Pro,N/A,73
+60,"LEGO DC Super-Villains (NS)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,5
+61,"Starlink: Battle for Atlas (NS)Ubisoft, Action-Adventure",Pro,N/A,5
+62,"Grand Theft Auto V (XOne)Take-Two Interactive, Action",Pro,N/A,209
+63,"Far Cry 5 (PS4)Ubisoft, Action",Pro,N/A,34
+64,"MineCraft (PS4)Sony Computer Entertainment, Misc",Pro,N/A,216
+65,"Horizon: Zero Dawn (PS4)Sony Interactive Entertainment, Action",Pro,N/A,90
+66,"Shadow of the Tomb Raider (XOne)Square Enix, Action-Adventure",Pro,N/A,10
+67,"Destiny 2 (PS4)Activision, Shooter",Pro,N/A,63
+68,"Ni no Kuni II: Revenant Kingdom (PS4)Namco Bandai Games, Role-Playing",Pro,N/A,35
+69,"LEGO DC Super-Villains (XOne)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,5
+70,"Kirby (NS)Nintendo, Platform",Pro,N/A,36
+71,"Star Wars Battlefront II (2017) (PS4)Electronic Arts, Shooter",Pro,N/A,53
+72,"Doom (2016) (PS4)Bethesda Softworks, Shooter",Pro,N/A,132
+73,"Mario + Rabbids Kingdom Battle (NS)Ubisoft, Strategy",Pro,N/A,64
+74,"Nintendo Labo: Toy-Con 03 Vehicle Kit (NS)Nintendo, Racing",Pro,N/A,10
+75,"My Hero One's Justice (PS4)Bandai Namco Entertainment, Fighting",Pro,N/A,13
+1,"Red Dead Redemption 2 (PS4)Take-Two Interactive, Action-Adventure","1,374,514","7,979,784",3
+2,"Red Dead Redemption 2 (XOne)Take-Two Interactive, Action-Adventure","706,758","3,229,204",3
+3,"Call of Duty: Black Ops IIII (PS4)Activision, Shooter","450,073","5,440,505",5
+4,"Call of Duty: Black Ops IIII (XOne)Activision, Shooter","242,284","2,667,628",5
+5,"FIFA 19 (PS4)Electronic Arts, Sports","184,147","5,938,741",7
+6,"Super Mario Party (NS)Nintendo, Party","131,782","1,613,163",6
+7,"Spider-Man (PS4) (PS4)Sony Interactive Entertainment, Action-Adventure","114,347","5,709,221",10
+8,"Mario Kart 8 Deluxe (NS)Nintendo, Racing","83,387","9,945,537",81
+9,"Assassin's Creed Odyssey (PS4)Ubisoft, Action-Adventure","78,425","1,854,427",6
+10,"Super Mario Odyssey (NS)Nintendo, Platform","74,446","10,514,331",55
+11,"Diablo III: Eternal Collection (NS)Activision, Action","66,790","192,115",2
+12,"The Legend of Zelda: Breath of the Wild (NS)Nintendo, Action-Adventure","53,989","8,439,205",89
+13,"Forza Horizon 4 (XOne)Microsoft Studios, Racing","53,094","904,139",6
+14,"FIFA 19 (XOne)Electronic Arts, Sports","52,997","1,457,968",7
+15,"Luigi's Mansion (3DS)Nintendo, Adventure","51,141","194,829",5
+16,"Minecraft (NS)Mojang, Sandbox","45,252","935,649",21
+17,"Splatoon 2 (NS)Nintendo, Shooter","42,045","6,392,247",69
+18,"NBA 2K19 (PS4)Take-Two Interactive, Sports","42,011","1,573,463",9
+19,"SoulCalibur VI (PS4)Namco Bandai Games, Fighting","40,673","517,903",4
+20,"Madden NFL 19 (XOne)Electronic Arts, Sports","40,232","1,069,812",14
+21,"NBA 2K19 (XOne)Take-Two Interactive, Sports","40,126","1,044,123",9
+22,"God of War (PS4) (PS4)Sony Interactive Entertainment, Action","39,372","5,158,973",30
+23,"WWE 2K19 (PS4)Take-Two Interactive, Fighting","34,592","429,455",5
+24,"Grand Theft Auto V (PS4)Take-Two Interactive, Action","32,650","18,836,420",208
+25,"Shadow of the Tomb Raider (PS4)Square Enix, Action-Adventure","31,918","1,144,281",9
+26,"Mario Kart (3DS)Nintendo, Racing","31,814","15,131,403",363
+27,"Madden NFL 19 (PS4)Electronic Arts, Sports","31,587","1,513,648",14
+28,"LEGO DC Super-Villains (PS4)Warner Bros. Interactive Entertainment, Action-Adventure","31,110","185,265",4
+29,"Assassin's Creed Odyssey (XOne)Ubisoft, Action-Adventure","30,870","760,266",6
+30,"Mario Tennis Aces (NS)Nintendo, Sports","29,413","1,512,344",21
+31,"Horizon: Zero Dawn (PS4)Sony Interactive Entertainment, Action",Pro,N/A,89
+32,"Deracine (PS4)Sony Interactive Entertainment, Adventure",Pro,N/A,1
+33,"Carnival Games (NS)Take-Two Interactive, Party",Pro,N/A,1
+34,"Just Dance 2019 (NS)Ubisoft, Music",Pro,N/A,3
+35,"Crash Bandicoot N. Sane Trilogy (NS)Activision, Platform",Pro,N/A,20
+36,"Kingdom Hearts: The Story So Far (PS4)Square Enix, Role-Playing",Pro,N/A,2
+37,"Tetris Effect (PS4)Sony Interactive Entertainment, Puzzle",Pro,N/A,1
+38,"Fortnite (PS4)Gearbox Software, Action",Pro,N/A,69
+39,"PlayStation VR Worlds (PS4)Sony Interactive Entertainment, Misc",Pro,N/A,109
+40,"Pokemon: Ultra Sun and Ultra Moon (3DS)Nintendo, Role-Playing",Pro,N/A,52
+41,"My Hero One's Justice (PS4)Bandai Namco Entertainment, Fighting",Pro,N/A,12
+42,"LEGO Harry Potter Collection (NS)Warner Bros. Interactive Entertainment, Action",Pro,N/A,2
+43,"Donkey Kong Country: Tropical Freeze (NS)Nintendo, Platform",Pro,N/A,28
+44,"Kirby (NS)Nintendo, Platform",Pro,N/A,35
+45,"LEGO DC Super-Villains (XOne)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,4
+46,"Detroit: Become Human (PS4)Sony Interactive Entertainment, Adventure",Pro,N/A,25
+47,"LEGO DC Super-Villains (NS)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,4
+48,"MineCraft (PS4)Sony Computer Entertainment, Misc",Pro,N/A,215
+49,"PlayerUnknown's Battlegrounds (XOne)Microsoft Studios, Shooter",Pro,N/A,48
+50,"Fortnite (XOne)Gearbox Software, Action",Pro,N/A,69
+51,"Monster Hunter: World (PS4)Capcom, Action",Pro,N/A,42
+52,"FIFA 19 (NS)Electronic Arts, Sports",Pro,N/A,7
+53,"Dark Souls: Remastered (NS)Bandai Namco Entertainment, Role-Playing",Pro,N/A,4
+54,"WWE 2K19 (XOne)Take-Two Interactive, Fighting",Pro,N/A,5
+55,"Sea of Thieves (XOne)Microsoft Studios, Action-Adventure",Pro,N/A,34
+56,"Grand Theft Auto V (XOne)Take-Two Interactive, Action",Pro,N/A,208
+57,"Shadow of the Tomb Raider (XOne)Square Enix, Action-Adventure",Pro,N/A,9
+58,"Crash Bandicoot N.Sane Trilogy (XOne)Activision, Platform",Pro,N/A,20
+59,"Resident Evil VII: Biohazard (PS4)Capcom, Action",Pro,N/A,94
+60,"Astro Bot Rescue Mission (PS4)Sony Interactive Entertainment, Platform",Pro,N/A,6
+61,"Moonlighter (NS)Merge Games, Role-Playing",Pro,N/A,1
+62,"SoulCalibur VI (XOne)Namco Bandai Games, Fighting",Pro,N/A,4
+63,"Doom (2016) (PS4)Bethesda Softworks, Shooter",Pro,N/A,131
+64,"Destiny 2 (PS4)Activision, Shooter",Pro,N/A,62
+65,"Call of Duty: WWII (PS4)Activision, Shooter",Pro,N/A,54
+66,"Starlink: Battle for Atlas (NS)Ubisoft, Action-Adventure",Pro,N/A,4
+67,"My Hero One's Justice (NS)Bandai Namco Entertainment, Fighting",Pro,N/A,12
+68,"Crash Bandicoot N. Sane Trilogy (PS4)Activision, Platform",Pro,N/A,72
+69,"Destiny 2: Forsaken (PS4)Activision, Shooter",Pro,N/A,10
+70,"NHL 19 (PS4)Electronic Arts, Sports",Pro,N/A,9
+71,"Monster Hunter Double Cross (NS)Capcom, Action",Pro,N/A,64
+72,"Captain Toad: Treasure Tracker (NS)Nintendo, Puzzle",Pro,N/A,18
+73,"Gran Turismo Sport (PS4)Sony Interactive Entertainment, Racing",Pro,N/A,56
+74,"EA Sports UFC 3 (PS4)Electronic Arts, Sports",Pro,N/A,41
+75,"Bass Pro Shops: The Strike - Championship Edition (NS)Planet Entertainment, Simulation",Pro,N/A,1
+1,"Red Dead Redemption 2 (PS4)Take-Two Interactive, Action-Adventure","1,994,306","6,605,270",2
+2,"Red Dead Redemption 2 (XOne)Take-Two Interactive, Action-Adventure","899,517","2,522,446",2
+3,"Call of Duty: Black Ops IIII (PS4)Activision, Shooter","495,642","4,990,432",4
+4,"Call of Duty: Black Ops IIII (XOne)Activision, Shooter","270,174","2,425,344",4
+5,"FIFA 19 (PS4)Electronic Arts, Sports","212,684","5,754,594",6
+6,"Super Mario Party (NS)Nintendo, Party","139,120","1,481,381",5
+7,"Diablo III: Eternal Collection (NS)Activision, Action","125,325","125,325",1
+8,"Spider-Man (PS4) (PS4)Sony Interactive Entertainment, Action-Adventure","118,690","5,594,874",9
+9,"Assassin's Creed Odyssey (PS4)Ubisoft, Action-Adventure","100,580","1,776,002",5
+10,"Mario Kart 8 Deluxe (NS)Nintendo, Racing","68,695","9,862,150",80
+11,"SoulCalibur VI (PS4)Namco Bandai Games, Fighting","66,781","477,230",3
+12,"Kingdom Hearts: The Story So Far (PS4)Square Enix, Role-Playing","64,049","64,049",1
+13,"Forza Horizon 4 (XOne)Microsoft Studios, Racing","57,582","851,045",5
+14,"Super Mario Odyssey (NS)Nintendo, Platform","51,760","10,439,885",54
+15,"FIFA 19 (XOne)Electronic Arts, Sports","49,760","1,404,971",6
+16,"LEGO Harry Potter Collection (NS)Warner Bros. Interactive Entertainment, Action","44,501","44,501",1
+17,"NBA 2K19 (PS4)Take-Two Interactive, Sports","43,957","1,531,452",8
+18,"NBA 2K19 (XOne)Take-Two Interactive, Sports","43,788","1,003,997",8
+19,"The Legend of Zelda: Breath of the Wild (NS)Nintendo, Action-Adventure","42,537","8,385,216",88
+20,"Call of Cthulhu (PS4)Focus Home Interactive, Role-Playing","41,010","41,010",1
+21,"Assassin's Creed Odyssey (XOne)Ubisoft, Action-Adventure","39,452","729,396",5
+22,"God of War (PS4) (PS4)Sony Interactive Entertainment, Action","39,157","5,119,601",29
+23,"Splatoon 2 (NS)Nintendo, Shooter","37,856","6,350,202",68
+24,"Minecraft (NS)Mojang, Sandbox","36,667","890,397",20
+25,"Grand Theft Auto V (PS4)Take-Two Interactive, Action","35,388","18,803,770",207
+26,"Shadow of the Tomb Raider (PS4)Square Enix, Action-Adventure","35,074","1,112,363",8
+27,"LEGO DC Super-Villains (PS4)Warner Bros. Interactive Entertainment, Action-Adventure","34,883","154,155",3
+28,"WWE 2K19 (PS4)Take-Two Interactive, Fighting","32,061","394,863",4
+29,"My Hero One's Justice (PS4)Bandai Namco Entertainment, Fighting","30,880","144,708",11
+30,"Football Manager 2019 (PC)Sega, Simulation","30,627","30,627",1
+31,"Madden NFL 19 (PS4)Electronic Arts, Sports",Pro,N/A,13
+32,"LEGO Harry Potter Collection (XOne)Warner Bros. Interactive Entertainment, Action",Pro,N/A,1
+33,"Horizon: Zero Dawn (PS4)Sony Interactive Entertainment, Action",Pro,N/A,88
+34,"My Hero One's Justice (NS)Bandai Namco Entertainment, Fighting",Pro,N/A,11
+35,"Dark Souls: Remastered (NS)Bandai Namco Entertainment, Role-Playing",Pro,N/A,3
+36,"Madden NFL 19 (XOne)Electronic Arts, Sports",Pro,N/A,13
+37,"Pokemon: Ultra Sun and Ultra Moon (3DS)Nintendo, Role-Playing",Pro,N/A,51
+38,"LEGO DC Super-Villains (NS)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,3
+39,"Luigi's Mansion (3DS)Nintendo, Adventure",Pro,N/A,4
+40,"SoulCalibur VI (XOne)Namco Bandai Games, Fighting",Pro,N/A,3
+41,"Just Dance 2019 (NS)Ubisoft, Music",Pro,N/A,2
+42,"PlayerUnknown's Battlegrounds (XOne)Microsoft Studios, Shooter",Pro,N/A,47
+43,"Astro Bot Rescue Mission (PS4)Sony Interactive Entertainment, Platform",Pro,N/A,5
+44,"Starlink: Battle for Atlas (NS)Ubisoft, Action-Adventure",Pro,N/A,3
+45,"Donkey Kong Country: Tropical Freeze (NS)Nintendo, Platform",Pro,N/A,27
+46,"Sea of Thieves (XOne)Microsoft Studios, Action-Adventure",Pro,N/A,33
+47,"Mario Tennis Aces (NS)Nintendo, Sports",Pro,N/A,20
+48,"Fortnite (PS4)Gearbox Software, Action",Pro,N/A,68
+49,"Mario Kart (3DS)Nintendo, Racing",Pro,N/A,362
+50,"WWE 2K19 (XOne)Take-Two Interactive, Fighting",Pro,N/A,4
+51,"Shadow of the Tomb Raider (XOne)Square Enix, Action-Adventure",Pro,N/A,8
+52,"FIFA 19 (NS)Electronic Arts, Sports",Pro,N/A,6
+53,"LEGO DC Super-Villains (XOne)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,3
+54,"PlayStation VR Worlds (PS4)Sony Interactive Entertainment, Misc",Pro,N/A,108
+55,"Detroit: Become Human (PS4)Sony Interactive Entertainment, Adventure",Pro,N/A,24
+56,"Yomawari: The Long Night Collection (NS)Nippon Ichi Software, Action-Adventure",Pro,N/A,2
+57,"Grand Theft Auto V (XOne)Take-Two Interactive, Action",Pro,N/A,207
+58,"Destiny 2: Forsaken (PS4)Activision, Shooter",Pro,N/A,9
+59,"Kirby (NS)Nintendo, Platform",Pro,N/A,34
+60,"MineCraft (PS4)Sony Computer Entertainment, Misc",Pro,N/A,214
+61,"Call of Cthulhu (XOne)Focus Home Interactive, Role-Playing",Pro,N/A,1
+62,"Taiko no Tatsujin: Drum 'n' Fun! (NS)Namco Bandai Games, Music",Pro,N/A,16
+63,"Fortnite (XOne)Gearbox Software, Action",Pro,N/A,68
+64,"Monster Hunter Double Cross (NS)Capcom, Action",Pro,N/A,63
+65,"Gran Turismo Sport (PS4)Sony Interactive Entertainment, Racing",Pro,N/A,55
+66,"Crash Bandicoot N. Sane Trilogy (PS4)Activision, Platform",Pro,N/A,71
+67,"Crash Bandicoot N. Sane Trilogy (NS)Activision, Platform",Pro,N/A,19
+68,"Mutant Football League (NS)Nighthawk Interactive, Sports",Pro,N/A,1
+69,"Monster Hunter: World (PS4)Capcom, Action",Pro,N/A,41
+70,"MLB The Show 18 (PS4)Sony Interactive Entertainment, Sports",Pro,N/A,32
+71,"Resident Evil VII: Biohazard (PS4)Capcom, Action",Pro,N/A,93
+72,"The World Ends with You: Final Remix (NS)Nintendo, Role-Playing",Pro,N/A,6
+73,"Shadow of the Colossus (PS4)Sony Interactive Entertainment, Action-Adventure",Pro,N/A,39
+74,"Crash Bandicoot N.Sane Trilogy (XOne)Activision, Platform",Pro,N/A,19
+75,"NHL 19 (PS4)Electronic Arts, Sports",Pro,N/A,8
+1,"Red Dead Redemption 2 (PS4)Take-Two Interactive, Action-Adventure","4,610,964","4,610,964",1
+2,"Red Dead Redemption 2 (XOne)Take-Two Interactive, Action-Adventure","1,622,929","1,622,929",1
+3,"Call of Duty: Black Ops IIII (PS4)Activision, Shooter","797,607","4,494,790",3
+4,"Call of Duty: Black Ops IIII (XOne)Activision, Shooter","421,618","2,155,170",3
+5,"FIFA 19 (PS4)Electronic Arts, Sports","235,145","5,541,910",5
+6,"Super Mario Party (NS)Nintendo, Party","160,193","1,342,261",4
+7,"Assassin's Creed Odyssey (PS4)Ubisoft, Action-Adventure","134,932","1,675,422",4
+8,"Spider-Man (PS4) (PS4)Sony Interactive Entertainment, Action-Adventure","134,184","5,476,184",8
+9,"SoulCalibur VI (PS4)Namco Bandai Games, Fighting","115,300","410,449",2
+10,"My Hero One's Justice (PS4)Bandai Namco Entertainment, Fighting","81,907","113,828",10
+11,"Forza Horizon 4 (XOne)Microsoft Studios, Racing","73,368","793,463",4
+12,"My Hero One's Justice (NS)Bandai Namco Entertainment, Fighting","68,043","116,421",10
+13,"Mario Kart 8 Deluxe (NS)Nintendo, Racing","65,890","9,793,455",79
+14,"Assassin's Creed Odyssey (XOne)Ubisoft, Action-Adventure","62,572","689,944",4
+15,"NBA 2K19 (PS4)Take-Two Interactive, Sports","56,990","1,487,495",7
+16,"FIFA 19 (XOne)Electronic Arts, Sports","48,541","1,355,211",5
+17,"Super Mario Odyssey (NS)Nintendo, Platform","47,746","10,388,125",53
+18,"NBA 2K19 (XOne)Take-Two Interactive, Sports","46,458","960,209",7
+19,"My Hero One's Justice (XOne)Bandai Namco Entertainment, Fighting","45,044","45,044",1
+20,"Shadow of the Tomb Raider (PS4)Square Enix, Action-Adventure","41,827","1,077,289",7
+21,"WWE 2K19 (PS4)Take-Two Interactive, Fighting","41,152","362,802",3
+22,"The Legend of Zelda: Breath of the Wild (NS)Nintendo, Action-Adventure","39,188","8,342,679",87
+23,"LEGO DC Super-Villains (PS4)Warner Bros. Interactive Entertainment, Action-Adventure","38,312","119,272",2
+24,"SoulCalibur VI (XOne)Namco Bandai Games, Fighting","36,324","149,215",2
+25,"Splatoon 2 (NS)Nintendo, Shooter","35,855","6,312,346",67
+26,"Minecraft (NS)Mojang, Sandbox","34,346","853,730",19
+27,"Dark Souls: Remastered (NS)Bandai Namco Entertainment, Role-Playing","34,046","139,431",2
+28,"Madden NFL 19 (PS4)Electronic Arts, Sports","34,026","1,453,853",12
+29,"Grand Theft Auto V (PS4)Take-Two Interactive, Action","33,093","18,768,382",206
+30,"Luigi's Mansion (3DS)Nintendo, Adventure","31,397","120,248",3
+31,"God of War (PS4) (PS4)Sony Interactive Entertainment, Action",Pro,N/A,28
+32,"Starlink: Battle for Atlas (NS)Ubisoft, Action-Adventure",Pro,N/A,2
+33,"WWE 2K19 (XOne)Take-Two Interactive, Fighting",Pro,N/A,3
+34,"Donkey Kong Country: Tropical Freeze (NS)Nintendo, Platform",Pro,N/A,26
+35,"Horizon: Zero Dawn (PS4)Sony Interactive Entertainment, Action",Pro,N/A,87
+36,"Madden NFL 19 (XOne)Electronic Arts, Sports",Pro,N/A,12
+37,"Pokemon: Ultra Sun and Ultra Moon (3DS)Nintendo, Role-Playing",Pro,N/A,50
+38,"LEGO DC Super-Villains (NS)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,2
+39,"NHL 19 (PS4)Electronic Arts, Sports",Pro,N/A,7
+40,"Mario Tennis Aces (NS)Nintendo, Sports",Pro,N/A,19
+41,"Astro Bot Rescue Mission (PS4)Sony Interactive Entertainment, Platform",Pro,N/A,4
+42,"Shadow of the Tomb Raider (XOne)Square Enix, Action-Adventure",Pro,N/A,7
+43,"PlayerUnknown's Battlegrounds (XOne)Microsoft Studios, Shooter",Pro,N/A,46
+44,"Just Dance 2019 (NS)Ubisoft, Music",Pro,N/A,1
+45,"Monster Hunter Double Cross (NS)Capcom, Action",Pro,N/A,62
+46,"Nickelodeon Kart Racers (NS)Maximum Games, Racing",Pro,N/A,1
+47,"FIFA 19 (NS)Electronic Arts, Sports",Pro,N/A,5
+48,"LEGO DC Super-Villains (XOne)Warner Bros. Interactive Entertainment, Action-Adventure",Pro,N/A,2
+49,"Mario Kart (3DS)Nintendo, Racing",Pro,N/A,361
+50,"Sea of Thieves (XOne)Microsoft Studios, Action-Adventure",Pro,N/A,32
+51,"The World Ends with You: Final Remix (NS)Nintendo, Role-Playing",Pro,N/A,5
+52,"Fortnite (PS4)Gearbox Software, Action",Pro,N/A,67
+53,"NHL 19 (XOne)Electronic Arts, Sports",Pro,N/A,7
+54,"PlayStation VR Worlds (PS4)Sony Interactive Entertainment, Misc",Pro,N/A,107
+55,"Crash Bandicoot N. Sane Trilogy (NS)Activision, Platform",Pro,N/A,18
+56,"Destiny 2 (PS4)Activision, Shooter",Pro,N/A,60
+57,"Dragon Quest XI (PS4)Square Enix, Role-Playing",Pro,N/A,66
+58,"Fortnite (XOne)Gearbox Software, Action",Pro,N/A,67
+59,"Detroit: Become Human (PS4)Sony Interactive Entertainment, Adventure",Pro,N/A,23
+60,"Code of  Princess EX (NS)Nicalis, Action",Pro,N/A,13
+61,"Forza Motorsport 7 (XOne)Microsoft Studios, Racing",Pro,N/A,57
+62,"Crash Bandicoot N. Sane Trilogy (PS4)Activision, Platform",Pro,N/A,70
+63,"Grand Theft Auto V (XOne)Take-Two Interactive, Action",Pro,N/A,206
+64,"MineCraft (PS4)Sony Computer Entertainment, Misc",Pro,N/A,213
+65,"Street Fighter 30th Anniversary Collection (PS4)Capcom, Fighting",Pro,N/A,22
+66,"Project Octopath Traveler (NS)Nintendo, Role-Playing",Pro,N/A,16
+67,"Destiny 2 (XOne)Activision, Shooter",Pro,N/A,60
+68,"Monster Hunter: World (PS4)Capcom, Action",Pro,N/A,40
+69,"Captain Toad: Treasure Tracker (NS)Nintendo, Puzzle",Pro,N/A,16
+70,"Need for Speed: Payback (PS4)Electronic Arts, Racing",Pro,N/A,51
+71,"Call of Duty: WWII (PS4)Activision, Shooter",Pro,N/A,52
+72,"The Crew 2 (PS4)Ubisoft, Racing",Pro,N/A,18
+73,"Just Dance 2019 (WiiU)Ubisoft, Music",Pro,N/A,1
+74,"EA Sports UFC 3 (PS4)Electronic Arts, Sports",Pro,N/A,39
+75,"Xenoblade Chronicles 2 (NS)Nintendo, Role-Playing",Pro,N/A,48

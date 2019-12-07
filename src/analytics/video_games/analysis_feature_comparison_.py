@@ -1,3 +1,5 @@
+import sys
+sys.path.append('../../')
 from utils.google_trends import GoogleTrends
 from analytics.video_games.data_preprocessing import data_sorting
 
@@ -8,7 +10,7 @@ have the highest sales with corresponding Total Search Volume from 2004 to 2018.
 
 #%% get sorted vgchartz dataframe
 feature = 'Platform'
-fname = '../conf/video_games/input/vgsales-refined-data.csv'
+fname = '../../../conf/video_games/input/vgsales-refined-data.csv'
 data_sorting(fname, feature, limit=4, line_plot=True)
 data_sorting(fname, feature, limit=4, bar_plot=True)
     
@@ -29,5 +31,5 @@ gt.get_trends_data_from_multiple_keywords(keywords=keywords,
 gt.sort_data_by_year()
 
 #%% plot
-gt.line_plot_by_year(save_fig=True,plot_name=feature +'_line_plot')
-gt.stack_bar_plot(show_values=False,value_format='{:.2f}',save_fig=True,plot_name=feature +'_bar_plot')
+gt.line_plot_by_year()
+gt.stack_bar_plot(show_values=False,value_format='{:.2f}')
